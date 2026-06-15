@@ -92,7 +92,7 @@ export default function Contact() {
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Our Location</span>
                       <span className="text-slate-500 leading-relaxed font-light">
-                        12/4 Vindhya Enclave, Medical Square, Bhopal, MP - 462001, India
+                        12/4 Vindhya Healthcare, Hyderabad,Telangana - 462001, India
                       </span>
                     </div>
                   </div>
@@ -261,14 +261,14 @@ export default function Contact() {
       <section className="h-[400px] w-full border-t border-slate-200 bg-slate-200 select-none">
         {/* We can use standard embed map */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117320.13885375531!2d77.3480805!3d23.2201947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c428f13fb9c77%3A0x2bd650aa4d32c6e2!2sBhopal%252C%2520Madhya%2520Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117320.13885375531!2d77.3480805!3d23.2201947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c428f13fb9c77%3A0x2bd650aa4d32c6e2!2sTelangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Vindhya Healthcare Bhopal Location Map"
+          title="Vindhya Healthcare Telangana Location Map"
         ></iframe>
       </section>
 

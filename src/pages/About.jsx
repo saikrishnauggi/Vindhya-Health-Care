@@ -5,7 +5,7 @@ import vindhyaBg from '../assets/image_9e2966.jpeg';
 
 export default function About() {
   const milestones = [
-    { year: "2006", title: "Inception", desc: "Vindhya Healthcare was founded as a 50-bed pediatric clinic in Bhopal." },
+    { year: "2006", title: "Inception", desc: "Vindhya Healthcare was founded as a 50-bed pediatric clinic in Telangana." },
     { year: "2010", title: "Expansion into Multi-Specialty", desc: "Expanded capacity to 150 beds and added complete Cardiology and Neurology wings." },
     { year: "2015", title: "NABH Accreditation", desc: "Recognized for clinical quality, patient safety, and premium operational safety protocols." },
     { year: "2018", title: "State-of-the-Art Diagnostics", desc: "Installed Central India's first high-resolution 3T Silent MRI scanner and dual Cath labs." },
