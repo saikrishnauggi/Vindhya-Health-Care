@@ -70,10 +70,10 @@ export default function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row items-stretch gap-4 w-full md:w-auto relative z-10">
             <a 
-              href="tel:+919346862148" 
+              href="tel:+919160854747" 
               className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
             >
-              <FaPhoneAlt size={14} /> Emergency: +91 934 686 2148
+              <FaPhoneAlt size={14} /> Emergency: +91 916 085 4747
             </a>
             <a 
               href="tel:108" 
@@ -104,7 +104,7 @@ export default function Footer() {
             <div className="space-y-3.5 text-xs text-slate-400">
               <p className="flex items-start gap-2.5">
                 <FaMapMarkerAlt className="text-emerald-accent mt-0.5 shrink-0" />
-                <span>12/4 Vindhya Healthcare, Hyderabad, Telangana, India</span>
+                <span>13-94 & 95, Vindhya Healthcare, beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri, Hyderabad, Secunderabad, Telangana - 500047</span>
               </p>
               <p className="flex items-center gap-2.5">
                 <FaEnvelope className="text-emerald-accent shrink-0" />

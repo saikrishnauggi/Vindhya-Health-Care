@@ -57,9 +57,9 @@ export default function Header() {
       {/* 1. STICKY INFORMATION BAR */}
       <div className="bg-medical-dark text-white text-xs py-2.5 px-4 md:px-8 flex flex-wrap justify-between items-center gap-2 border-b border-white/10">
         <div className="flex flex-wrap items-center gap-4 md:gap-6">
-          <a href="tel:+919346862148" className="flex items-center gap-1.5 hover:text-emerald-accent transition-colors">
+          <a href="tel:+919160854747" className="flex items-center gap-1.5 hover:text-emerald-accent transition-colors">
             <FaPhoneAlt className="text-emerald-accent" />
-            <span className="font-semibold">Emergency:</span> +91 934 686 2148
+            <span className="font-semibold">Emergency:</span> +91 916 085 4747
           </a>
           <a href="tel:108" className="flex items-center gap-1.5 hover:text-red-400 transition-colors animate-pulse">
             <FaAmbulance className="text-red-500" />
@@ -76,7 +76,7 @@ export default function Header() {
         </div>
         
         <div className="flex items-center gap-4">
-          <a href="tel:+919346862148" className="bg-emerald-accent/20 text-emerald-accent px-3 py-1 rounded-full font-semibold border border-emerald-accent/30 hover:bg-emerald-accent hover:text-white transition-all text-[11px]">
+          <a href="tel:+919160854747" className="bg-emerald-accent/20 text-emerald-accent px-3 py-1 rounded-full font-semibold border border-emerald-accent/30 hover:bg-emerald-accent hover:text-white transition-all text-[11px]">
             Call Now
           </a>
           <Link to="/appointment" className="text-white hover:text-emerald-accent font-semibold transition-colors text-[11px]">
@@ -223,10 +223,10 @@ export default function Header() {
                 Book Appointment
               </Link>
               <a
-                href="tel:+919346862148"
+                href="tel:+919160854747"
                 className="block text-center border border-slate-200 text-slate-700 font-semibold py-3.5 rounded-xl hover:bg-slate-50 transition-all"
               >
-                Emergency Call: +91 934 686 2148
+                Emergency Call: +91 916 085 4747
               </a>
             </div>
           </div>

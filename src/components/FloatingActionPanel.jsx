@@ -61,21 +61,21 @@ export default function FloatingActionPanel() {
     {
       label: 'WhatsApp Chat',
       icon: <FaWhatsapp />,
-      path: 'https://wa.me/919346862148',
+      path: 'https://wa.me/919160854747',
       color: 'bg-green-500 hover:bg-green-600',
       isLink: false
     },
     {
       label: 'Call Hospital',
       icon: <FaPhoneAlt />,
-      path: 'tel:+919346862148',
+      path: 'tel:+919160854747',
       color: 'bg-blue-600 hover:bg-blue-700',
       isLink: false
     },
     {
       label: 'Emergency Help',
       icon: <FaAmbulance />,
-      path: 'tel:+919346862148',
+      path: 'tel:+919160854747',
       color: 'bg-red-600 hover:bg-red-750 animate-pulse',
       isLink: false
     }

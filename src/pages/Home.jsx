@@ -464,10 +464,10 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a 
-              href="tel:+919346862148" 
+              href="tel:+919160854747" 
               className="bg-white text-red-700 font-extrabold text-sm px-8 py-4 rounded-xl shadow-lg transition-all hover:scale-103 inline-flex items-center gap-2"
             >
-              <FaPhoneAlt size={14} /> Emergency Dial: +91 934 686 2148
+              <FaPhoneAlt size={14} /> Emergency Dial: +91 916 085 4747
             </a>
             <a 
               href="tel:108" 

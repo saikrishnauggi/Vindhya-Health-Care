@@ -30,7 +30,7 @@ export default function HeroSlider() {
       ctaPrimary: "Find A Doctor",
       ctaPrimaryPath: "/doctors",
       ctaSecondary: "Emergency Call",
-      ctaSecondaryPath: "tel:+919346862148"
+      ctaSecondaryPath: "tel:+919160854747"
     },
     {
       image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=1600",
@@ -58,7 +58,7 @@ export default function HeroSlider() {
       title: "Rapid Emergency & Trauma Center",
       description: "Equipped with advanced life support (ALS) ambulances, immediate cardiac resuscitation systems, and round-the-clock emergency doctors.",
       ctaPrimary: "Call Emergency",
-      ctaPrimaryPath: "tel:+919346862148",
+      ctaPrimaryPath: "tel:+919160854747",
       ctaSecondary: "Ambulance: 108",
       ctaSecondaryPath: "tel:108"
     }
