@@ -104,7 +104,7 @@ export default function Footer() {
             <div className="space-y-3.5 text-xs text-slate-400">
               <p className="flex items-start gap-2.5">
                 <FaMapMarkerAlt className="text-emerald-accent mt-0.5 shrink-0" />
-                <span>12/4 Vindhya Enclave, Medical Square, Bhopal, MP - 462001, India</span>
+                <span>12/4 Vindhya Healthcare, Hyderabad, Telangana, India</span>
               </p>
               <p className="flex items-center gap-2.5">
                 <FaEnvelope className="text-emerald-accent shrink-0" />
