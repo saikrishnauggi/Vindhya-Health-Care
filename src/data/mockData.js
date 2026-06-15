@@ -2,6 +2,23 @@
 
 export const DEPARTMENTS = [
   {
+    id: "ophthalmology",
+    name: "Ophthalmology",
+    icon: "FaEye",
+    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600",
+    description: "Comprehensive eye care services for all age groups.",
+    detailedDescription: "Our Ophthalmology Department provides expert diagnosis and treatment for various eye conditions using modern technology and experienced specialists.",
+    services: [
+    "Eye Checkups",
+    "Cataract Treatment",
+    "LASIK Surgery",
+    "Glaucoma Care",
+    "Retina Services",
+    "Pediatric Eye Care",
+    "Dry Eye Treatment"
+    ]
+  },
+  {
     id: "cardiology",
     name: "Cardiology",
     icon: "FaHeartbeat",
