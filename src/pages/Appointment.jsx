@@ -145,10 +145,10 @@ export default function Appointment() {
       if (response.success) {
         // 2. Dispatch EmailJS notification directly using full fallbacks
         await emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_q4pm60f',
-          import.meta.env.VITE_EMAILJS_APPOINTMENT_TEMPLATE_ID || 'template_s7vq67z', 
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_APPOINTMENT_TEMPLATE_ID, 
           templateParams,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '9E9TLrzf0DL3N3a97'
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
         );
 
         // 3. Generate WhatsApp backup redirection fallback link
