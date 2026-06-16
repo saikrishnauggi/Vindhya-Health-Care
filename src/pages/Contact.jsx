@@ -11,7 +11,8 @@ import {
   FaSpinner, 
   FaCheckCircle 
 } from 'react-icons/fa';
-import { apiService } from '../services/api';
+// 1. Import EmailJS browser library
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   // Form states
@@ -34,23 +35,32 @@ export default function Contact() {
 
     setIsLoading(true);
     setErrorMsg('');
+
+    // 2. Map form states to match your exact EmailJS template placeholder variables
+    const templateParams = {
+      from_name: name,
+      reply_to: email,
+      subject: subject || 'General Query',
+      message: message
+    };
+
     try {
-      const response = await apiService.submitContactInquiry({
-        name,
-        email,
-        subject: subject || 'General Query',
-        message
-      });
-      if (response.success) {
-        setSubmitted(true);
-        // Reset form
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-      }
+      // 3. Trigger EmailJS Send function with comprehensive secure fallbacks
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_q4pm60f',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_i8fl30g', 
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '9E9TLrzf0DL3N3a97'
+      );
+
+      // Success workflow handling
+      setSubmitted(true);
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
     } catch (err) {
-      setErrorMsg(err.message || 'Something went wrong. Please try again.');
+      setErrorMsg(err.text || 'Something went wrong while delivering your email. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -120,12 +130,12 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Email Support</span>
-                      <a href="mailto:info@vindhyahealthcare.com" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        info@vindhyahealthcare.com
+                      <a href="mailto:care@vindhyahealthcare.in" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        care@vindhyahealthcare.in
                       </a>
-                      <a href="mailto:appointments@vindhyahealthcare.com" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        appointments@vindhya.com
-                      </a>
+                      {/* <a href="mailto:appointments@vindhyahealthcare.in" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        appointments@vindhyahealthcare.in
+                      </a> */}
                     </div>
                   </div>
 
@@ -185,7 +195,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleContactSubmit} className="space-y-5">
                   {errorMsg && (
-                    <div className="bg-red-50 border border-red-105 text-red-650 rounded-xl p-3.5 text-xs font-semibold">
+                    <div className="bg-red-50 border border-red-100 text-red-650 rounded-xl p-3.5 text-xs font-semibold">
                       {errorMsg}
                     </div>
                   )}
@@ -193,7 +203,7 @@ export default function Contact() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Name */}
                     <div>
-                      <label className="block text-xs font-bold text-slate-650 mb-2">Your Full Name*</label>
+                      <label className="block text-xs font-bold text-slate-655 mb-2">Your Full Name*</label>
                       <input
                         type="text"
                         required
@@ -205,7 +215,7 @@ export default function Contact() {
                     </div>
                     {/* Email */}
                     <div>
-                      <label className="block text-xs font-bold text-slate-650 mb-2">Email Address*</label>
+                      <label className="block text-xs font-bold text-slate-655 mb-2">Email Address*</label>
                       <input
                         type="email"
                         required
@@ -257,19 +267,18 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* 3. Google Maps Integration Mock Iframe */}
+      {/* 3. Google Maps Integration */}
       <section className="h-[400px] w-full border-t border-slate-200 bg-slate-200 select-none">
-        {/* We can use standard embed map */}
         <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2234551184803!2d78.5248232!3d17.4489814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b2e2868954b%3A0xe8ded595d57d245f!2sLaser%20Eye%20Hospital%20%40%20Vindhya%20Health%20Care!5e0!3m2!1sen!2sin!4v1718465000000!5m2!1sen!2sin"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Vindhya Healthcare Malkajgiri Location Map"
-      ></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2234551184803!2d78.5248232!3d17.4489814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b2e2868954b%3A0xe8ded595d57d245f!2sLaser%20Eye%20Hospital%20%40%20Vindhya%20Health%20Care!5e0!3m2!1sen!2sin!4v1718465000000!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Vindhya Healthcare Malkajgiri Location Map"
+        ></iframe>
       </section>
 
     </div>

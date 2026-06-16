@@ -48,7 +48,7 @@ export default function Header() {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Blog', path: '/blog' },
     { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Careers', path: '/careers' },
+    /* { name: 'Careers', path: '/careers' }, */
     { name: 'Contact Us', path: '/contact' }
   ];
 
@@ -69,9 +69,9 @@ export default function Header() {
             <FaClock className="text-medical-sky" />
             <span>Mon - Sun: 24 Hours Open</span>
           </span>
-          <a href="mailto:info@vindhyahealthcare.com" className="hidden lg:flex items-center gap-1.5 hover:text-medical-sky transition-colors">
+          <a href="mailto:care@vindhyahealthcare.in" className="hidden lg:flex items-center gap-1.5 hover:text-medical-sky transition-colors">
             <FaEnvelope className="text-medical-sky" />
-            <span>info@vindhyahealthcare.com</span>
+            <span>care@vindhyahealthcare.in</span>
           </a>
         </div>
         

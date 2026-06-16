@@ -108,7 +108,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2.5">
                 <FaEnvelope className="text-emerald-accent shrink-0" />
-                <a href="mailto:info@vindhyahealthcare.com" className="hover:text-white transition-colors">info@vindhyahealthcare.com</a>
+                <a href="mailto:care@vindhyahealthcare.in" className="hover:text-white transition-colors">care@vindhyahealthcare.in</a>
               </p>
               <p className="flex items-center gap-2.5">
                 <FaClock className="text-emerald-accent shrink-0" />

@@ -1,4 +1,5 @@
 // Mock data for Vindhya Healthcare
+import cardiacCampImg from '../assets/image_9e2966.jpeg';
 
 export const DEPARTMENTS = [
   {
@@ -562,7 +563,7 @@ export const GALLERY_ITEMS = [
   { id: 9, category: "awards", title: "Best Multi-Specialty Hospital 2025", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600" },
   { id: 10, category: "infrastructure", title: "Advanced Neonatal ICU Setup", image: "https://images.unsplash.com/photo-1584515901387-a7a1a6373140?q=80&w=600" },
   { id: 11, category: "equipment", title: "Automated Hematology Analyzer", image: "https://images.unsplash.com/photo-1579156286657-39961f0b094f?q=80&w=600" },
-  { id: 12, category: "events", title: "Free Cardiac Screening Camp", image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600" }
+  { id: 12, category: "events", title: "Free Cardiac Screening Camp", image: cardiacCampImg }
 ];
 
 export const FACILITIES = [
