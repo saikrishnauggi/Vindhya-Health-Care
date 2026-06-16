@@ -3,6 +3,10 @@ import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaPhoneAlt, FaHeartbeat } from 'react-icons/fa';
+import hospitalpic from '../assets/hospitalpic.jpg';
+import advancedtech from '../assets/advancedtech.jpg';
+import infra from '../assets/infra.jpg';
+import emergency from '../assets/emergency.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,7 +17,7 @@ import 'swiper/css/effect-fade';
 export default function HeroSlider() {
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=1600",
+      image: hospitalpic,
       tagline: "VINDHYA HEALTHCARE",
       title: "World-Class Medical Excellence",
       description: "Providing compassionate, state-of-the-art medical services with advanced diagnostic facilities and top-tier clinical outcomes.",
@@ -33,7 +37,7 @@ export default function HeroSlider() {
       ctaSecondaryPath: "tel:+919160854747"
     },
     {
-      image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=1600",
+      image: advancedtech,
       tagline: "NEXT-GENERATION TECH",
       title: "Advanced Medical Technology",
       description: "Equipped with high-precision 3T Silent MRI scanners, multi-slice CT, computer-assisted Cath labs, and robotic joint replacement capabilities.",
@@ -43,7 +47,7 @@ export default function HeroSlider() {
       ctaSecondaryPath: "/departments"
     },
     {
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1600",
+      image: infra,
       tagline: "HEALING IN COMFORT",
       title: "Premium Patient Infrastructure",
       description: "Rest easy in luxury recovery suites with dedicated 24/7 nursing care, designed to provide a warm and healing environment.",
@@ -53,7 +57,7 @@ export default function HeroSlider() {
       ctaSecondaryPath: "/testimonials"
     },
     {
-      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1600",
+      image: emergency,
       tagline: "24/7 CRITICAL CARE",
       title: "Rapid Emergency & Trauma Center",
       description: "Equipped with advanced life support (ALS) ambulances, immediate cardiac resuscitation systems, and round-the-clock emergency doctors.",

@@ -2,6 +2,7 @@ import { FaHistory, FaBullseye, FaHeart, FaRibbon, FaAward, FaHospital, FaChevro
 
 // 1. IMPORT YOUR BACKGROUND IMAGE ASSET WITH THE CORRECT EXTENSION
 import vindhyaBg from '../assets/image_9e2966.jpeg';
+import equipment from '../assets/equipment1.jpg';
 
 export default function About() {
   const milestones = [
@@ -241,7 +242,7 @@ export default function About() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
-              <img src="https://images.unsplash.com/photo-1584515901387-a7a1a6373140?q=80&w=500" alt="ICU" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
+              <img src={equipment} alt="ICU" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
                 <span className="text-white font-bold text-sm">Level III Neonatal Intensive Care (NICU)</span>
               </div>

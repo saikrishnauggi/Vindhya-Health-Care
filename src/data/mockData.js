@@ -1,41 +1,12 @@
 // Mock data for Vindhya Healthcare
 import cardiacCampImg from '../assets/image_9e2966.jpeg';
+import equipment1 from '../assets/equipment1.jpg';
+import operation from '../assets/operation.jpg';
+import emergency from '../assets/emergency.jpg';
+import operation3 from '../assets/operation3.jpg';
+import advancedtech from '../assets/advancedtech.jpg';
 
 export const DEPARTMENTS = [
-  {
-    id: "ophthalmology",
-    name: "Ophthalmology",
-    icon: "FaEye",
-    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600",
-    description: "Comprehensive eye care services for all age groups.",
-    detailedDescription: "Our Ophthalmology Department provides expert diagnosis and treatment for various eye conditions using modern technology and experienced specialists.",
-    services: [
-    "Eye Checkups",
-    "Cataract Treatment",
-    "LASIK Surgery",
-    "Glaucoma Care",
-    "Retina Services",
-    "Pediatric Eye Care",
-    "Dry Eye Treatment"
-    ]
-  },
-  {
-    id: "cardiology",
-    name: "Cardiology",
-    icon: "FaHeartbeat",
-    image: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=600",
-    description: "State-of-the-art cardiac care including angiography, angioplasty, and bypass surgery from top cardiac specialists.",
-    detailedDescription: "The Cardiology Department at Vindhya Healthcare is a world-class center for cardiac sciences. We are equipped with advanced digital flat-panel Cath labs, state-of-the-art non-invasive cardiac labs, and dedicated coronary care units. Our experienced interventional cardiologists, cardiothoracic surgeons, and specialized nurses work together to provide comprehensive care for all heart issues, ranging from pediatric cardiology to adult cardiac interventions and rehabilitation.",
-    services: [
-      "24/7 Emergency Cardiac Care & Primary Angioplasty",
-      "Interventional Cardiology (Angioplasty & Stenting)",
-      "Coronary Artery Bypass Grafting (CABG)",
-      "Valvular Heart Disease Treatment & Valve Replacements",
-      "Heart Failure Management & Device Implantation (Pacemaker, AICD)",
-      "Pediatric Cardiology & Congenital Heart Defect Repairs",
-      "Non-invasive tests: 2D Echo, TMT, Holter Monitoring, Dobutamine Stress Echo"
-    ]
-  },
   {
     id: "neurology",
     name: "Neurology",
@@ -51,23 +22,6 @@ export const DEPARTMENTS = [
       "Neuro-Oncology (Brain & Spinal Cord Tumors)",
       "Sleep Disorders Clinic",
       "Pediatric Neurology & Neuro-rehabilitation"
-    ]
-  },
-  {
-    id: "orthopedics",
-    name: "Orthopedics",
-    icon: "FaBone",
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=600",
-    description: "Expert joint replacement surgeries, sports medicine, trauma care, and complex fracture management.",
-    detailedDescription: "Our Orthopedics and Joint Reconstruction Department is dedicated to restoring mobility and alleviating joint pain. We specialize in computer-assisted joint replacement surgeries, arthroscopy, and complex fracture treatments. Our team is supported by a robust physical rehabilitation division to ensure rapid recovery and restore optimal functional capability to our patients.",
-    services: [
-      "Total Knee & Total Hip Replacement (Minimally Invasive & Robot-Assisted)",
-      "Arthroscopic Surgeries for Knee, Shoulder, and Ankle (ACL/MCL repairs)",
-      "Complex Trauma & Fracture Management",
-      "Pediatric Orthopedics & Deformity Correction",
-      "Spine Surgeries (Discectomy, Spinal Fusion)",
-      "Sports Injury Management & Specialized Rehabilitation",
-      "Bone Health Clinic for Osteoporosis Management"
     ]
   },
   {
@@ -88,23 +42,6 @@ export const DEPARTMENTS = [
     ]
   },
   {
-    id: "pediatrics",
-    name: "Pediatrics",
-    icon: "FaBaby",
-    image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600",
-    description: "Compassionate healthcare for infants, children, and adolescents, backed by an advanced NICU/PICU.",
-    detailedDescription: "Vindhya Healthcare's Pediatrics Department provides a warm, welcoming environment for young patients. We cater to all healthcare needs of children, from routine wellness checks and vaccinations to intensive care. Our Neonatal Intensive Care Unit (NICU) and Pediatric Intensive Care Unit (PICU) are equipped with state-of-the-art ventilation systems to care for critically ill and premature newborns.",
-    services: [
-      "24/7 Pediatric Emergency & ICU Services",
-      "Level III Neonatal ICU (NICU) for Premature Babies",
-      "Immunization & Vaccination Clinic",
-      "Growth, Development, and Nutrition Counseling",
-      "Pediatric Pulmonology & Allergy Management",
-      "Pediatric Surgery & Congenital Anomaly Correction",
-      "Adolescent Medicine & Counseling"
-    ]
-  },
-  {
     id: "gynecology",
     name: "Gynecology & Obstetrics",
     icon: "FaFemale",
@@ -119,40 +56,6 @@ export const DEPARTMENTS = [
       "Menopause Management & Cervical Cancer Screening (Pap Smear, HPV)",
       "Urogynecology & Pelvic Floor Reconstruction",
       "Adolescent Gynecology & PCOS Management"
-    ]
-  },
-  {
-    id: "oncology",
-    name: "Oncology",
-    icon: "FaRibbon",
-    image: "https://images.unsplash.com/photo-1579156286657-39961f0b094f?q=80&w=600",
-    description: "Multidisciplinary cancer care spanning chemotherapy, targeted therapy, and advanced surgical oncology.",
-    detailedDescription: "Our Oncology Center is built on a multidisciplinary approach to fight cancer. The department offers comprehensive medical, surgical, and radiation oncology support. Backed by high-end diagnostic tools, personalized treatment pathways, and supportive care counselors, our oncologists work to maximize patient outcomes and comfort.",
-    services: [
-      "Medical Oncology & Daycare Chemotherapy Center",
-      "Targeted Immunotherapy & Hormone Therapy",
-      "Surgical Oncology for Solid Tumors (Head & Neck, Breast, GI)",
-      "Gynecological Oncology & Uro-Oncology",
-      "Palliative Care & Pain Management",
-      "Cancer Screening & Prevention Programs",
-      "Post-treatment Rehabilitation & Support Groups"
-    ]
-  },
-  {
-    id: "urology",
-    name: "Urology",
-    icon: "FaWater",
-    image: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?q=80&w=600",
-    description: "Advanced urology services treating kidney stones, prostate disorders, and urinary track issues.",
-    detailedDescription: "The Urology Department at Vindhya Healthcare delivers advanced surgical solutions for kidney stones, prostate enlargement, urological cancers, and male infertility. We utilize high-power lasers for stone fragmentation (RIRS) and minimally invasive prostate surgeries (HoLEP/TURP) to ensure faster recovery, less pain, and shorter hospital stays.",
-    services: [
-      "Laser Treatment for Kidney Stones (RIRS, PCNL, URSL)",
-      "Laser Prostate Surgery (HoLEP) & Conventional TURP",
-      "Uro-oncology (Kidney, Bladder, Prostate cancer surgeries)",
-      "Female Urology & Urinary Incontinence Treatments",
-      "Andrology, Male Infertility & Erectile Dysfunction Clinics",
-      "Reconstructive Urology (Urethroplasty)",
-      "Pediatric Urology (Hypospadias correction)"
     ]
   },
   {
@@ -187,23 +90,6 @@ export const DEPARTMENTS = [
       "PRP Therapy for Hair Loss and Skin Rejuvenation",
       "Removal of Warts, Skin Tags, and Moles",
       "Diagnostic Skin Biopsies & Dermoscopy"
-    ]
-  },
-  {
-    id: "pulmonology",
-    name: "Pulmonology",
-    icon: "FaLungs",
-    image: "https://images.unsplash.com/photo-1584515901387-a7a1a6373140?q=80&w=600",
-    description: "Treatment for asthma, COPD, sleep apnea, tuberculosis, and critical respiratory illnesses.",
-    detailedDescription: "The Pulmonology Department provides comprehensive respiratory care. We specialize in managing chronic obstructive pulmonary disease (COPD), asthma, interstitial lung diseases, and lung infections. Supported by an advanced bronchoscopy suite and pulmonary function laboratory, we deliver top-tier diagnostic and therapeutic solutions.",
-    services: [
-      "Asthma & Allergy Management & Immunotherapy",
-      "COPD & Emphysema Long-term Rehabilitation",
-      "Diagnostic & Therapeutic Bronchoscopy",
-      "Sleep Studies (Polysomnography) for Sleep Apnea",
-      "Interstitial Lung Disease (ILD) & Sarcoidosis Care",
-      "Tuberculosis Treatment & Management",
-      "Pulmonary Function Testing (PFT) & Spirometry"
     ]
   },
   {
@@ -554,16 +440,21 @@ export const BLOG_POSTS = [
 export const GALLERY_ITEMS = [
   { id: 1, category: "infrastructure", title: "Hospital Main Facade", image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=600" },
   { id: 2, category: "infrastructure", title: "Luxury Executive Waiting Lounge", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600" },
-  { id: 3, category: "equipment", title: "3T Silent MRI Suite", image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600" },
-  { id: 4, category: "doctors", title: "Cardiology Conference", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" },
-  { id: 5, category: "equipment", title: "Advanced Cath Lab Suite", image: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=600" },
-  { id: 6, category: "infrastructure", title: "Ultra-Clean Operation Theatre (OT)", image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600" },
-  { id: 7, category: "doctors", title: "Dr. Vinay Kumar in Consultation", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600" },
+  { id: 3, category: "equipment", title: "Eye Examination Suite", image: equipment1 },
+  { id: 4, category: "operation", title: "Eye Operation by Experts", image: operation },
+  { id: 5, category: "operation", title: "Emergency Operation", image: emergency },
+  { id: 6, category: "operation", title: "Operation Theatre", image: operation3 },
+  { id: 7, category: "infrastructure", title: "Modern Diagnostic Center", image: advancedtech },
   { id: 8, category: "events", title: "Annual Healthcare Awareness Rally", image: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=600" },
   { id: 9, category: "awards", title: "Best Multi-Specialty Hospital 2025", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600" },
   { id: 10, category: "infrastructure", title: "Advanced Neonatal ICU Setup", image: "https://images.unsplash.com/photo-1584515901387-a7a1a6373140?q=80&w=600" },
   { id: 11, category: "equipment", title: "Automated Hematology Analyzer", image: "https://images.unsplash.com/photo-1579156286657-39961f0b094f?q=80&w=600" },
-  { id: 12, category: "events", title: "Free Cardiac Screening Camp", image: cardiacCampImg }
+  { id: 12, category: "events", title: "Free Cardiac Screening Camp", image: cardiacCampImg },
+  { id: 13, category: "equipment", title: "3T Silent MRI Suite", image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600" },
+  { id: 14, category: "doctors", title: "Cardiology Conference", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" },
+  { id: 15, category: "equipment", title: "Advanced Cath Lab Suite", image: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=600" },
+  { id: 16, category: "infrastructure", title: "Ultra-Clean Operation Theatre (OT)", image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600" },
+  { id: 17, category: "doctors", title: "Dr. Vinay Kumar in Consultation", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600" }
 ];
 
 export const FACILITIES = [
