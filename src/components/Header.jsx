@@ -37,7 +37,8 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const navLinks = [
+  // Comprehensive link catalog used explicitly for the Mobile Drawer
+  const allNavLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Doctors', path: '/doctors' },
@@ -52,10 +53,28 @@ export default function Header() {
     { name: 'Contact Us', path: '/contact' }
   ];
 
+  // Segmented links for the clean Desktop Layout
+  const primaryDesktopLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Doctors', path: '/doctors' },
+    { name: 'Departments', path: '/departments' },
+    { name: 'Services', path: '/services' }
+  ];
+
+  const secondaryDesktopLinks = [
+    { name: 'Facilities', path: '/facilities' },
+    { name: 'Health Packages', path: '/health-packages' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'Careers', path: '/careers' }
+  ];
+
   return (
     <header className="w-full z-50">
-      {/* 1. STICKY INFORMATION BAR */}
-      <div className="bg-medical-dark text-white text-xs py-2.5 px-4 md:px-8 flex flex-wrap justify-between items-center gap-2 border-b border-white/10">
+      {/* 1. STICKY INFORMATION BAR (Optimized & Reduced Footprint) */}
+      <div className="bg-medical-dark text-white text-xs py-1.5 px-3 md:px-6 flex flex-wrap justify-between items-center gap-2 border-b border-white/10">
         <div className="flex flex-wrap items-center gap-4 md:gap-6">
           <a href="tel:+919160854747" className="flex items-center gap-1.5 hover:text-emerald-accent transition-colors">
             <FaPhoneAlt className="text-emerald-accent" />
@@ -95,7 +114,7 @@ export default function Header() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
           
-          {/* Modified Desktop Logo Wrapper */}
+          {/* Logo Wrapper */}
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={logoImg} 
@@ -103,24 +122,28 @@ export default function Header() {
               className="h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105" 
             />
             <div className="flex flex-col justify-center">
-              <span className="block font-black text-lg md:text-xl tracking-tight leading-none text-slate-900 group-hover:text-emerald-accent transition-colors">
+              <span className={`block font-black text-lg md:text-xl tracking-tight leading-none group-hover:text-emerald-accent transition-colors ${
+                !isScrolled && isHomePage ? 'text-white' : 'text-slate-900'
+              }`}>
                 VINDHYA
               </span>
-              <span className="block text-[10px] tracking-widest font-bold text-slate-500 mt-0.5">
+              <span className={`block text-[10px] tracking-widest font-bold mt-0.5 ${
+                !isScrolled && isHomePage ? 'text-slate-300' : 'text-slate-500'
+              }`}>
                 HEALTHCARE
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links (Compact Multi-Dropdown Architecture) */}
           <div className="hidden xl:flex items-center gap-1">
-            {navLinks.map((link) => {
+            {primaryDesktopLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-3 py-2 text-xs font-bold rounded-lg transition-all duration-200 ${
+                  className={`px-3 py-2 text-xs font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
                     isActive
                       ? 'bg-emerald-accent/10 text-emerald-accent font-extrabold'
                       : !isScrolled && isHomePage
@@ -132,6 +155,49 @@ export default function Header() {
                 </Link>
               );
             })}
+
+            {/* Hover-Triggered Secondary Dropdown */}
+            <div className="relative group px-3 py-2 text-xs font-bold rounded-lg cursor-pointer transition-all duration-200 text-slate-600 hover:bg-slate-100/10">
+              <span className={`whitespace-nowrap flex items-center gap-1 ${
+                !isScrolled && isHomePage ? 'text-slate-100 group-hover:text-emerald-accent' : 'text-slate-600 group-hover:text-medical-blue'
+              }`}>
+                Explore More <span className="text-[9px] opacity-70">▼</span>
+              </span>
+              
+              {/* Dropdown Container */}
+              <div className="absolute left-0 mt-2 w-52 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 origin-top-left z-50 p-1.5">
+                {secondaryDesktopLinks.map((subLink) => {
+                  const isSubActive = location.pathname === subLink.path;
+                  return (
+                    <Link
+                      key={subLink.path}
+                      to={subLink.path}
+                      className={`block px-4 py-2.5 text-xs rounded-lg transition-colors text-left ${
+                        isSubActive 
+                          ? 'bg-emerald-accent/10 text-emerald-accent font-bold' 
+                          : 'text-slate-600 hover:bg-slate-50 hover:text-emerald-accent'
+                      }`}
+                    >
+                      {subLink.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Anchor Dropdown Split Boundary for Contact Us */}
+            <Link
+              to="/contact"
+              className={`px-3 py-2 text-xs font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+                location.pathname === '/contact'
+                  ? 'bg-emerald-accent/10 text-emerald-accent font-extrabold'
+                  : !isScrolled && isHomePage
+                    ? 'hover:bg-white/10 hover:text-white text-slate-100'
+                    : 'hover:bg-slate-100 hover:text-medical-blue text-slate-600'
+              }`}
+            >
+              Contact Us
+            </Link>
           </div>
 
           {/* Action Button & Menu Button */}
@@ -147,7 +213,7 @@ export default function Header() {
               Book Appointment
             </Link>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`xl:hidden p-2 rounded-lg transition-colors ${
@@ -162,7 +228,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Navigation Drawer (Renders all 12 items comprehensively) */}
         <div className={`fixed inset-0 z-40 bg-medical-dark transition-all duration-300 xl:hidden ${
           isMobileMenuOpen 
             ? 'opacity-100 translate-x-0' 
@@ -170,7 +236,7 @@ export default function Header() {
         }`} style={{ top: '0px', height: '100vh' }}>
           <div className="flex flex-col h-full bg-white text-slate-800 p-6 pt-24 overflow-y-auto">
             
-            {/* Modified Mobile Drawer Logo Top Bar */}
+            {/* Mobile Drawer Top Heading Line */}
             <div className="absolute top-6 left-6 right-6 flex justify-between items-center border-b border-slate-100 pb-4">
               <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsMobileMenuOpen(false)}>
                 <img 
@@ -191,9 +257,9 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Links */}
+            {/* Scrollable Mobile Link Loop */}
             <div className="flex flex-col gap-1 mt-6">
-              {navLinks.map((link) => {
+              {allNavLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
                   <Link
@@ -213,7 +279,7 @@ export default function Header() {
               })}
             </div>
 
-            {/* Buttons */}
+            {/* Mobile Footer Action Handles */}
             <div className="mt-8 space-y-4 border-t border-slate-100 pt-6">
               <Link
                 to="/appointment"

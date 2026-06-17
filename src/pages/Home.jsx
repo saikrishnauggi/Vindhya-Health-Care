@@ -21,7 +21,9 @@ import {
 import HeroSlider from '../components/HeroSlider';
 import DepartmentCard from '../components/DepartmentCard';
 import DoctorCard from '../components/DoctorCard';
-
+import outdoor4 from '../assets/outdoor4.jpg';
+import DiabeticRetinopathy from '../assets/DiabeticRetinopathy.png';
+import ICL from '../assets/ICL.png';
 import { DEPARTMENTS, DOCTORS, TESTIMONIALS, BLOG_POSTS } from '../data/mockData';
 
 // Custom Auto-Increment Stat Counter
@@ -82,14 +84,14 @@ export default function Home() {
     {
       id: 'diabetic-retinopathy',
       name: 'Diabetic Retinopathy',
-      image: 'https://images.unsplash.com/photo-1504813184591-015578c17d25?q=80&w=600&auto=format&fit=crop',
+      image: DiabeticRetinopathy,
       desc: 'Early detection, laser treatments, and injections to manage diabetes-related damage to the retina.',
       features: ['Micro-Aneurysm Detection', 'Targeted Laser Treatments', 'Anti-VEGF Injections']
     },
     {
       id: 'lasik',
       name: 'LASIK & ICL Surgery',
-      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop',
+      image: ICL,
       desc: 'Experience freedom from glasses with advanced laser vision correction and implantable contact lenses tailored to your eyes.',
       features: ['Spectacle-Free Correction', 'Implantable Contact Lenses', 'Custom Wavefront Tracking']
     }
@@ -183,7 +185,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-medical-sky/20 to-emerald-accent/20 rounded-3xl -rotate-3 scale-102"></div>
               <img 
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800" 
+                src={outdoor4}
                 alt="Eye Clinic Consultation" 
                 className="w-full h-[350px] md:h-[450px] object-cover rounded-3xl shadow-lg relative z-10"
               />

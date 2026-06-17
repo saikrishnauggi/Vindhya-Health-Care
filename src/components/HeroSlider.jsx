@@ -3,7 +3,7 @@ import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaPhoneAlt, FaHeartbeat } from 'react-icons/fa';
-import hospitalpic from '../assets/hospitalpic.jpg';
+import outdoor4 from '../assets/outdoor4.jpg';
 import advancedtech from '../assets/advancedtech.jpg';
 import infra from '../assets/infra.jpg';
 import emergency from '../assets/emergency.jpg';
@@ -17,7 +17,7 @@ import 'swiper/css/effect-fade';
 export default function HeroSlider() {
   const slides = [
     {
-      image: hospitalpic,
+      image: outdoor4,
       tagline: "VINDHYA HEALTHCARE",
       title: "World-Class Medical Excellence",
       description: "Providing compassionate, state-of-the-art medical services with advanced diagnostic facilities and top-tier clinical outcomes.",

@@ -4,6 +4,8 @@ import { FaHistory, FaBullseye, FaHeart, FaRibbon, FaAward, FaHospital, FaEye } 
 // 1. IMPORT YOUR BACKGROUND IMAGE ASSET WITH THE CORRECT EXTENSION
 import vindhyaBg from '../assets/image_9e2966.jpeg';
 import equipment from '../assets/equipment1.jpg';
+import operation from '../assets/operation.jpg';
+import operation3 from '../assets/operation3.jpg';
 
 export default function About() {
   const milestones = [
@@ -237,7 +239,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
-              <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=500" alt="OT" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
+              <img src={operation3} alt="OT" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
                 <span className="text-white font-bold text-sm">Sterile Ophthalmic Operation Theaters</span>
               </div>
@@ -249,7 +251,7 @@ export default function About() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
-              <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=500" alt="Suites" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
+              <img src={operation} alt="Suites" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
                 <span className="text-white font-bold text-sm">In-House Vision Studio &amp; Refractive Labs</span>
               </div>

@@ -5,8 +5,36 @@ import operation from '../assets/operation.jpg';
 import emergency from '../assets/emergency.jpg';
 import operation3 from '../assets/operation3.jpg';
 import advancedtech from '../assets/advancedtech.jpg';
-
+import equipment3 from '../assets/equipment3.jpg';
+import patientbed1 from '../assets/patientbed1.jpg';
+import patientbed2 from '../assets/patientbed2.jpg';
+import patientbed5 from '../assets/patientbed5.jpg';
+import patientbed8 from '../assets/patientbed8.jpg';
+import outdoor1 from '../assets/outdoor1.jpg';
+import outdoorpatientblock from '../assets/outdoorpatientblock.jpg';
+import reception4 from '../assets/reception4.jpg';
+import reception7 from '../assets/reception7.jpg';
+import waitinghall2 from '../assets/waitinghall2.jpg';
+import eyeglasses1 from '../assets/eyeglasses1.jpg';
+import eyeglasses2 from '../assets/eyeglasses2.jpg';
+import Glaucoma from '../assets/glaucoma.png';
+import diabetic from '../assets/diabetic.png';
 export const DEPARTMENTS = [
+  {
+    id: "general-medicine",
+    name: "General Medicine & Triage Desk",
+    icon: "FaUserMd",
+    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600",
+    description: "Not sure which doctor to see? Book an initial evaluation with our general medicine desk for proper diagnostic routing.",
+    detailedDescription: "The General Medicine and Primary Consultation unit acts as the primary health evaluation layer for Vindhya Health Care. If you are uncertain about the root cause of your symptoms, our general practitioners will run baseline checks, analyze vitals, provide primary diagnoses, and route you directly to the correct specialized expert.",
+    services: [
+      "Primary Clinical Consultations & Baseline Vitals Audit",
+      "Symptom Evaluation and Multi-Specialty Department Routing",
+      "Routine Health Screenings and Diagnostic Lab Order Setup",
+      "Chronic Health Condition Monitoring (Hypertension, Blood Sugar Base)",
+      "General Wellness Consultations & Preventive Healthcare Guidelines"
+    ]
+  },
   {
     id: "gynecology-obstetrics",
     name: "Gynecology, Obstetrics & Fertility",
@@ -222,6 +250,23 @@ export const DOCTORS = [
     ]
   },
   {
+    id: "dr-general-triage",
+    name: "General Medicine Desk (Unsure of Specialist)",
+    photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400",
+    qualification: "M.B.B.S / Consultant Physicians",
+    departmentId: "general-medicine",
+    departmentName: "General Medicine & Triage Desk",
+    specialization: "Primary Healthcare & Specialist Allocation Specialist",
+    experience: "10+ Years",
+    timings: "Mon - Sat: 09:00 AM - 08:00 PM",
+    bio: "Our General Medicine Desk is staffed by experienced practitioners dedicated to helping patients who are uncertain about their clinical symptoms. We check your health baseline and connect you directly with the exact gynaecology, orthopaedic, or eye surgeon you require.",
+    attachments: [
+      "Comprehensive Primary Physical Assessment Models",
+      "Fast-Track Referral Channels into Speciality Clinical Units",
+      "Dedicated to smooth, stress-free care navigation for new patients"
+    ]
+  },
+  {
     id: "dr-anand-vardhan",
     name: "Dr. Anand Vardhan",
     photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
@@ -356,11 +401,23 @@ export const BLOG_POSTS = [
     id: "diabetic-retinopathy-guide",
     title: "Preserving Vision with Diabetes: Retinal Screening Updates",
     category: "Medical Awareness",
-    author: "Dr. Anand Vardhan",
+    author: "Dr. Navneeth Servey",
     date: "May 24, 2026",
-    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600",
+    image: diabetic,
     excerpt: "Understand how blood sugar spikes impact weak retinal capillaries and learn why routine dilated fundus tracking arrests progressive vision damage.",
-    content: "Diabetic Retinopathy remains a primary indicator for acquired vision limitations. High systemic glucose imbalances gradually weaken retinal capillary structures, causing micro-aneurysms or fluid leakage inside the macula. Because initial stages display zero pain or blur, regular eye screenings are critical. In this detailed article, Dr. Anand Vardhan maps out the preventative roles of OCT cross-sections, Anti-VEGF medical paths, and micro-surgical options used to secure vascular integrity."
+    content: `The primary clinical challenge with diabetic retinopathy is its asymptomatic nature during early stages. A patient can comfortably maintain normal vision while micro-aneurysms, capillary blockages, and retinal ischemia actively accumulate. Waiting for noticeable symptoms—such as floating dark spots, blurred central text, or sudden vision fluctuations—frequently means catching the pathology only after significant structural damage has established itself.
+
+    Loss of Pericyte Support: High ambient sugar leads to the selective loss of pericytes—the structural guard cells that wrap around and stabilize microscopic blood vessels.
+
+    Micro-Aneurysm Formation: Deprived of cell support, capillary walls thin and balloon outward into tiny, fragile pouches.
+
+    Capillary Occlusion and Ischemia: As these weak pouches rupture or clot, the surrounding capillary networks begin to shut down entirely. This blocks vital blood flow, starving sections of the retina of oxygen and nutrients—a silent state known as retinal ischemia.
+
+    The Angiogenic Switch (VEGF Overdrive): In a desperate bid to survive the suffocating lack of oxygen, the starved retinal tissue releases a chemical distress signal called Vascular Endothelial Growth Factor (VEGF). VEGF's job is to stimulate new blood vessel growth to restore oxygen flow, but in the diabetic eye, this mechanism backfires.
+
+    Neovascularization and Catastrophic Failure: Induced by VEGF, a wave of abnormal, highly fragile new blood vessels begins to sprout across the surface of the retina. Lacking tight cellular junctions, these new sprouts leak fluid and blood constantly, leading to vitreous hemorrhages (bleeding into the eye's gel) or tractional retinal detachment, where scar tissue physically pulls the retina away from the back of the eye.
+
+    Clinical Takeaway: Because the macular zone—responsible for sharp, central vision—can remain untouched until the late stages of this cascade, annual dilated fundus examinations remain the only reliable clinical window to catch and arrest diabetic retinopathy before irreversible structural damage occurs.`
   },
   {
     id: "glaucoma-silent-thief",
@@ -368,20 +425,41 @@ export const BLOG_POSTS = [
     category: "Health Tips",
     author: "Dr. Smriti Saxena",
     date: "June 02, 2026",
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600",
+    image: Glaucoma,
     excerpt: "High intraocular pressure can slowly restrict optic nerve fibres. Learn to read tracking indicators before peripheral visual activity drops.",
-    content: "Glaucoma is often called the silent thief of sight because central vision remains intact while peripheral field limits are slowly compromised. The condition stems from fluid drain path blocks increasing internal pressure configurations on the optic nerve. Dr. Smriti Saxena emphasizes the value of regular automated visual perimetry and advanced SLT laser approaches used to manage ocular pressures safely before irreversible optic disc modifications settle."
+    content: `Glaucoma is often called the silent thief of sight because central vision remains entirely intact while peripheral field limits are slowly, unnoticeably compromised. The pathology centers around a structural pressure mismatch within the eye's anterior chamber that ultimately starves and destroys the optic nerve. 
+
+    The Mechanics of Fluid Dynamics: The eye continuously produces a clear fluid called aqueous humor to nourish its front structures. In a healthy eye, this fluid drains out at an equal rate through a microscopic meshwork (the trabecular meshwork) located at the angle where the iris and cornea meet.
+
+    The Drainage Blockage: In open-angle glaucoma, this drainage system becomes microscopicly clogged over time. While fluid production remains steady, the exit path is restricted, causing fluid to back up. This fluid accumulation drives up the Intraocular Pressure (IOP).
+
+    Optic Nerve Compression: The elevated IOP creates mechanical stress and restricts micro-capillary blood flow at the back of the eye, specifically hitting the optic nerve head (optic disc). This chronic pressure slowly suffocates and kills individual nerve fibers.
+
+    Periphery-First Vision Loss: Because the nerve fibers responsible for side vision are located on the outer bundles of the optic nerve, peripheral vision is always the first to go. A patient can comfortably read the smallest line on an eye chart while losing chunks of their side vision without realizing it.
+
+    Clinical Intervention: Dr. Smriti Saxena emphasizes that relying on 'blurry vision' as a warning sign is a dangerous strategy. Early detection requires regular automated visual perimetry (visual field testing) to map out early blind spots, alongside advanced Selective Laser Trabeculoplasty (SLT) or pressure-lowering drops to open drainage pathways and manage ocular pressures safely before irreversible optic disc modifications settle.`
   }
 ];
 
 export const GALLERY_ITEMS = [
-  { id: 1, category: "infrastructure", title: "Vindhya Eye Care Facade", image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=600" },
-  { id: 2, category: "infrastructure", title: "Premium Patient Vision Lounge", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600" },
+  { id: 1, category: "infrastructure", title: "Vindhya Eye Care Outdoor View", image: outdoor1 },
+  { id: 2, category: "infrastructure", title: "In Patient and OT Block", image: outdoorpatientblock },
   { id: 3, category: "equipment", title: "Computerized Refraction Suite", image: equipment1 },
   { id: 4, category: "operation", title: "Precision Microsurgery Operating Flow", image: operation },
   { id: 5, category: "operation", title: "Emergency Trauma Micro-repair", image: emergency },
   { id: 6, category: "operation", title: "Sterile Laser Ablation Suite", image: operation3 },
   { id: 7, category: "infrastructure", title: "Specialty Diagnostic Center", image: advancedtech },
+  /* { id: 8, category: "events", title: "Free Blindness Prevention Mobile Camp", image: cardiacCampImg }, */
+  { id: 9, category: "infrastructure", title: "Optech Motorized Ophthalmic Refraction Unit", image: equipment3 },
+  { id: 10, category: "infrastructure", title: "Patient Recovery & Observation Beds", image: patientbed1 },
+  { id: 11, category: "infrastructure", title: "Post-Operative Care & Recovery Area", image: patientbed2 },
+  { id: 12, category: "infrastructure", title: "Advanced Patient Observation Beds", image: patientbed5 },
+  { id: 13, category: "infrastructure", title: "State-of-the-Art Patient Recovery Beds", image: patientbed8 },
+  { id: 14, category: "infrastructure", title: "Hospital Reception", image: reception4 },
+  { id: 15, category: "infrastructure", title: "Hospital Reception & Patient Registration", image: reception7 },
+  { id: 16, category: "infrastructure", title: "Spacious Waiting Hall for Patients", image: waitinghall2 },
+  { id: 17, category: "opticals", title: "Premium Eyeglasses Collection", image: eyeglasses1 },
+  { id: 18, category: "opticals", title: "Designer Eyewear Frames & Lenses", image: eyeglasses2 },
   { id: 8, category: "events", title: "Free Blindness Prevention Mobile Camp", image: cardiacCampImg }
 ];
 
