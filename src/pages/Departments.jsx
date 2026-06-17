@@ -2,90 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 
-export default function Departments() {
-  // Direct embedded Eye Care dataset transformation frame
-  const EYE_DEPARTMENTS = [
-    {
-      id: 'cataract',
-      name: 'Cataract Services',
-      icon: 'FaEye',
-      image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=600&auto=format&fit=crop',
-      detailedDescription: 'Our Cataract Department specializes in advanced clear lens restoration using high-precision computer-guided layouts. We offer stitch-less micro-incision cataract surgery (MICS) alongside state-of-the-art AI planning for custom premium intraocular lens (IOL) mapping.',
-      services: [
-        'Micro-Incision Cataract Surgery (MICS)',
-        'AI-guided Premium Intraocular Lens (IOL) Custom Selection',
-        'Phacoemulsification Systems with Navigational Guidance',
-        'Post-operative Visual Activity Tracking Panels'
-      ]
-    },
-    {
-      id: 'glaucoma',
-      name: 'Glaucoma Management',
-      icon: 'FaEyeSlash',
-      image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600&auto=format&fit=crop',
-      detailedDescription: 'Known as the silent progressive vision constraint, glaucoma requires detailed early tracking. Our wing uses advanced digital metrics to monitor changes in intraocular pressure and map optic nerve layer health for proactive vision protection.',
-      services: [
-        'Automated Visual Field Plotting Analysis (Perimetry)',
-        'High-Resolution Optical Coherence Tomography (OCT)',
-        'Targeted Laser Trabeculoplasty Intervention Paths',
-        'Continuous Intraocular Pressure Management Matrices'
-      ]
-    },
-    {
-      id: 'retina',
-      name: 'Retina & Vitreous Wing',
-      icon: 'FaProcedures',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop',
-      detailedDescription: 'Specialized medical and surgical management for all posterior segment eye conditions. This department handles complex retinal detachments, age-related macular changes, and microvascular anomalies inside a modern sterile setup.',
-      services: [
-        'Vitreoretinal Micro-Surgical Management Layouts',
-        'Digital Fundus Fluorescein Angiography Panels',
-        'Intraocular Anti-VEGF Therapeutic Injections',
-        'Retinal Detachment Emergency Procedures'
-      ]
-    },
-    {
-      id: 'refractive-lasik',
-      name: 'LASIK & Refractive Studio',
-      icon: 'FaGlasses',
-      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop',
-      detailedDescription: 'Experience complete freedom from glasses and contact lenses. Our refractive suite coordinates wavefront-guided, completely blade-free custom laser transformations configured precisely to the curvature rules of your eye.',
-      services: [
-        'Custom Blade-Free Wavefront LASIK Correction',
-        'Implantable Contact Lens (ICL) Alternative Sizing',
-        'Precision Corneal Topography Structural Diagnostics',
-        'Refractive Error Mapping Panels for Young Adults'
-      ]
-    },
-    {
-      id: 'pediatric',
-      name: 'Pediatric Ophthalmology',
-      icon: 'FaChild',
-      image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
-      detailedDescription: 'Dedicated pediatric environments designed specifically for children. We address childhood squint corrections, structural layout developments, refractive balances, and lazy eye anomalies using child-friendly care techniques.',
-      services: [
-        'Amblyopia (Lazy Eye) Custom Muscle Calibration Training',
-        'Pediatric Refractive Prescription Evaluation Tracks',
-        'Surgical Squint Strabismus Muscle Alignments',
-        'Congenital Eye Disorder Diagnostic Imaging Screenings'
-      ]
-    },
-    {
-      id: 'cornea',
-      name: 'Cornea & Ocular Surface Center',
-      icon: 'FaStethoscope',
-      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600&auto=format&fit=crop',
-      detailedDescription: 'Comprehensive monitoring and advanced therapeutic tracking for structural corneal disorders, external trauma damage, tracking infections, and specialized transplant protocols.',
-      services: [
-        'Full & Partial Thickness Corneal Transplantation (Keratoplasty)',
-        'Advanced Corneal Collagen Cross-Linking (C3R) for Keratoconus',
-        'Severe Dry Eye Intensive Ocular Surface Reconstruction',
-        'Pterygium Excision with Automated Auto-Graft Scaling'
-      ]
-    }
-  ];
+// 1. Import your dynamic mock data array here (adjust the path if necessary)
+import { DEPARTMENTS } from '../data/mockData'; 
 
-  const [activeDept, setActiveDept] = useState(EYE_DEPARTMENTS[0].id);
+export default function Departments() {
+  // Use the imported DEPARTMENTS array dynamically for the initial state
+  const [activeDept, setActiveDept] = useState(DEPARTMENTS[0]?.id || '');
   const location = useLocation();
 
   // Scroll to hash element if target id exists in URL
@@ -116,11 +38,11 @@ export default function Departments() {
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-3xl mx-auto relative z-10">
           <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/15 px-3 py-1.5 rounded-full">
-            Clinical Ophthalmic Units
+            Clinical Units
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Eye Care Departments</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Medical Departments</h1>
           <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Explore our specialized vision and microsurgical divisions. Equipped with top-tier eye diagnostic arrays and staffed by board-certified ophthalmologists.
+            Explore our specialized divisions. Equipped with top-tier diagnostics arrays and staffed by board-certified healthcare professionals.
           </p>
         </div>
       </div>
@@ -132,9 +54,10 @@ export default function Departments() {
             
             {/* Left Column Sticky Menu */}
             <aside className="w-full lg:w-80 lg:sticky lg:top-24 bg-white border border-slate-100 rounded-3xl p-5 shadow-sm max-h-[80vh] overflow-y-auto hidden lg:block">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-2">Eye Specialties</h3>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-2">Specialties</h3>
               <div className="flex flex-col gap-1">
-                {EYE_DEPARTMENTS.map((dept) => {
+                {DEPARTMENTS.map((dept) => {
+                  // Dynamically resolve the icon component from string mapping
                   const Icon = FaIcons[dept.icon] || FaIcons.FaRegHospital;
                   const isActive = activeDept === dept.id;
                   return (
@@ -157,7 +80,8 @@ export default function Departments() {
 
             {/* Right Column Detailed Content scroll view */}
             <div className="flex-1 space-y-12 w-full">
-              {EYE_DEPARTMENTS.map((dept) => {
+              {DEPARTMENTS.map((dept) => {
+                // Dynamically resolve the icon component from string mapping
                 const Icon = FaIcons[dept.icon] || FaIcons.FaRegHospital;
                 return (
                   <div 
@@ -173,7 +97,7 @@ export default function Departments() {
                         </div>
                         <div>
                           <h2 className="text-xl font-bold text-slate-800">{dept.name}</h2>
-                          <span className="text-[10px] text-slate-450 uppercase font-semibold tracking-wider">Ophthalmic Division</span>
+                          <span className="text-[10px] text-slate-450 uppercase font-semibold tracking-wider">Clinical Division</span>
                         </div>
                       </div>
                       
@@ -213,7 +137,7 @@ export default function Departments() {
                           {dept.detailedDescription}
                         </p>
 
-                        {/* List of medical eye care services loop template */}
+                        {/* List of medical services loop template */}
                         <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3.5">Specialized Medical Services:</h4>
                         <ul className="space-y-2.5 text-xs text-slate-500">
                           {dept.services.map((srv, idx) => (

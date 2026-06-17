@@ -8,6 +8,38 @@ import advancedtech from '../assets/advancedtech.jpg';
 
 export const DEPARTMENTS = [
   {
+    id: "gynecology-obstetrics",
+    name: "Gynecology, Obstetrics & Fertility",
+    icon: "FaVenus",
+    image: "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=600",
+    description: "Comprehensive women's healthcare focusing on high-risk obstetrics, laparoscopic surgeries, and reproductive fertility solution pathways.",
+    detailedDescription: "The Gynecology & Obstetrics Department at Vindhya Health Care delivers compassionate, end-to-end care for women across all stages of life. From early prenatal diagnostics and high-risk pregnancy management to modern minimally invasive laparoscopic procedures and comprehensive fertility evaluations, our specialists combine clinical excellence with state-of-the-art monitoring technologies.",
+    services: [
+      "Comprehensive High-Risk Obstetric Care and Personalized Delivery Mapping",
+      "Advanced Fertility Evaluations and Reproductive Endocrinology Pathways",
+      "Minimally Invasive Gynecological Laparoscopic & Hysteroscopic Surgeries",
+      "PCOS, Endometriosis, and Menopause Clinical Management Frameworks",
+      "Pre-conceptional Counseling, Genetic Screening, and Antenatal Care Grids",
+      "Preventive Cancer Screenings including Pap Smears and HPV Colposcopy"
+    ]
+  },
+  {
+    id: "orthopedics-rheumatology",
+    name: "Orthopedic Surgery & Rheumatology",
+    icon: "FaBone",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600",
+    description: "Advanced joint replacements, minimally invasive fracture reconstructions, and clinical management for chronic autoimmune rheumatic conditions.",
+    detailedDescription: "Our Orthopedics and Rheumatology Division offers international-standard surgical and therapeutic solutions for musculoskeletal and chronic joint conditions. Specializing in advanced joint reconstructions (arthroplasty), trauma care, and complex clinical rheumatology workflows, the department provides comprehensive recovery models for arthritis, sports injuries, and degenerative bone health issues.",
+    services: [
+      "Total and Partial Joint Replacements (Knee, Hip, and Shoulder Arthroplasty)",
+      "Comprehensive Rheumatology Screening Panels for Autoimmune Disorders",
+      "Minimally Invasive Arthroscopic Surgeries for Sports and Ligament Tears",
+      "Complex Fracture Management, Trauma Reconstruction, and Bone Grafting",
+      "Intra-articular PRP and Viscosupplementation Injections for Osteoarthritis",
+      "Advanced Pediatric Orthopedics and Congenital Bone Alignment Corrections"
+    ]
+  },
+  {
     id: "cataract",
     name: "Cataract Services",
     icon: "FaEye",
