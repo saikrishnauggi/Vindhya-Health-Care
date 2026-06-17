@@ -17,7 +17,7 @@ import reception7 from '../assets/reception7.jpg';
 import waitinghall2 from '../assets/waitinghall2.jpg';
 import eyeglasses1 from '../assets/eyeglasses1.jpg';
 import eyeglasses2 from '../assets/eyeglasses2.jpg';
-import Glaucoma from '../assets/glaucoma.png';
+import glaucoma from '../assets/glaucoma.png';
 import diabetic from '../assets/diabetic.png';
 export const DEPARTMENTS = [
   {
@@ -425,7 +425,7 @@ export const BLOG_POSTS = [
     category: "Health Tips",
     author: "Dr. Smriti Saxena",
     date: "June 02, 2026",
-    image: Glaucoma,
+    image: glaucoma,
     excerpt: "High intraocular pressure can slowly restrict optic nerve fibres. Learn to read tracking indicators before peripheral visual activity drops.",
     content: `Glaucoma is often called the silent thief of sight because central vision remains entirely intact while peripheral field limits are slowly, unnoticeably compromised. The pathology centers around a structural pressure mismatch within the eye's anterior chamber that ultimately starves and destroys the optic nerve. 
 
