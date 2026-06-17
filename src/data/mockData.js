@@ -139,17 +139,55 @@ export const DEPARTMENTS = [
 
 export const DOCTORS = [
   {
-    id: "dr-rajeshwari-nair",
-    name: "Dr. Rajeshwari Nair",
-    photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400",
-    qualification: "MS, DNB (Ophthalmology), Fellowship in MICS",
-    departmentId: "cataract",
-    departmentName: "Cataract Services",
-    specialization: "Micro-Incision Cataract Surgeon",
-    experience: "18+ Years",
-    timings: "Mon - Sat: 09:00 AM - 01:00 PM",
-    bio: "Dr. Rajeshwari Nair is a highly acclaimed ophthalmic surgeon who has successfully completed over 15,000 phacoemulsification surgeries. She specializes in premium multi-focal and toric intraocular lens micro-alignments under computer guidance.",
-    achievements: ["Fellow of the International Council of Ophthalmology (FICO)", "Best Surgical Excellence Ribbon at National Ophthalmic Summit 2024", "Pioneered automated AI-assisted biometry configurations locally"]
+    "id": "dr-navneeth-servey",
+    "name": "Dr. Navneeth Servey",
+    "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
+    "qualification": "M.B.B.S (Osm), M.S. Ophthal (GMC, Sarojini Devi Eye Hospital), Fellow in Phaco Surgery (Aravind Eye Hospital), Fellow in Refractive & Lasik Surgeries",
+    "departmentId": "ophthalmology",
+    "departmentName": "Ophthalmology & Laser Eye Surgery",
+    "specialization": "Consultant Ophthalmic Surgeon, Phaco & Refractive Specialist",
+    "experience": "12+ Years",
+    "timings": "Mon - Sat: 10:00 AM - 02:00 PM, 05:00 PM - 08:00 PM",
+    "bio": "Dr. Navneeth Servey is a highly skilled Consultant Ophthalmic Surgeon specializing in advanced Phacoemulsification, Refractive, and Lasik surgeries. With extensive training from premier institutes like Sarojini Devi Eye Hospital and Aravind Eye Hospital, he delivers precise vision correction and advanced eye care.",
+    "attachments": [
+      "Fellow in Phaco Surgery - Aravind Eye Hospital, Coimbatore",
+      "Fellow in Refractive & Lasik Surgeries - New Vision Laser Centre, Gujrat",
+      "Former Senior Surgeon & Faculty at E.S.I.C. MCH., Sanatnagar"
+    ]
+  },
+  {
+    "id": "dr-tejeswini-nese",
+    "name": "Dr. Tejeswini Nese",
+    "photo": "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=400",
+    "qualification": "M.B.B.S (Osm), M.S. OBG (Gandhi)",
+    "departmentId": "gynecology",
+    "departmentName": "Gynecology & Obstetrics",
+    "specialization": "Gynaecologist, Obstetrician & Fertility Specialist",
+    "experience": "10+ Years",
+    "timings": "Mon - Sat: 11:00 AM - 03:00 PM, 06:00 PM - 08:30 PM",
+    "bio": "Dr. Tejeswini Nese is a dedicated Gynaecologist, Obstetrician, and Fertility Specialist with extensive postgraduate training from the prestigious Gandhi Medical College. She specializes in high-risk pregnancies, reproductive health issues, and comprehensive infertility evaluations.",
+    "attachments": [
+      "Alumnus of Osmania Medical College and Gandhi Medical College",
+      "Expertise in High-Risk Obstetrics and Laparoscopic Gynecology",
+      "Dedicated advocate for comprehensive women's reproductive health and wellness"
+    ]
+  },
+  {
+    "id": "dr-rahul-kuraganti",
+    "name": "Dr. Rahul Kuraganti",
+    "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400",
+    "qualification": "M.B.B.S (Osm), M.S. Ortho (Osm), Fellow in Arthroplasty, Fellow Orthopaediae (Germany), PGP Rheumatology (Johns Hopkins, USA)",
+    "departmentId": "orthopedics",
+    "departmentName": "Orthopedic Surgery & Rheumatology",
+    "specialization": "Consultant Orthopaedic Surgeon & Rheumatology Specialist",
+    "experience": "14+ Years",
+    "timings": "Mon - Sat: 09:30 AM - 01:30 PM, 05:30 PM - 08:00 PM",
+    "bio": "Dr. Rahul Kuraganti is a globally trained Consultant Orthopaedic Surgeon specializing in joint replacements, arthroplasty, and clinical rheumatology. His international training in Germany and clinical credentials from Johns Hopkins university allow him to handle complex bone, joint, and chronic rheumatic disorders effectively.",
+    "attachments": [
+      "Fellow Orthopaediae - Bruder Krankenhaus, Germany",
+      "Post Graduate Program in Rheumatology - Johns Hopkins University, USA",
+      "Specialist in Advanced Arthroplasty and Minimally Invasive Joint Replacements"
+    ]
   },
   {
     id: "dr-anand-vardhan",
