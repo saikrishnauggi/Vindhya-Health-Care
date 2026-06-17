@@ -13,15 +13,16 @@ import {
   FaArrowRight, 
   FaQuoteLeft, 
   FaStar,
-  FaPhoneAlt
+  FaPhoneAlt,
+  FaGlasses,
+  FaEye
 } from 'react-icons/fa';
 
 import HeroSlider from '../components/HeroSlider';
 import DepartmentCard from '../components/DepartmentCard';
 import DoctorCard from '../components/DoctorCard';
-import HealthPackageCard from '../components/HealthPackageCard';
 
-import { DEPARTMENTS, DOCTORS, HEALTH_PACKAGES, TESTIMONIALS, BLOG_POSTS } from '../data/mockData';
+import { DEPARTMENTS, DOCTORS, TESTIMONIALS, BLOG_POSTS } from '../data/mockData';
 
 // Custom Auto-Increment Stat Counter
 function StatCounter({ target, label, suffix = '', icon }) {
@@ -67,8 +68,32 @@ export default function Home() {
   // Select featured entities
   const featuredDepts = DEPARTMENTS.slice(0, 6);
   const featuredDocs = DOCTORS.slice(0, 4);
-  const featuredPkgs = HEALTH_PACKAGES.slice(0, 3);
   const latestBlogs = BLOG_POSTS.slice(0, 3);
+
+  // Solis Eye Care Advanced Treatments dataset for Section 7 grid preview
+  const featuredEyeTreatments = [
+    {
+      id: 'cataract',
+      name: 'Cataract Surgery',
+      image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=600&auto=format&fit=crop',
+      desc: 'Restore clear vision with advanced cataract surgeries using AI-assisted and navigation-guided systems.',
+      features: ['AI-Assisted Surgical Mapping', 'Navigation-Guided Systems', 'Clear Vision Restoration']
+    },
+    {
+      id: 'diabetic-retinopathy',
+      name: 'Diabetic Retinopathy',
+      image: 'https://images.unsplash.com/photo-1504813184591-015578c17d25?q=80&w=600&auto=format&fit=crop',
+      desc: 'Early detection, laser treatments, and injections to manage diabetes-related damage to the retina.',
+      features: ['Micro-Aneurysm Detection', 'Targeted Laser Treatments', 'Anti-VEGF Injections']
+    },
+    {
+      id: 'lasik',
+      name: 'LASIK & ICL Surgery',
+      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop',
+      desc: 'Experience freedom from glasses with advanced laser vision correction and implantable contact lenses tailored to your eyes.',
+      features: ['Spectacle-Free Correction', 'Implantable Contact Lenses', 'Custom Wavefront Tracking']
+    }
+  ];
 
   // Testimonial Swiper index
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -82,14 +107,15 @@ export default function Home() {
   };
 
   const whyChooseUsData = [
-    { title: "Expert Doctors", desc: "Consult board-certified specialists with international clinical experience.", icon: <FaUserMd /> },
-    { title: "Modern Technology", desc: "Equipped with advanced diagnostic units (3T Silent MRI) and robotic surgery.", icon: <FaMicroscope /> },
-    { title: "24/7 Emergency Care", desc: "Instant clinical triage, advanced life-support ambulances, and fast ER routes.", icon: <FaClock /> },
-    { title: "Patient-Centered Care", desc: "Dedicated attendants, spacious executive recovery rooms, and transparent billings.", icon: <FaShieldAlt /> },
-    { title: "Affordable Checkups", desc: "Value-focused, comprehensive health packages for preventive care.", icon: <FaMoneyBillWave /> },
-    { title: "Insurance Support", desc: "Cashless treatments supported across leading insurance providers and TPAs.", icon: <FaAward /> },
-    { title: "Advanced Equipment", desc: "Laminar Flow Operation Theatres with cutting-edge HEPA air filtration.", icon: <FaHospital /> },
-    { title: "Experienced Staff", desc: "Compassionate, fully-trained nurses and diagnostics technicians.", icon: <FaUserMd /> }
+    { title: "Expert Eye Specialists", desc: "Consult board-certified ophthalmologists with specialized fellowship training.", icon: <FaUserMd /> },
+    { title: "Modern Precision Diagnostic", desc: "Equipped with ultra-high speed 3D OCT Angiography and laser diagnostic tracking.", icon: <FaMicroscope /> },
+    { title: "24/7 Ocular Emergency Care", desc: "Instant clinical triage for accidental eye injuries, trauma, or chemical burns.", icon: <FaClock /> },
+    { title: "Patient-Centered Comfort", desc: "Dedicated patient coordinators, streamlined dilated waiting zones, and clear workflows.", icon: <FaShieldAlt /> },
+    { title: "Preventative Screenings", desc: "Value-focused, comprehensive eye wellness profiles for diabetic and senior checkups.", icon: <FaMoneyBillWave /> },
+    { title: "Advanced Vision Studio", desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
+    { title: "Insurance Support", desc: "Cashless surgical processing supported across leading insurance providers and TPAs.", icon: <FaAward /> },
+    { title: "Sterile Microsurgery OTs", desc: "Dedicated operating rooms featuring vertical laminar flow systems for optimal safety.", icon: <FaHospital /> },
+    { title: "Certified Optometrists", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", icon: <FaUserMd /> }
   ];
 
   return (
@@ -101,10 +127,10 @@ export default function Home() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            <StatCounter target="500000" label="Patients Treated" suffix="+" icon={<FaUserMd />} />
-            <StatCounter target="150" label="Expert Doctors" suffix="+" icon={<FaUserMd />} />
-            <StatCounter target="15" label="Specialty Departments" suffix="+" icon={<FaHospital />} />
-            <StatCounter target="600" label="Inpatient Beds" suffix="+" icon={<FaBed />} />
+            <StatCounter target="500000" label="Visions Restored" suffix="+" icon={<FaEye />} />
+            <StatCounter target="25" label="Expert Eye Surgeons" suffix="+" icon={<FaUserMd />} />
+            <StatCounter target="8" label="Specialty Eye Wings" suffix="+" icon={<FaHospital />} />
+            <StatCounter target="50" label="Recovery Beds" suffix="+" icon={<FaBed />} />
             <StatCounter target="20" label="Years Experience" suffix="+" icon={<FaAward />} />
           </div>
         </div>
@@ -119,14 +145,14 @@ export default function Home() {
               Clinical Quality
             </span>
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-              Why Vindhya Healthcare is the Trusted Choice
+              Why Vindhya Eye Care is the Trusted Choice
             </h2>
             <p className="text-sm text-slate-500 mt-4 leading-relaxed font-light">
-              We benchmark our facilities against top global hospitals to deliver unmatched clinical accuracy, patient comfort, and successful treatments.
+              We benchmark our microsurgical facilities against top global eye institutions to deliver unmatched diagnostic precision and successful treatments.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
             {whyChooseUsData.map((item, idx) => (
               <div 
                 key={idx}
@@ -158,7 +184,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-tr from-medical-sky/20 to-emerald-accent/20 rounded-3xl -rotate-3 scale-102"></div>
               <img 
                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800" 
-                alt="Hospital Lobby" 
+                alt="Eye Clinic Consultation" 
                 className="w-full h-[350px] md:h-[450px] object-cover rounded-3xl shadow-lg relative z-10"
               />
               <div className="absolute -bottom-6 -right-6 bg-white border border-slate-100 rounded-2xl p-5 shadow-xl relative z-20 hidden sm:flex items-center gap-4 max-w-xs">
@@ -167,7 +193,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="block font-black text-base text-slate-800">NABH Accredited</span>
-                  <span className="block text-[10px] text-slate-500 font-medium leading-tight">National safety and quality hospital standards</span>
+                  <span className="block text-[10px] text-slate-500 font-medium leading-tight">National safety and quality eye hospital standards</span>
                 </div>
               </div>
             </div>
@@ -175,26 +201,26 @@ export default function Home() {
             {/* Right Copy */}
             <div className="w-full lg:w-1/2">
               <span className="text-xs font-extrabold tracking-widest text-emerald-accent uppercase bg-emerald-accent/10 px-3.5 py-1.5 rounded-full">
-                About Vindhya Healthcare
+                About Vindhya Eye Care
               </span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-                An Institution of Trust, Care, and Clinical Excellence
+                An Institution of Trust, Sight, and Microsurgical Excellence
               </h2>
               <p className="text-sm text-slate-500 mt-4 leading-relaxed font-light">
-                Founded with a mission to bring world-class healthcare to Central India, Vindhya Healthcare is a state-of-the-art multi-specialty hospital. We integrate clinical experience with the latest technological developments to offer reliable outcomes.
+                Founded with a mission to bring world-class ophthalmic treatments to the region, Vindhya Eye Care is a state-of-the-art specialty facility. We integrate global clinical experience with the latest technological diagnostic modules to offer secure visual outcomes.
               </p>
               
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 pb-8 border-b border-slate-200">
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Our Mission</h4>
                   <p className="text-xs text-slate-500 font-light leading-relaxed">
-                    To deliver premium-quality, patient-centric healthcare with empathy, ethical clinical standards, and clinical accuracy.
+                    To deliver premium-quality, patient-centric ophthalmic care with empathy, ethical clinical protocols, and precise visual corrections.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Our Vision</h4>
                   <p className="text-xs text-slate-500 font-light leading-relaxed">
-                    To be the leading choice in medical treatments, setting high standards of clinical outcomes, healthcare research, and patient safety.
+                    To be the leading center for complete vision restoration, setting outstanding parameters in refractive research, clinical metrics, and safety.
                   </p>
                 </div>
               </div>
@@ -224,17 +250,17 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-4">
             <div>
               <span className="text-xs font-extrabold tracking-widest text-emerald-accent uppercase bg-emerald-accent/10 px-3.5 py-1.5 rounded-full">
-                Clinical Departments
+                Ophthalmic Departments
               </span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-                Our Specialities
+                Our Eye Specialties
               </h2>
             </div>
             <Link 
               to="/departments" 
               className="bg-emerald-accent/10 text-emerald-accent hover:bg-emerald-accent hover:text-white font-extrabold px-5 py-3 rounded-xl text-xs transition-all flex items-center gap-1.5 shrink-0"
             >
-              View All 14 Departments <FaArrowRight size={10} />
+              View All Eye Departments <FaArrowRight size={10} />
             </Link>
           </div>
 
@@ -257,7 +283,7 @@ export default function Home() {
                 Our Medical Panel
               </span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-                Meet Our Experienced Specialists
+                Meet Our Experienced Eye Specialists
               </h2>
             </div>
             <Link 
@@ -277,25 +303,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 7 - HEALTH PACKAGES */}
+      {/* SECTION 7 - OPHTHALMIC TREATMENT & DIAGNOSIS GRID */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-extrabold tracking-widest text-emerald-accent uppercase bg-emerald-accent/10 px-3.5 py-1.5 rounded-full">
-              Preventative Care
+              Ocular Excellence
             </span>
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-              Affordable Healthcare Checkup Packages
+              Advanced Eye Care Treatments &amp; Diagnosis
             </h2>
             <p className="text-sm text-slate-500 mt-4 leading-relaxed font-light">
-              Early detection is the key to a healthy lifestyle. Book a comprehensive, customized health review that covers primary organ function tests.
+              A Center of Excellence in Eye Care for Every Stage of Life. Experience precision micro-surgeries and highly specialized diagnostics configured with modern technology layouts.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredPkgs.map((pkg) => (
-              <HealthPackageCard key={pkg.id} {...pkg} />
+            {featuredEyeTreatments.map((treatment) => (
+              <div 
+                key={treatment.id}
+                className="bg-slate-50 rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div className="aspect-[16/10] w-full bg-slate-200 overflow-hidden relative">
+                  <img 
+                    src={treatment.image} 
+                    alt={treatment.name} 
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" 
+                  />
+                  <div className="absolute top-4 left-4 bg-medical-sky text-white text-[9px] font-bold px-2.5 py-1 rounded uppercase tracking-wider flex items-center gap-1 shadow-sm">
+                    <FaEye size={10} /> Ocular Care
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-base font-extrabold text-slate-800 mb-2 group-hover:text-emerald-accent transition-colors">
+                      {treatment.name}
+                    </h3>
+                    <p className="text-xs text-slate-500 font-light leading-relaxed mb-5">
+                      {treatment.desc}
+                    </p>
+                    
+                    <div className="border-t border-slate-200/60 pt-4 mb-6">
+                      <ul className="space-y-2 text-xs text-slate-500 font-light">
+                        {treatment.features.map((feat, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent"></span>
+                            {feat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-slate-200/60 pt-4">
+                    <Link 
+                      to="/appointment"
+                      className="w-full text-center bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold py-3 rounded-xl text-xs transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                    >
+                      Book Consultation
+                    </Link>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
@@ -304,7 +375,7 @@ export default function Home() {
               to="/health-packages" 
               className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold px-6 py-3.5 rounded-xl text-xs transition-all inline-flex items-center gap-1.5"
             >
-              Compare All Checkup Packages <FaArrowRight size={10} />
+              Explore All Specialty Eye Services <FaArrowRight size={10} />
             </Link>
           </div>
 
@@ -402,14 +473,14 @@ export default function Home() {
                 Medical Insights
               </span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-                Latest Health Updates &amp; Tips
+                Latest Eye Health Updates &amp; Tips
               </h2>
             </div>
             <Link 
               to="/blog" 
               className="bg-emerald-accent/10 text-emerald-accent hover:bg-emerald-accent hover:text-white font-extrabold px-5 py-3 rounded-xl text-xs transition-all flex items-center gap-1.5 shrink-0"
             >
-              Read All Health Articles <FaArrowRight size={10} />
+              Read All Eye Care Articles <FaArrowRight size={10} />
             </Link>
           </div>
 
@@ -457,10 +528,10 @@ export default function Home() {
       <section className="bg-red-600 text-white py-12 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center relative z-10">
           <h2 className="text-xl md:text-3xl font-black uppercase tracking-wide">
-            Emergency Medical Service Available 24 Hours
+            Ocular Emergency Service Available 24 Hours
           </h2>
           <p className="text-sm text-red-200 mt-2 max-w-2xl mx-auto font-light">
-            Do not delay medical complications. If you suspect emergency symptoms, connect directly with our trauma desk.
+            Do not delay trauma complications or sudden vision drop. Connect directly with our on-call trauma desk.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a 

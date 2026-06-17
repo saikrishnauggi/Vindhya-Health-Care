@@ -23,7 +23,7 @@ export default function Doctors() {
     const deptParam = searchParams.get('dept');
     
     if (searchParam) {
-      setSearchQuery(searchParam);
+      setQuery(searchParam);
     }
     if (deptParam) {
       // Find matching department ID or name
@@ -63,11 +63,11 @@ export default function Doctors() {
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-3xl mx-auto relative z-10">
           <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/15 px-3 py-1.5 rounded-full">
-            Clinical Panel
+            Ophthalmic Panel
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Find Our Specialists</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Meet Our Eye Specialists</h1>
           <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Search and connect with experienced medical experts, board-certified surgeons, and dedicated therapists at Vindhya Healthcare.
+            Search and connect with experienced ophthalmologists, vitreo-retinal experts, corneal surgeons, and certified optometrists at Vindhya Eye Care.
           </p>
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function Doctors() {
               </span>
               <input
                 type="text"
-                placeholder="Search doctors by name or specialization..."
+                placeholder="Search by name, specialization (e.g., LASIK, Cataract)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-accent focus:ring-2 focus:ring-emerald-accent/10 text-sm placeholder-slate-400 bg-slate-50"
@@ -102,7 +102,7 @@ export default function Doctors() {
                   onChange={(e) => setSelectedDept(e.target.value)}
                   className="bg-transparent focus:outline-none font-bold pr-4 appearance-none cursor-pointer"
                 >
-                  <option value="">All Departments</option>
+                  <option value="">All Eye Departments</option>
                   {DEPARTMENTS.map((dept) => (
                     <option key={dept.id} value={dept.name}>
                       {dept.name}
@@ -119,7 +119,7 @@ export default function Doctors() {
                   onChange={(e) => setSelectedSpecialty(e.target.value)}
                   className="bg-transparent focus:outline-none font-bold pr-4 appearance-none cursor-pointer"
                 >
-                  <option value="">All Specialities</option>
+                  <option value="">All Clinical Specialities</option>
                   {specializations.map((spec, i) => (
                     <option key={i} value={spec}>
                       {spec}
@@ -149,8 +149,8 @@ export default function Doctors() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
           <div className="mb-6 flex justify-between items-center text-xs text-slate-500">
-            <span>Showing {filteredDoctors.length} Specialists</span>
-            {filteredDoctors.length === 0 && <span>No results matching filters.</span>}
+            <span>Showing {filteredDoctors.length} Eye Care Professionals</span>
+            {filteredDoctors.length === 0 && <span>No matching specialists found.</span>}
           </div>
 
           {filteredDoctors.length > 0 ? (
@@ -166,13 +166,13 @@ export default function Doctors() {
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-2">No Specialists Found</h3>
               <p className="text-xs text-slate-500 leading-relaxed font-light mb-6">
-                We couldn't find any specialist matching your search. Please adjust your keywords, search names, or select other clinical departments.
+                We couldn't find an eye care professional matching your criteria. Try adjusting your query or switching options within the eye departments list.
               </p>
               <button
                 onClick={handleReset}
                 className="bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold px-6 py-3 rounded-xl text-xs shadow-md"
               >
-                Show All Doctors
+                Show All Specialists
               </button>
             </div>
           )}

@@ -1,15 +1,203 @@
-import HealthPackageCard from '../components/HealthPackageCard';
-import { HEALTH_PACKAGES } from '../data/mockData';
-import { FaHeartbeat, FaInfoCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaInfoCircle, FaCalendarCheck, FaEye } from 'react-icons/fa';
 
 export default function HealthPackages() {
+  // Fixed and updated dataset mapping out the Solis Eye Care treatment matrix with live, verified image URLs
+  const treatmentServices = [
+    {
+      id: 'cataract',
+      name: 'Cataract Surgery',
+      image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'AI-assisted surgical mapping',
+        'Navigation-guided alignment systems',
+        'Advanced clear vision restoration',
+        'Premium intraocular lens options'
+      ],
+      description: 'Restore clear vision with advanced cataract surgeries using AI-assisted and navigation-guided systems.'
+    },
+    {
+      id: 'glaucoma',
+      name: 'Glaucoma Management',
+      // Fixed image: Ophthalmic checkup using precision medical testing machinery
+      image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Early intraocular pressure screening',
+        'Optic nerve tracking analysis',
+        'Long-term progressive control planning',
+        'Advanced targeted ocular therapies'
+      ],
+      description: 'Early diagnosis and long-term management to protect your vision from this silent, progressive condition.'
+    },
+    {
+      id: 'retina',
+      name: 'Retina & Vitreous Care',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Diabetic retinopathy management',
+        'Retinal detachment repairs',
+        'Vitreoretinal micro-surgeries',
+        'Macular health tracking panels'
+      ],
+      description: 'Comprehensive treatment for retinal and vitreous disorders, including diabetic retinopathy and retinal detachment.'
+    },
+    {
+      id: 'uvea',
+      name: 'Uvea Inflammation Clinic',
+      // Fixed image: Medical macro/microscopic analysis laboratory look
+      image: 'https://images.unsplash.com/photo-1579153138244-3917a00811d0?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Ocular inflammation diagnosis',
+        'Immunosuppressive treatment tracks',
+        'Complication prevention checkups',
+        'Systemic association evaluations'
+      ],
+      description: 'Diagnosis and management of inflammation in the uveal tract to prevent complications that can affect vision.'
+    },
+    {
+      id: 'cornea',
+      name: 'Cornea & External Disease',
+      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Corneal transplant procedures',
+        'Infection & injury therapeutics',
+        'Advanced topographer diagnostic grids',
+        'Dry eye specialty treatments'
+      ],
+      description: 'Expert care for corneal diseases, infections, and injuries – including corneal transplants and advanced therapeutic techniques.'
+    },
+    {
+      id: 'diabetic-retinopathy',
+      name: 'Diabetic Retinopathy Track',
+      // Fixed image: Professional optometrist scanning eyes in clinical dark room
+      image: 'https://images.unsplash.com/photo-1504813184591-015578c17d25?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Early micro-aneurysm detection',
+        'Targeted retinal laser therapies',
+        'Anti-VEGF intraocular injections',
+        'Continuous retinal vascular tracking'
+      ],
+      description: 'Early detection, laser treatments, and injections to manage diabetes-related damage to the retina.'
+    },
+    {
+      id: 'pediatric',
+      name: 'Pediatric Ophthalmology',
+      image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Lazy eye (Amblyopia) treatment plans',
+        'Squint correction optimization',
+        'Refractive error management paths',
+        'Congenital tracking checkups'
+      ],
+      description: 'Dedicated eye care for children, covering issues like lazy eye, squint, refractive errors, and congenital eye disorders.'
+    },
+    {
+      id: 'low-vision',
+      name: 'Low Vision Rehabilitation',
+      image: 'https://images.unsplash.com/photo-1507668077129-56e32842fceb?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Permanent vision loss management',
+        'Optical assistive device adaptation',
+        'Daily function support counseling',
+        'Environmental visibility upgrades'
+      ],
+      description: 'Rehabilitation and assistive solutions for patients with permanent vision loss to improve daily functioning and quality of life.'
+    },
+    {
+      id: 'trauma',
+      name: 'Trauma & Emergency Care',
+      image: 'https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Accidental injury reconstruction',
+        'Acute structural repair procedures',
+        'Emergency vision preservation tracks',
+        'Post-trauma aesthetic corrections'
+      ],
+      description: 'Emergency and reconstructive care for eye injuries caused by accidents or trauma, ensuring timely restoration of vision and structure.'
+    },
+    {
+      id: 'lasik',
+      name: 'LASIK & ICL Surgery',
+      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Advanced laser vision corrections',
+        'Implantable contact lenses (ICL)',
+        'Spectacle-free lifestyle planning',
+        'Custom corneal wave tracking'
+      ],
+      description: 'Experience freedom from glasses with advanced laser vision correction and implantable contact lenses tailored to your eyes.'
+    },
+    {
+      id: 'oculoplasty',
+      name: 'Oculoplasty & Squint Surgery',
+      image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Eyelid & tear duct interventions',
+        'Orbital structural adjustments',
+        'Ocular cosmetic enhancements',
+        'Muscle balance alignment plans'
+      ],
+      description: 'Specialized care for Squint eyelid, tear duct, and orbital disorders, along with cosmetic procedures to enhance eye appearance.'
+    },
+    {
+      id: 'contact-lens',
+      name: 'Specialty Contact Lenses',
+      image: 'https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Precision multi-focal lens custom sizing',
+        'Therapeutic lens allocations',
+        'Keratoconus scleral lens fittings',
+        'Hygiene and adaptation tracking'
+      ],
+      description: 'Fitting and guidance for a wide range of contact lenses – from cosmetic to therapeutic – suited to your specific eye needs.'
+    },
+    {
+      id: 'diagnostics',
+      name: 'Specialty Diagnostics',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'High-speed optical coherence topography',
+        'Digital fundus photography displays',
+        'Automated visual field plotting tests',
+        'Ultra-precise structural imaging tools'
+      ],
+      description: 'State-of-the-art diagnostic tools and imaging systems for accurate detection and monitoring of various eye diseases.'
+    },
+    {
+      id: 'comprehensive',
+      name: 'Comprehensive Ophthalmology',
+      // Fixed image: Standard diagnostic phoropter chart testing
+      image: 'https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Holistic preventive eye check-ups',
+        'Refractive prescription updates',
+        'Common infection control therapies',
+        'Multi-age routine screening paths'
+      ],
+      description: 'Routine eye check-ups, preventive care, and holistic management of common eye conditions for all age groups.'
+    },
+    {
+      id: 'anterior-segment',
+      name: 'Anterior Segment Disorders',
+      // Fixed image: Macro diagnostic view focusing on iris and cornea
+      image: 'https://images.unsplash.com/photo-1612531388300-1730e9d3f796?q=80&w=600&auto=format&fit=crop',
+      features: [
+        'Front-third ocular structure checks',
+        'Iris and crystalline lens tracking',
+        'Advanced micro-structural treatments',
+        'Pre-and-post operative diagnostics'
+      ],
+      description: 'Comprehensive management of conditions affecting the front third of the eye, including the cornea, iris, and lens.'
+    }
+  ];
+
   const guidelines = [
-    "10 - 12 hours of overnight fasting is mandatory before blood sampling (no tea/coffee/juices, water is allowed).",
-    "Avoid alcohol, high-fat meals, and strenuous physical training at least 24 hours prior to screening.",
-    "For male cardiac treadmill tests (TMT), please shave chest hair before arrival.",
-    "For abdominal ultrasound scans, please arrive with a full bladder (drink water and hold urine).",
-    "Carry previous medical records, prescriptions, and wear comfortable clothing and shoes.",
-    "If diabetic, hypertensive, or cardiac patient, inform the receptionist during sample collection."
+    "Many patients can schedule directly, but certain insurance plans may require a referral. Please check with your provider or contact our front desk for clarification.",
+    "If you wear contact lenses, please switch to regular eyeglasses at least 3-7 days prior to a corrective surgery consultation (like LASIK).",
+    "Bring all your current prescription glasses, contact lens cases, or old lens prescriptions to your evaluation.",
+    "Expect your pupils to be dilated during a comprehensive retina evaluation. This causes temporary blurred vision, so please arrange for someone to drive you home.",
+    "Carry your complete medical history records, especially details regarding Diabetes, Hypertension, or prior surgeries.",
+    "Inform our clinical staff immediately if you are currently using blood thinners or specialized eye drops."
   ];
 
   return (
@@ -20,11 +208,11 @@ export default function HealthPackages() {
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-3xl mx-auto relative z-10">
           <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/15 px-3 py-1.5 rounded-full">
-            Preventative Wellness
+            Treatment & Diagnosis
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Health Screening Packages</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Ophthalmic Specialities</h1>
           <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Invest in preventative diagnostics. Compare our specialized checkups designed to assess vital organs and identify potential health complications early.
+            A Center of Excellence in Advanced Eye Care for Every Stage of Life. Invest in targeted clinical evaluations to keep your vision pristine.
           </p>
         </div>
       </div>
@@ -33,8 +221,54 @@ export default function HealthPackages() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {HEALTH_PACKAGES.map((pkg) => (
-              <HealthPackageCard key={pkg.id} {...pkg} />
+            {treatmentServices.map((pkg) => (
+              <div 
+                key={pkg.id}
+                className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group"
+              >
+                {/* Image Section */}
+                <div className="aspect-[16/10] w-full bg-slate-200 overflow-hidden relative">
+                  <img 
+                    src={pkg.image} 
+                    alt={pkg.name} 
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" 
+                  />
+                  <div className="absolute top-4 left-4 bg-medical-sky text-white text-[9px] font-bold px-2.5 py-1 rounded uppercase tracking-wider flex items-center gap-1 shadow-sm">
+                    <FaEye size={10} /> Ocular Care
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-base font-extrabold text-slate-800 mb-2 group-hover:text-emerald-accent transition-colors">
+                      {pkg.name}
+                    </h3>
+                    <p className="text-[11px] text-slate-400 font-light leading-relaxed mb-5">
+                      {pkg.description}
+                    </p>
+                    
+                    <div className="border-t border-slate-50 pt-4 mb-6">
+                      <ul className="space-y-2 text-xs text-slate-500 font-light">
+                        {pkg.features.map((feat, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent"></span>
+                            {feat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-slate-50 pt-4 mt-2">
+                    <Link 
+                      to="/appointment"
+                      className="w-full text-center bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold py-3 rounded-xl text-xs transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                    >
+                      <FaCalendarCheck size={12} /> Book Consultation
+                    </Link>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -50,7 +284,7 @@ export default function HealthPackages() {
             </div>
             <div>
               <h2 className="text-xl font-bold text-slate-800">Pre-Checkup Preparation Guidelines</h2>
-              <p className="text-xs text-slate-500 font-light">Important instructions to ensure accuracy of your test reports.</p>
+              <p className="text-xs text-slate-500 font-light">Important instructions to ensure an efficient and precise clinical evaluation.</p>
             </div>
           </div>
 

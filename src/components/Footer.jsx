@@ -4,7 +4,7 @@ import {
   FaInstagram, 
   FaLinkedinIn, 
   FaYoutube, 
-  FaHeartbeat, 
+  FaEye, 
   FaPhoneAlt, 
   FaEnvelope, 
   FaMapMarkerAlt, 
@@ -17,7 +17,7 @@ export default function Footer() {
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Doctors', path: '/doctors' },
+    { name: 'Specialists', path: '/doctors' },
     { name: 'Facilities', path: '/facilities' },
     { name: 'Careers', path: '/careers' },
     { name: 'Gallery', path: '/gallery' },
@@ -27,29 +27,28 @@ export default function Footer() {
   ];
 
   const departments = [
-    { name: 'Cardiology', path: '/departments' },
-    { name: 'Neurology', path: '/departments' },
-    { name: 'Orthopedics', path: '/departments' },
-    { name: 'Pediatrics', path: '/departments' },
-    { name: 'Oncology', path: '/departments' },
-    { name: 'Gynecology & Obstetrics', path: '/departments' }
+    { name: 'Cataract Services', path: '/departments' },
+    { name: 'Retina & Vitreous Care', path: '/departments' },
+    { name: 'LASIK & Refractive Studio', path: '/departments' },
+    { name: 'Glaucoma Management', path: '/departments' },
+    { name: 'Pediatric & Squint Division', path: '/departments' },
+    { name: 'Cornea & Surface Center', path: '/departments' }
   ];
 
   const services = [
-    { name: 'Outpatient (OPD)', path: '/services' },
-    { name: 'Inpatient (IPD)', path: '/services' },
-    { name: 'Intensive Care (ICU)', path: '/services' },
-    { name: 'Emergency 24/7', path: '/services' },
-    { name: 'Ambulance Logistics', path: '/services' },
-    { name: 'Pharmacy Services', path: '/services' }
+    { name: 'Comprehensive Checkups', path: '/services' },
+    { name: 'Micro-Incision Surgery', path: '/services' },
+    { name: 'Advanced Diagnostics Studio', path: '/services' },
+    { name: '24/7 Ocular Emergency', path: '/services' },
+    { name: 'Vision Studio & Opticals', path: '/services' },
+    { name: 'In-House Pharmacy', path: '/services' }
   ];
 
   const packages = [
-    { name: 'General Health Checkup', path: '/health-packages' },
-    { name: 'Executive Health Checkup', path: '/health-packages' },
-    { name: 'Cardiac Package', path: '/health-packages' },
-    { name: 'Women\'s Health Package', path: '/health-packages' },
-    { name: 'Senior Citizen Package', path: '/health-packages' }
+    { name: 'Primary Vision Review', path: '/health-packages' },
+    { name: 'Retina & Diabetic Track', path: '/health-packages' },
+    { name: 'Glaucoma Evaluation Pack', path: '/health-packages' },
+    { name: 'Pre-LASIK Fitness Profile', path: '/health-packages' }
   ];
 
   return (
@@ -64,8 +63,8 @@ export default function Footer() {
               <FaPhoneAlt className="text-3xl" />
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-bold">In Need of Emergency Medical Care?</h3>
-              <p className="text-sm text-slate-300 mt-1">Our emergency room is fully equipped and staffed 24/7.</p>
+              <h3 className="text-xl md:text-2xl font-bold">In Need of Emergency Ocular Care?</h3>
+              <p className="text-sm text-slate-300 mt-1">Our trauma unit handles foreign body extractions and eye injuries 24/7.</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-stretch gap-4 w-full md:w-auto relative z-10">
@@ -73,13 +72,13 @@ export default function Footer() {
               href="tel:+919160854747" 
               className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
             >
-              <FaPhoneAlt size={14} /> Emergency: +91 916 085 4747
+              <FaPhoneAlt size={14} /> Trauma Hotline: +91 916 085 4747
             </a>
             <a 
               href="tel:108" 
               className="bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
             >
-              <FaPhoneAlt size={14} /> Ambulance 24/7: 108
+              <FaPhoneAlt size={14} /> Emergency Request: 108
             </a>
           </div>
         </div>
@@ -91,41 +90,44 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="bg-emerald-accent p-2 rounded-lg text-white">
-                <FaHeartbeat className="text-xl" />
+                <FaEye className="text-xl" />
               </div>
               <div>
                 <span className="block font-black text-lg text-white leading-none">VINDHYA</span>
-                <span className="block text-[8px] tracking-widest text-emerald-accent font-bold">HEALTHCARE</span>
+                <span className="block text-[8px] tracking-widest text-emerald-accent font-bold">EYE CARE</span>
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed mb-6">
-              Vindhya Healthcare is a premium, multi-specialty medical center dedicated to patient safety, state-of-the-art diagnostics, and clinical excellence.
+              Vindhya Eye Care is a premium ophthalmic center dedicated to vision safety, high-precision diagnostics, and micro-surgical clinical excellence.
             </p>
             <div className="space-y-3.5 text-xs text-slate-400">
               <p className="flex items-start gap-2.5">
                 <FaMapMarkerAlt className="text-emerald-accent mt-0.5 shrink-0" />
-                <span>13-94 & 95, Vindhya Healthcare, beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri, Hyderabad, Secunderabad, Telangana - 500047</span>
+                <span>13-94 & 95, Vindhya Eye Care, beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri, Hyderabad, Secunderabad, Telangana - 500047</span>
               </p>
               <p className="flex items-center gap-2.5">
                 <FaEnvelope className="text-emerald-accent shrink-0" />
-                <a href="mailto:care@vindhyahealthcare.in" className="hover:text-white transition-colors">care@vindhyahealthcare.in</a>
+                <a href="mailto:care@vindhyaeyecare.in" className="hover:text-white transition-colors">care@vindhyaeyecare.in</a>
               </p>
               <p className="flex items-center gap-2.5">
                 <FaClock className="text-emerald-accent shrink-0" />
-                <span>OPD: 9:00 AM - 8:00 PM</span>
+                <span>OPD Hours: 9:00 AM - 8:00 PM</span>
               </p>
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
+          {/* Col 2: Quick Links (Fixed structure matching image_98d3d1.png) */}
           <div>
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-6 pb-2 border-b border-slate-800">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-xs">
               {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.path} className="hover:text-emerald-accent hover:translate-x-1 inline-block transition-all text-slate-400">
+                <li key={link.name} className="font-light">
+                  <Link 
+                    to={link.path} 
+                    className="hover:text-emerald-accent hover:translate-x-1 inline-block transition-all text-slate-400"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -136,11 +138,11 @@ export default function Footer() {
           {/* Col 3: Departments */}
           <div>
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-6 pb-2 border-b border-slate-800">
-              Departments
+              Specialties
             </h4>
             <ul className="space-y-2.5 text-xs">
               {departments.map((dept) => (
-                <li key={dept.name}>
+                <li key={dept.name} className="font-light">
                   <Link to={dept.path} className="hover:text-emerald-accent hover:translate-x-1 inline-block transition-all text-slate-400">
                     {dept.name}
                   </Link>
@@ -152,11 +154,11 @@ export default function Footer() {
           {/* Col 4: Services */}
           <div>
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-6 pb-2 border-b border-slate-800">
-              Services
+              Clinical Services
             </h4>
             <ul className="space-y-2.5 text-xs">
               {services.map((srv) => (
-                <li key={srv.name}>
+                <li key={srv.name} className="font-light">
                   <Link to={srv.path} className="hover:text-emerald-accent hover:translate-x-1 inline-block transition-all text-slate-400">
                     {srv.name}
                   </Link>
@@ -168,11 +170,11 @@ export default function Footer() {
           {/* Col 5: Packages */}
           <div>
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-6 pb-2 border-b border-slate-800">
-              Health Checkups
+              Vision Panels
             </h4>
             <ul className="space-y-2.5 text-xs">
               {packages.map((pkg) => (
-                <li key={pkg.name}>
+                <li key={pkg.name} className="font-light">
                   <Link to={pkg.path} className="hover:text-emerald-accent hover:translate-x-1 inline-block transition-all text-slate-400">
                     {pkg.name}
                   </Link>
@@ -186,7 +188,7 @@ export default function Footer() {
         {/* Middle Line: Social Media Links */}
         <div className="border-t border-slate-800 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            Connecting you with health and safety tips:
+            Connecting you with vision care updates and safety tips:
           </p>
           <div className="flex items-center gap-3">
             <a 
@@ -230,7 +232,7 @@ export default function Footer() {
 
         {/* Legal & Copyright */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
-          <p>&copy; {currentYear} Vindhya Healthcare. All rights reserved. Hospital registration: VHC-MP-092-2023.</p>
+          <p>&copy; {currentYear} Vindhya Eye Care. All rights reserved. Hospital registration: VEC-TS-092-2023.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <a href="#privacy" className="hover:text-emerald-accent transition-colors">Privacy Policy</a>
             <span>|</span>

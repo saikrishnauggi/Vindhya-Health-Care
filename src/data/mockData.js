@@ -1,4 +1,4 @@
-// Mock data for Vindhya Healthcare
+// Mock data for Vindhya Eye Care Hospital
 import cardiacCampImg from '../assets/image_9e2966.jpeg';
 import equipment1 from '../assets/equipment1.jpg';
 import operation from '../assets/operation.jpg';
@@ -8,336 +8,243 @@ import advancedtech from '../assets/advancedtech.jpg';
 
 export const DEPARTMENTS = [
   {
-    id: "neurology",
-    name: "Neurology",
-    icon: "FaBrain",
-    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=600",
-    description: "Comprehensive care for neurological disorders, stroke, epilepsy, and advanced spine and brain surgeries.",
-    detailedDescription: "The Neurology and Neurosurgery Department at Vindhya Healthcare offers cutting-edge diagnostic and therapeutic solutions for a wide range of nervous system disorders. With high-precision microscopes, advanced neuro-navigational systems, and dedicated stroke units, our expert neurologists and neurosurgeons treat complicated conditions like brain tumors, spinal trauma, epilepsy, Parkinson's disease, and ischemic strokes.",
-    services: [
-      "24/7 Hyperacute Stroke Care with Thrombolysis",
-      "Comprehensive Epilepsy Center (EEG, Video EEG)",
-      "Minimally Invasive Neuro and Spine Surgery",
-      "Movement Disorders & Parkinson's Disease Management",
-      "Neuro-Oncology (Brain & Spinal Cord Tumors)",
-      "Sleep Disorders Clinic",
-      "Pediatric Neurology & Neuro-rehabilitation"
-    ]
-  },
-  {
-    id: "ophthalmology",
-    name: "Ophthalmology",
+    id: "cataract",
+    name: "Cataract Services",
     icon: "FaEye",
-    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600",
-    description: "Advanced eye care from micro-incision cataract surgeries to complex retinal procedures.",
-    detailedDescription: "The Ophthalmology Department delivers superior ophthalmic diagnostics and surgical services. We perform thousands of micro-incision cataract surgeries (MICS) with premium intraocular lenses annually. Our dedicated sub-specialty clinics manage diabetic retinopathy, glaucoma, squint corrections, and pediatric eye diseases with exceptional precision.",
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=600",
+    description: "Advanced clear vision restoration using AI-assisted planning and navigation-guided microsurgeries.",
+    detailedDescription: "The Cataract Department at Vindhya Eye Care handles advanced clear lens restorations utilizing stitch-less micro-incision cataract surgery (MICS). Equipped with real-time digital overlays and high-resolution operating microscopes, our specialists customize premium monofocal, multifocal, and toric intraocular lens (IOL) implantations to restore sharp, crystal-clear vision.",
     services: [
       "Micro-Incision Cataract Surgery (MICS) with Phacoemulsification",
-      "Refractive Laser Procedures (LASIK, PRK)",
-      "Diabetic Retinopathy & Medical Retina Management",
-      "Glaucoma Screening & Surgical Management",
-      "Corneal Transplants & External Eye Disease Care",
-      "Pediatric Ophthalmology & Squint Correction",
-      "Emergency Ocular Trauma Management"
+      "AI-driven Premium Intraocular Lens (IOL) Selection & Mapping",
+      "Navigation-Guided Toric and Multifocal Lens Alignments",
+      "Laser-Assisted Capsulotomy for Secondary Cataracts",
+      "Pre-operative Corneal Endothelial Cell Density Profiling",
+      "Complex Cataract Management with Capsular Tension Rings"
     ]
   },
   {
-    id: "gynecology",
-    name: "Gynecology & Obstetrics",
-    icon: "FaFemale",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600",
-    description: "Comprehensive care for women across all stages of life, maternity services, and fertility treatments.",
-    detailedDescription: "The Department of Obstetrics and Gynecology offers world-class diagnostic, therapeutic, and surgical care for women. Our birthing suites are designed to provide a comfortable, luxurious maternity experience. We specialize in high-risk pregnancy management, laparoscopic gynecological surgeries, and comprehensive reproductive health services including fertility treatments.",
+    id: "retina",
+    name: "Retina & Vitreous Care",
+    icon: "FaProcedures",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600",
+    description: "Comprehensive medical and surgical interventions for complex posterior segment disorders.",
+    detailedDescription: "Our Retina and Vitreous Center specializes in the diagnostic screening and surgical repair of delicate posterior eye complications. Utilizing high-speed Optical Coherence Tomography (OCT) systems and micro-incision vitrectomy instruments, our vitreoretinal surgeons effectively manage diabetic retinopathy, age-related macular degeneration (ARMD), retinal detachments, and severe vascular blockages.",
     services: [
-      "Comprehensive Maternity & Pre-pregnancy Counseling",
-      "High-Risk Pregnancy Management",
-      "Laparoscopic (Keyhole) Gynecological Surgeries",
-      "Infertility Diagnostic & Assisted Reproductive Services",
-      "Menopause Management & Cervical Cancer Screening (Pap Smear, HPV)",
-      "Urogynecology & Pelvic Floor Reconstruction",
-      "Adolescent Gynecology & PCOS Management"
+      "Micro-Incision Vitrectomy Surgery (MIVS) for Retinal Tears",
+      "Intraocular Anti-VEGF Intravitreal Injection Pathways",
+      "High-Resolution Optical Coherence Tomography (OCT) Grids",
+      "Digital Fundus Fluorescein Angiography (FFA) Retinal Mapping",
+      "Targeted Argon Laser Photocoagulation for Diabetic Retinopathy",
+      "Management of Retinal Vein Occlusions and Macular Edema"
     ]
   },
   {
-    id: "ent",
-    name: "ENT",
-    icon: "FaDeaf",
-    image: "https://images.unsplash.com/photo-1551884831-b5901ee50c8b?q=80&w=600",
-    description: "Treatment for ear, nose, throat disorders, speech therapy, and advanced sinus surgeries.",
-    detailedDescription: "Our ENT and Head & Neck Surgery Department handles all disorders related to the ear, nose, throat, sinuses, head, and neck. We are equipped with advanced endoscopes, operating microscopes, and microdebriders. Our services range from routine tonsillectomies to advanced sinus surgeries, ear reconstructions, and micro-laryngeal surgeries.",
+    id: "lasik-refractive",
+    name: "LASIK & Refractive Studio",
+    icon: "FaGlasses",
+    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600",
+    description: "Blade-free laser vision correction and implantable contact lenses designed for spectacle-free living.",
+    detailedDescription: "Eliminate dependency on glasses and standard contact lenses safely. Our Refractive Studio features advanced wavefront-guided laser systems that precisely map corneal irregularities. We provide advanced touchless laser variations (SMILE/Contoura Vision) and premium Implantable Collamer Lenses (ICL) for patients with thin corneas or high prescriptions.",
     services: [
-      "Microscopic Ear Surgeries (Tympanoplasty, Mastoidectomy)",
-      "Functional Endoscopic Sinus Surgery (FESS) for Sinusitis",
-      "Treatment for Snoring & Obstructive Sleep Apnea",
-      "Micro-laryngeal Surgeries for Voice Disorders",
-      "Hearing Assessment & Auditory/Speech Rehabilitation",
-      "Head and Neck Cancer Surgeries",
-      "Cochlear Implant Program"
+      "Blade-Free, Customized Wavefront LASIK Vision Correction",
+      "Implantable Collamer Lens (ICL) Sizing & Implantation",
+      "Topography-Guided Laser Ablation (Contoura Vision Tracking)",
+      "Photorefractive Keratectomy (PRK) for Customized Corneal Thickness",
+      "Comprehensive Pre-LASIK Corneal Pachymetry Profiling",
+      "Phakic Intraocular Lens Options for High Myopia Balance"
     ]
   },
   {
-    id: "dermatology",
-    name: "Dermatology",
-    icon: "FaHandSparkles",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600",
-    description: "Expert medical and cosmetic treatments for skin, hair, and nail conditions.",
-    detailedDescription: "Our Dermatology and Cosmetology Department offers complete clinical treatments for medical skin conditions like psoriasis, eczema, and acne, alongside advanced aesthetic procedures. We utilize medical-grade lasers, chemical peels, and microdermabrasion to provide safe, effective skin care solutions.",
+    id: "glaucoma",
+    name: "Glaucoma Management",
+    icon: "FaEyeSlash",
+    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600",
+    description: "Early intraocular pressure screening and progressive management to protect optic nerve health.",
+    detailedDescription: "Often labeled as the silent thief of sight, glaucoma requires early tracking. This department relies on highly automated visual field analyzers, precise tonometry, and laser diagnostics to arrest disease progression, regulate fluid pressure imbalances, and preserve optimal peripheral visual fields.",
     services: [
-      "Treatment for Psoriasis, Eczema, Acne, and Vitiligo",
-      "Laser Hair Reduction & Skin Resurfacing",
-      "Aesthetic Procedures: Botox, Dermal Fillers, Chemical Peels",
-      "Acne Scar Treatment & Microdermabrasion",
-      "PRP Therapy for Hair Loss and Skin Rejuvenation",
-      "Removal of Warts, Skin Tags, and Moles",
-      "Diagnostic Skin Biopsies & Dermoscopy"
+      "Automated Visual Field Perimetry (Humphrey Field Analyzer)",
+      "Optical Coherence Tomography for Optic Nerve Head Profiling",
+      "Selective Laser Trabeculoplasty (SLT) for Pressure Control",
+      "Advanced Filtering Surgeries (Trabeculectomy with Ocular Implants)",
+      "Pachymetry Correlated Applanation Tonometry Tracks",
+      "Gonioscopy for Irido-Corneal Angle Structural Metrics"
     ]
   },
   {
-    id: "gastroenterology",
-    name: "Gastroenterology",
+    id: "pediatric-squint",
+    name: "Pediatric & Squint Division",
+    icon: "FaChild",
+    image: "https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600",
+    description: "Dedicated clinical checkups and muscle balance corrections for lazy eyes and congenital anomalies in children.",
+    detailedDescription: "Our Pediatric Ophthalmology unit provides customized, stress-free clinical screening for infants and children. We focus heavily on resolving refractive variances early, treating lazy eyes (amblyopia), and performing precise muscle adjustment surgeries to resolve squint alignments (strabismus) to secure proper visual development.",
+    services: [
+      "Amblyopia (Lazy Eye) Occlusion Therapy and Synchronization Training",
+      "Surgical Adjustments for Squint and Strabismus Realignments",
+      "Pediatric Cycloplegic Refraction & Binocular Vision Assays",
+      "Congenital Cataract and Glaucoma Pediatric Surgeries",
+      "Retinopathy of Prematurity (ROP) Critical Screenings",
+      "Pediatric Low Vision Aids and Adaptation Counseling"
+    ]
+  },
+  {
+    id: "cornea-surface",
+    name: "Cornea & Ocular Surface Center",
     icon: "FaStethoscope",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600",
-    description: "Diagnostic and therapeutic endoscopy, liver disease treatments, and digestive health care.",
-    detailedDescription: "The Gastroenterology and Hepatology Department provides comprehensive care for disorders of the digestive system and liver. Our state-of-the-art endoscopy suites perform regular diagnostic and therapeutic gastroscopies, colonoscopies, and ERCPs. We treat complex conditions such as inflammatory bowel disease (IBD), chronic liver diseases, and pancreatitis.",
+    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600",
+    description: "Expert corneal transplantation and therapeutic treatments for severe ocular surface diseases.",
+    detailedDescription: "The Cornea and Ocular Surface division offers top-tier surgical treatments for corneal dystrophies, severe scars, keratoconus, and traumatic eye burns. We feature modern preservation storage parameters and specialize in partial-thickness corneal tissue grafts to minimize rejection profiles.",
     services: [
-      "Diagnostic & Therapeutic Gastroscopy & Colonoscopy",
-      "ERCP for Bile Duct & Pancreatic Disorders",
-      "Liver Disease Clinic (Hepatitis B/C, Cirrhosis, Fatty Liver)",
-      "Inflammatory Bowel Disease (Crohn's, Ulcerative Colitis) Clinic",
-      "Gastrointestinal Bleeding Management (Band Ligation, Injection)",
-      "Pediatric Gastroenterology & Nutrition",
-      "Gastric Balloon Placement for Weight Management"
+      "Full & Partial Thickness Corneal Transplantation (Keratoplasty)",
+      "Corneal Collagen Cross-Linking (C3R / CXL) for Keratoconus",
+      "Amniotic Membrane Grafting for Ocular Surface Chemical Burns",
+      "Severe Dry Eye Diagnostic Panels & Meibomian Gland Expression",
+      "Pterygium Excision Surgery with Sutureless Autografting",
+      "Therapeutic Contact Lens Fittings for Persistent Epithelial Defects"
     ]
   },
   {
-    id: "emergency-medicine",
-    name: "Emergency Medicine",
+    id: "ocular-trauma",
+    name: "Ocular Trauma & Emergency",
     icon: "FaAmbulance",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600",
-    description: "24/7 dedicated emergency unit, trauma center, and advanced cardiac life-support ambulances.",
-    detailedDescription: "The Emergency Medicine and Trauma Center at Vindhya Healthcare is a 24/7, high-velocity critical care hub. Managed by qualified emergency physicians, trauma surgeons, and specialized nurses, our facility contains dedicated triage areas, trauma bays, and resuscitation rooms. We operate a fleet of advanced life-support (ALS) ambulances to start treatment en route.",
+    image: "https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600",
+    description: "24/7 dedicated emergency unit for accidental eye trauma, chemical burns, and foreign body removals.",
+    detailedDescription: "The Ocular Emergency and Trauma Wing is a rapid-response unit designed to save sight during critical emergencies. Manned by dedicated on-call trauma ophthalmologists, the center handles open-globe injuries, accidental perforations, corneal foreign body extractions, and acute micro-surgical repairs instantly.",
     services: [
-      "24/7 Trauma, Accident, and Cardiac Resuscitation Care",
-      "Advanced Cardiac Life Support (ACLS) Ambulances with Tele-medicine",
-      "Triage System for Quick Assessment & Management",
-      "Dedicated Burn Management Unit",
-      "Emergency Toxicology and Poisoning Antidote Protocol",
-      "Disaster Management & Rapid Response Teams",
-      "Stroke and Cardiac Fast-Track Protocols"
+      "24/7 Reconstruction Care for Open-Globe and Perforating Injuries",
+      "Emergency Ocular Surface Irrigation Protocols for Chemical Burns",
+      "Micro-surgical Repair of Eyelid Lacerations and Canalicular Tears",
+      "Precision Surgical Extraction of Deep Intraocular Foreign Bodies",
+      "Fast-Track Management for Acute Angle-Closure Glaucoma Crises",
+      "Emergency Repair of Traumatic Iris and Crystalline Lens Dislocations"
     ]
   },
   {
-    id: "diagnostics",
-    name: "Diagnostics & Imaging",
+    id: "diagnostics-opticals",
+    name: "Specialty Diagnostics Studio",
     icon: "FaMicroscope",
-    image: "https://images.unsplash.com/photo-1579156286657-39961f0b094f?q=80&w=600",
-    description: "High-precision diagnostic testing, including MRI, CT, digital X-Ray, ultrasound, and pathology labs.",
-    detailedDescription: "The Radiology and Laboratory Medicine Department at Vindhya Healthcare forms the analytical backbone of our hospital. We feature high-field MRI scanners, multi-slice CT scanners, digital mammography, high-resolution ultrasounds, and fully automated biochemistry and pathology labs that deliver quick and accurate reports to enable precise treatments.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600",
+    description: "State-of-the-art diagnostic imaging, digital visual fields mapping, and custom lens dispensing setups.",
+    detailedDescription: "The Specialty Diagnostics Department utilizes ultra-modern imaging modalities to support our clinical teams with unmatched analytical clarity. From mapping corneal curvature maps via automated systems to computing optical coherence structures, we ensure precise baseline matrices to formulate accurate ocular treatment plans.",
     services: [
-      "High-field 3T Silent MRI & Multi-Slice CT Scanner",
-      "Digital X-Ray & Digital Mammography",
-      "Color Doppler & High-Resolution Ultrasound",
-      "Fully Automated Biochemistry, Hematology & Pathology Labs",
-      "Biopsy & FNA Cytology under Radiological Guidance",
-      "Echocardiogram (ECG) and EEG Diagnostics",
-      "Home Sample Collection & Digital Reports"
+      "High-Definition 3D Optical Coherence Tomography (OCT-Angiography)",
+      "Automated Corneal Topography and Wavefront Aberrometry Grids",
+      "Digital Fundus Autofluorescence and Slit-Lamp Photography",
+      "Specular Microscopy and Precision Ultrasound A-Scan/B-Scan Biometry",
+      "Computerized Vision Studio Dispensing and Pupil Distance Alignment",
+      "Contact Lens Custom Sizing Matrices for Irregular Corneas"
     ]
   }
 ];
 
 export const DOCTORS = [
   {
-    id: "dr-vinay-kumar",
-    name: "Dr. Vinay Kumar",
-    photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
-    qualification: "MD, DM (Cardiology)",
-    departmentId: "cardiology",
-    departmentName: "Cardiology",
-    specialization: "Interventional Cardiology",
-    experience: "18+ Years",
-    timings: "Mon - Sat: 10:00 AM - 04:00 PM",
-    bio: "Dr. Vinay Kumar is a highly acclaimed cardiologist who has performed over 10,000 successful coronary angioplasties. He is an expert in radial route interventions and complex coronary procedures.",
-    achievements: ["Fellow of the American College of Cardiology", "Best Cardiologist Award at National Healthcare Summit 2024", "Published over 30 research papers in top journals"]
-  },
-  {
-    id: "dr-anjali-sharma",
-    name: "Dr. Anjali Sharma",
-    photo: "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=400",
-    qualification: "MD, DM (Neurology)",
-    departmentId: "neurology",
-    departmentName: "Neurology",
-    specialization: "Stroke & Epilepsy Specialist",
-    experience: "15+ Years",
-    timings: "Mon - Fri: 11:00 AM - 05:00 PM",
-    bio: "Dr. Anjali Sharma specializes in managing acute stroke, refractory epilepsy, and sleep disorders. She runs our comprehensive Epilepsy Clinic and is dedicated to improving patient quality of life.",
-    achievements: ["Gold Medalist in Neurology (AIIMS)", "Established the Hyperacute Stroke Protocol at Vindhya Healthcare", "Active member of World Stroke Organization"]
-  },
-  {
-    id: "dr-rakesh-singh",
-    name: "Dr. Rakesh Singh",
-    photo: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=400",
-    qualification: "MS, MCh (Orthopedics)",
-    departmentId: "orthopedics",
-    departmentName: "Orthopedics",
-    specialization: "Joint Replacement & Arthroscopy",
-    experience: "16+ Years",
-    timings: "Mon, Wed, Fri: 09:00 AM - 03:00 PM",
-    bio: "Dr. Rakesh Singh is a leading surgeon in joint reconstruction. He specializes in minimally invasive knee and hip replacements and sports-related ligament repairs.",
-    achievements: ["Trained in Robotic Joint Replacement in Germany", "Consultant to National Sports Teams", "Successfully performed over 4,000 joint replacements"]
-  },
-  {
-    id: "dr-sunita-patel",
-    name: "Dr. Sunita Patel",
+    id: "dr-rajeshwari-nair",
+    name: "Dr. Rajeshwari Nair",
     photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400",
-    qualification: "MD (Pediatrics), Fellowship in Neonatology",
-    departmentId: "pediatrics",
-    departmentName: "Pediatrics",
-    specialization: "Neonatal Intensive Care (NICU)",
+    qualification: "MS, DNB (Ophthalmology), Fellowship in MICS",
+    departmentId: "cataract",
+    departmentName: "Cataract Services",
+    specialization: "Micro-Incision Cataract Surgeon",
+    experience: "18+ Years",
+    timings: "Mon - Sat: 09:00 AM - 01:00 PM",
+    bio: "Dr. Rajeshwari Nair is a highly acclaimed ophthalmic surgeon who has successfully completed over 15,000 phacoemulsification surgeries. She specializes in premium multi-focal and toric intraocular lens micro-alignments under computer guidance.",
+    achievements: ["Fellow of the International Council of Ophthalmology (FICO)", "Best Surgical Excellence Ribbon at National Ophthalmic Summit 2024", "Pioneered automated AI-assisted biometry configurations locally"]
+  },
+  {
+    id: "dr-anand-vardhan",
+    name: "Dr. Anand Vardhan",
+    photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
+    qualification: "MD, FRCS (Ophthalmology), Fellowship in Retina",
+    departmentId: "retina",
+    departmentName: "Retina & Vitreous Care",
+    specialization: "Vitreoretinal Specialist",
+    experience: "15+ Years",
+    timings: "Mon, Wed, Fri: 11:00 AM - 05:00 PM",
+    bio: "Dr. Anand Vardhan specializes in advanced micro-incision vitrectomy surgeries (MIVS) and complex posterior segment retinal repair. He supervises our diabetic retinopathy clinic and complex macular tracking programs.",
+    achievements: ["Gold Medalist in Ophthalmic Micro-surgery (AIIMS)", "Designed the regional fast-track screening guidelines for Diabetic Retinopathy", "Active panelist in the Global Vitreoretinal Research Society"]
+  },
+  {
+    id: "dr-smriti-saxena",
+    name: "Dr. Smriti Alok Saxena",
+    photo: "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=400",
+    qualification: "MS (Ophth), Fellowship in Glaucoma",
+    departmentId: "glaucoma",
+    departmentName: "Glaucoma Management",
+    specialization: "Glaucoma Consultant",
     experience: "12+ Years",
     timings: "Tue, Thu, Sat: 10:00 AM - 04:00 PM",
-    bio: "Dr. Sunita Patel has deep expertise in managing extremely low birth weight infants and critical pediatric disorders in the NICU.",
-    achievements: ["Established the Level III NICU unit", "Excellence in Pediatric Critical Care Award", "Conducted over 100 pediatric health camps"]
+    bio: "Dr. Smriti Saxena has deep clinical experience in long-term pressure regulation protocols, automated visual field diagnostics, and micro-stent drainage surgical applications for progressive glaucoma cases.",
+    achievements: ["Established the Advanced Humphrey Perimetry Lab", "Ocular Safety and Vision Preservation Award 2025", "Conducted over 150 community glaucoma tracking camps"]
   },
   {
-    id: "dr-rajesh-gupta",
-    name: "Dr. Rajesh Gupta",
-    photo: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400",
-    qualification: "MD, DM (Medical Oncology)",
-    departmentId: "oncology",
-    departmentName: "Oncology",
-    specialization: "Targeted Cancer Therapy & Immunotherapy",
-    experience: "14+ Years",
-    timings: "Mon - Fri: 12:00 PM - 06:00 PM",
-    bio: "Dr. Rajesh Gupta is a dedicated medical oncologist focused on patient-centered cancer care, utilizing cutting-edge genomic profiling and immunotherapy.",
-    achievements: ["Member of ESMO & ASCO", "Key researcher in multi-center clinical trials", "Inspirational Oncology Leader Award 2025"]
-  },
-  {
-    id: "dr-meera-reddy",
-    name: "Dr. Meera Reddy",
-    photo: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=400",
-    qualification: "MD, DGO (Obstetrics & Gynecology)",
-    departmentId: "gynecology",
-    departmentName: "Gynecology & Obstetrics",
-    specialization: "High-Risk Pregnancy & Laparoscopic Surgery",
-    experience: "17+ Years",
-    timings: "Mon - Sat: 09:00 AM - 02:00 PM",
-    bio: "Dr. Meera Reddy is renowned for her skill in laparoscopic gynecological procedures and handling highly complicated pregnancy cases with exceptional care.",
-    achievements: ["President of local Obstetric & Gynecological Society", "Authored handbook on High-Risk Pregnancy Management", "Delivered over 6,000 healthy babies"]
-  },
-  {
-    id: "dr-amit-verma",
-    name: "Dr. Amit Verma",
-    photo: "https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?q=80&w=400",
-    qualification: "MS, MCh (Urology)",
-    departmentId: "urology",
-    departmentName: "Urology",
-    specialization: "Laser Kidney Stone Surgery & Uro-Oncology",
-    experience: "13+ Years",
-    timings: "Tue, Thu, Fri: 02:00 PM - 06:00 PM",
-    bio: "Dr. Amit Verma specializes in laser applications for kidney stones (RIRS) and prostate surgeries. He is committed to minimally invasive urological techniques.",
-    achievements: ["Pioneer in RIRS procedure in the region", "Member of Urological Society of India", "Outstanding Young Urologist Award"]
-  },
-  {
-    id: "dr-priya-menon",
-    name: "Dr. Priya Menon",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400",
-    qualification: "MD (Dermatology)",
-    departmentId: "dermatology",
-    departmentName: "Dermatology",
-    specialization: "Cosmetic Dermatology & Hair Restoration",
-    experience: "10+ Years",
-    timings: "Mon, Wed, Sat: 04:00 PM - 08:00 PM",
-    bio: "Dr. Priya Menon provides expert clinical skin solutions and advanced aesthetic treatments, including lasers, fillers, and PRP hair therapy.",
-    achievements: ["Fellowship in Cosmetic Dermatology (USA)", "Regular speaker at cosmetic medicine conferences", "Recipient of Skin Care Excellence Award"]
-  },
-  {
-    id: "dr-sanjay-joshi",
-    name: "Dr. Sanjay Joshi",
-    photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400",
-    qualification: "MD, DNB (Pulmonary Medicine)",
-    departmentId: "pulmonology",
-    departmentName: "Pulmonology",
-    specialization: "Asthma, COPD & Sleep Medicine",
-    experience: "15+ Years",
-    timings: "Mon - Sat: 08:00 AM - 12:00 PM",
-    bio: "Dr. Sanjay Joshi is a senior pulmonologist specializing in chronic respiratory disorders, sleep studies, and critical care medicine.",
-    achievements: ["Fellow of the American College of Chest Physicians (FCCP)", "Pioneered Sleep Study labs in Vindhya Healthcare", "Authored several pulmonology clinical guides"]
-  },
-  {
-    id: "dr-suresh-nair",
-    name: "Dr. Suresh Nair",
-    photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
-    qualification: "MD, DM (Gastroenterology)",
-    departmentId: "gastroenterology",
-    departmentName: "Gastroenterology",
-    specialization: "Therapeutic Endoscopy & Hepatology",
+    id: "dr-vikram-kiran",
+    name: "Dr. Vikram Kiran",
+    photo: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=400",
+    qualification: "MS, Fellowship in Cornea & Refractive Surgery",
+    departmentId: "lasik-refractive",
+    departmentName: "LASIK & Refractive Studio",
+    specialization: "LASIK & Cornea Specialist",
     experience: "16+ Years",
-    timings: "Mon - Fri: 10:00 AM - 03:00 PM",
-    bio: "Dr. Suresh Nair is a veteran gastroenterologist who specializes in advanced ERCP, colonoscopy screenings, and liver disease management.",
-    achievements: ["Outstanding Clinician Award 2023", "Pioneered advanced ERCP diagnostics locally", "Member of Society of Gastrointestinal Endoscopy"]
+    timings: "Mon - Sat: 11:00 AM - 07:00 PM",
+    bio: "Dr. Vikram Kiran is a senior refractive specialist focused on touchless laser vision updates. He coordinates blade-free custom contour tracking and specialized corneal transplantation layouts.",
+    achievements: ["Trained in Wavefront Laser Ablation systems in Germany", "Successfully processed over 5,000 refractive laser treatments", "Active contributor to corneal collagen cross-linking data registries"]
+  },
+  {
+    id: "dr-neha-reddy",
+    name: "Dr. Neha Reddy",
+    photo: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=400",
+    qualification: "MS (Ophth), Fellowship in Pediatric Strabismus",
+    departmentId: "pediatric-squint",
+    departmentName: "Pediatric & Squint Division",
+    specialization: "Pediatric Ophthalmologist",
+    experience: "10+ Years",
+    timings: "Mon - Fri: 09:00 AM - 02:00 PM",
+    bio: "Dr. Neha Reddy provides dedicated screening tracking for pediatric structural variances, childhood amblyopia optimization, and precise strabismus muscle re-alignment surgical plans.",
+    achievements: ["Fellowship in Pediatric Strabismus (USA)", "Pioneered specialized binocular balance screening modules for children", "Recipient of the National Childhood Blindness Control Award"]
   }
 ];
 
 export const HEALTH_PACKAGES = [
   {
-    id: "general-checkup",
-    title: "General Health Checkup",
+    id: "basic-eye-screen",
+    title: "Primary Vision Review",
+    price: "₹499",
+    tagline: "Essential tracking for baseline refraction metric safety",
+    description: "An entry-level evaluation designed for routine eye check-ups, power adjustments, and monitoring structural eye alignment thresholds.",
+    benefits: ["Computerized Autorefraction Test", "Subjective Visual Acuity Testing", "Slit-Lamp Anterior Segment Check", "Intraocular Pressure (NCT) Screening", "Color Vision Base Assessment"],
+    testsCount: 5,
+    frequency: "Recommended once a year for all screen users"
+  },
+  {
+    id: "diabetic-eye-track",
+    title: "Retina & Diabetic Eye Care",
     price: "₹1,999",
-    tagline: "Essential screening for general health tracking",
-    description: "An entry-level preventative package designed for individuals of all ages to monitor primary organ functions and blood indices.",
-    benefits: ["Complete Blood Count (CBC)", "Kidney Function Test (Serum Creatinine, Urea)", "Liver Function Test (SGOT, SGPT, Bilirubin)", "Fast Blood Sugar", "Urine Routine Examination"],
-    testsCount: 28,
-    frequency: "Recommended once a year"
+    tagline: "Comprehensive checkup tailored for diabetic patients",
+    description: "A comprehensive retinal panel addressing diabetes-related vascular changes, micro-aneurysms, and macular consistency.",
+    benefits: ["All Primary Vision tests", "Pharmacological Pupil Dilation", "Digital Indirect Ophthalmoscopy", "Optical Coherence Tomography (OCT Scan)", "Fundus Photography Imaging", "Macular Thickness Grid Mapping"],
+    testsCount: 8,
+    frequency: "Highly critical every 6-12 months for diabetic individuals"
   },
   {
-    id: "executive-checkup",
-    title: "Executive Health Checkup",
-    price: "₹4,999",
-    tagline: "Premium checkup tailored for professionals",
-    description: "A comprehensive health review addressing stress-related markers, thyroid, lipids, liver, kidney, and cardiovascular status.",
-    benefits: ["All General Checkup tests", "Lipid Profile (Cholesterol, HDL, LDL, Triglycerides)", "Thyroid Profile (T3, T4, TSH)", "HbA1c (Average Blood Sugar)", "ECG", "Chest X-Ray", "Physical Consultation"],
-    testsCount: 52,
-    frequency: "Recommended for adults over 30"
-  },
-  {
-    id: "cardiac-package",
-    title: "Cardiac Package",
-    price: "₹6,499",
-    tagline: "Advanced evaluations for heart health",
-    description: "A focused package targeting heart wellness, artery status, and cardiac fitness, supervised by our senior cardiologists.",
-    benefits: ["Lipid Profile (Fractionated)", "Electrocardiogram (ECG)", "Echocardiogram (2D Echo)", "Treadmill Test (TMT)", "Serum Electrolytes", "HbA1c & Fast Sugar", "Consultation with Cardiologist"],
-    testsCount: 35,
-    frequency: "Recommended for history of BP, Diabetes, or heart issues"
-  },
-  {
-    id: "womens-package",
-    title: "Women's Health Package",
-    price: "₹5,499",
-    tagline: "Dedicated screening covering female health needs",
-    description: "A specialized pack targeting cervical cancer screens, breast ultrasound, bone minerals, and thyroid levels for women.",
-    benefits: ["Thyroid Profile", "Vitamin D & Vitamin B12", "Calcium & Bone Density Index", "Pap Smear test", "Ultrasound Pelvis / Abdomen", "Mammography (Breast scan)", "Gynecologist Consultation"],
-    testsCount: 44,
-    frequency: "Recommended annually for women above 25"
-  },
-  {
-    id: "child-package",
-    title: "Child Health Package",
+    id: "glaucoma-screening",
+    title: "Glaucoma Evaluation Pack",
     price: "₹2,499",
-    tagline: "Monitoring healthy growth and pediatric vitals",
-    description: "Specially put together to monitor growth spurts, childhood allergies, blood group confirmation, and pediatric deficiencies.",
-    benefits: ["Complete Blood Count", "Blood Grouping", "Urine Routine", "Stool Routine", "Serum Calcium & Vitamin D", "Eye & Dental screening", "Pediatrician Growth Assessment"],
-    testsCount: 22,
-    frequency: "Recommended for children aged 2 - 14"
+    tagline: "Advanced profiling for progressive nerve pressure tracking",
+    description: "A targeted preventative package focused on measuring fluid circulation channels and tracking optic nerve health dimensions.",
+    benefits: ["Applanation Tonometry Pressure Check", "Automated Visual Field Perimetry", "Optic Nerve Head OCT Scan", "Central Corneal Pachymetry Test", "Gonioscopy Angle Evaluation", "Detailed Ophthalmologist Consultation"],
+    testsCount: 7,
+    frequency: "Recommended annually for individuals over 40 or with family history"
   },
   {
-    id: "senior-citizen-package",
-    title: "Senior Citizen Package",
-    price: "₹5,999",
-    tagline: "Comprehensive care and tracking for seniors",
-    description: "Tailored to address senior issues like bone strength, joint inflammation, uric acid, cardiac vitals, and prostate status (for men).",
-    benefits: ["All Executive Checkup tests", "Uric Acid", "Rheumatoid Factor (RA Factor)", "PSA Test (for males) / Vitamin D (for females)", "Ultrasound Abdomen & Pelvis", "Pulmonary Spirometry", "Senior Consultant Review"],
-    testsCount: 58,
-    frequency: "Recommended every 6 months for individuals above 60"
+    id: "pre-lasik-assessment",
+    title: "Pre-LASIK Fitness Profile",
+    price: "₹2,999",
+    tagline: "Advanced mapping for spectacle-free laser eligibility",
+    description: "A highly specialized analytical package computed to map absolute corneal structural thickness rules prior to laser vision correction.",
+    benefits: ["3D Corneal Topography Mapping", "Ultrasound Pachymetry (Thickness Check)", "Dry Eye Tear Film Breakdown Assay", "Wavefront Aberrometry Distortion Grid", "Dilated Fundus Peripheral Review", "Refractive Surgeon Assessment Consultation"],
+    testsCount: 9,
+    frequency: "Prerequisite mapping prior to booking LASIK or ICL surgery"
   }
 ];
 
@@ -347,18 +254,18 @@ export const TESTIMONIALS = [
     name: "Arun Venkat",
     age: 54,
     rating: 5,
-    storyTitle: "Life-Saving Cardiac Intervention",
-    text: "I was brought to Vindhya Healthcare during a major cardiac arrest in the middle of the night. Within 30 minutes, Dr. Vinay Kumar and team performed an emergency angioplasty. The speed, professional expertise, and compassion saved my life. I am eternally grateful.",
+    storyTitle: "Pristine Sight Restored Instantly",
+    text: "I was diagnosed with an advanced nuclear cataract that severely limited my night driving. Dr. Rajeshwari Nair performed micro-incision phaco surgery and implanted a multifocal lens. The structural speed, lack of pain, and crystal-clear outcomes are truly life-changing.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
     videoUrl: ""
   },
   {
     id: 2,
     name: "Dr. Shruti Iyer",
-    age: 34,
+    age: 28,
     rating: 5,
-    storyTitle: "Amazing Maternity Experience",
-    text: "Giving birth to my daughter at Vindhya Healthcare was a beautiful experience. The birthing suite was like a luxury hotel, and Dr. Meera Reddy's care was highly comforting. The pediatric team and lactation consultants were extremely helpful during the first crucial days.",
+    storyTitle: "Glasses-Free Life Post LASIK",
+    text: "Being a medical professional, wearing thick prescription lenses inside sterile settings was tedious. The Pre-LASIK data profiling at Vindhya Eye Care was exceptionally thorough, and the blade-free laser modification by Dr. Vikram Kiran gave me perfect 6/6 vision within 24 hours.",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200",
     videoUrl: ""
   },
@@ -367,170 +274,85 @@ export const TESTIMONIALS = [
     name: "Ramanathan K.",
     age: 67,
     rating: 5,
-    storyTitle: "Smooth Knee Replacement",
-    text: "I suffered from severe osteo-arthritis for years. Dr. Rakesh Singh performed bilateral knee replacement using robot assistance. I was standing on day two, walking on day five, and now, 3 months later, I take long walks pain-free. A top-class rehab program!",
+    storyTitle: "Saved My Sight From Retinal Tear",
+    text: "I experienced sudden floaters and flashes of light while traveling. I rushed to Vindhya's 24/7 emergency trauma room where Dr. Anand Vardhan diagnosed a retinal tear. Immediate barrier laser photocoagulation saved my vision. Exceptional clinical response time!",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200",
-    videoUrl: ""
-  },
-  {
-    id: 4,
-    name: "Pooja Deshmukh",
-    age: 29,
-    rating: 5,
-    storyTitle: "Excellent Diagnostic Accuracy",
-    text: "After visiting multiple clinics, it was the radiology and neurology team at Vindhya that correctly diagnosed my chronic migraine triggers using high-res MRI scans. Their treatment plan worked like magic. Extremely professional!",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200",
-    videoUrl: ""
-  },
-  {
-    id: 5,
-    name: "Karan Johar (Patient relative)",
-    age: 42,
-    rating: 5,
-    storyTitle: "State-of-the-Art ICU Facilities",
-    text: "My father was admitted to the ICU for severe respiratory issues. The facilities, the round-the-clock intensive care specialists, and the transparent updates we received daily were truly outstanding. Vindhya Healthcare is easily the best in critical care.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200",
     videoUrl: ""
   }
 ];
 
 export const BLOG_POSTS = [
   {
-    id: "heart-attack-prevention",
-    title: "Preventing Heart Attacks: Modern Lifestyle Alterations",
-    category: "Health Tips",
-    author: "Dr. Vinay Kumar",
+    id: "diabetic-retinopathy-guide",
+    title: "Preserving Vision with Diabetes: Retinal Screening Updates",
+    category: "Medical Awareness",
+    author: "Dr. Anand Vardhan",
     date: "May 24, 2026",
     image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600",
-    excerpt: "Understand the subtle warning signs of heart diseases, lipid imbalances, and daily routines that keep your cardiovascular system strong.",
-    content: "Heart diseases remain the leading cause of mortality worldwide. However, up to 80% of premature heart attacks can be prevented with key lifestyle modifications. The pillars of cardiac prevention include managing blood pressure, balancing lipid levels, engaging in 150 minutes of moderate cardiovascular exercise per week, and consuming a diet rich in fiber, healthy fats (like Omega-3), and antioxidants. In this detailed article, Dr. Vinay Kumar explains the role of early screening, TMT evaluations, and decoding warning signs like chest tightness and unexplained breathlessness."
+    excerpt: "Understand how blood sugar spikes impact weak retinal capillaries and learn why routine dilated fundus tracking arrests progressive vision damage.",
+    content: "Diabetic Retinopathy remains a primary indicator for acquired vision limitations. High systemic glucose imbalances gradually weaken retinal capillary structures, causing micro-aneurysms or fluid leakage inside the macula. Because initial stages display zero pain or blur, regular eye screenings are critical. In this detailed article, Dr. Anand Vardhan maps out the preventative roles of OCT cross-sections, Anti-VEGF medical paths, and micro-surgical options used to secure vascular integrity."
   },
   {
-    id: "stroke-awareness-fast",
-    title: "Time is Brain: Understanding Stroke Warning Signs (B.E. F.A.S.T.)",
-    category: "Medical Awareness",
-    author: "Dr. Anjali Sharma",
-    date: "June 02, 2026",
-    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=600",
-    excerpt: "Every second counts during a stroke. Learn the B.E. F.A.S.T. acronym and know what to do instantly to minimize brain damage.",
-    content: "A stroke occurs when blood supply to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen. Within minutes, brain cells begin to die. That is why emergency stroke intervention is crucial. The acronym B.E. F.A.S.T. stands for Balance issues, Eye/Vision changes, Face drooping, Arm weakness, Speech difficulty, and Time to call emergency. Acting fast and bringing the patient to a stroke-ready center like Vindhya Healthcare within the 4.5-hour golden window allows physicians to administer clot-busting thrombolytic drugs, preventing long-term disability."
-  },
-  {
-    id: "robotic-joint-surgery",
-    title: "How Robotic Surgery is Revolutionizing Knee Replacements",
-    category: "Hospital Updates",
-    author: "Dr. Rakesh Singh",
-    date: "June 12, 2026",
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=600",
-    excerpt: "Vindhya Healthcare launches robotic-assisted joint surgeries. Learn why patients experience quicker recovery and natural joint alignment.",
-    content: "Vindhya Healthcare is proud to announce the integration of robotic-assisted navigation systems for knee and hip replacements. Unlike traditional surgery, robotic technology uses a 3D digital model of the patient's joint. This allows the surgeon to perform bone cuts with sub-millimeter precision, conserving healthy bone and mapping ligament tension accurately. Patients experience significantly less post-operative pain, minimal blood loss, and a natural-feeling joint alignment that translates to faster discharge times."
-  },
-  {
-    id: "childhood-obesity-health",
-    title: "Managing Childhood Obesity: Tips for Modern Parents",
+    id: "glaucoma-silent-thief",
+    title: "Understanding Glaucoma: Tracking Pressure Imbalances Proactively",
     category: "Health Tips",
-    author: "Dr. Sunita Patel",
-    date: "June 14, 2026",
-    image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600",
-    excerpt: "Healthy eating habits, digital screen regulations, and fun physical activities to keep your children active and fit.",
-    content: "Childhood obesity is a growing global concern. Sedentary behavior, processed foods, and increased screen time have replaced active playground play. To combat this, parents must foster healthy environments rather than placing children on restrictive diets. Increase home-cooked meals, replace sugary juices with whole fruits, limit screen time to 1-2 hours daily, and encourage family active hours like swimming or cycling. Ensuring adequate sleep and periodic growth reviews with pediatricians are key steps to track healthy developmental trajectories."
+    author: "Dr. Smriti Saxena",
+    date: "June 02, 2026",
+    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600",
+    excerpt: "High intraocular pressure can slowly restrict optic nerve fibres. Learn to read tracking indicators before peripheral visual activity drops.",
+    content: "Glaucoma is often called the silent thief of sight because central vision remains intact while peripheral field limits are slowly compromised. The condition stems from fluid drain path blocks increasing internal pressure configurations on the optic nerve. Dr. Smriti Saxena emphasizes the value of regular automated visual perimetry and advanced SLT laser approaches used to manage ocular pressures safely before irreversible optic disc modifications settle."
   }
 ];
 
 export const GALLERY_ITEMS = [
-  { id: 1, category: "infrastructure", title: "Hospital Main Facade", image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=600" },
-  { id: 2, category: "infrastructure", title: "Luxury Executive Waiting Lounge", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600" },
-  { id: 3, category: "equipment", title: "Eye Examination Suite", image: equipment1 },
-  { id: 4, category: "operation", title: "Eye Operation by Experts", image: operation },
-  { id: 5, category: "operation", title: "Emergency Operation", image: emergency },
-  { id: 6, category: "operation", title: "Operation Theatre", image: operation3 },
-  { id: 7, category: "infrastructure", title: "Modern Diagnostic Center", image: advancedtech },
-  { id: 8, category: "events", title: "Annual Healthcare Awareness Rally", image: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=600" },
-  { id: 9, category: "awards", title: "Best Multi-Specialty Hospital 2025", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600" },
-  { id: 10, category: "infrastructure", title: "Advanced Neonatal ICU Setup", image: "https://images.unsplash.com/photo-1584515901387-a7a1a6373140?q=80&w=600" },
-  { id: 11, category: "equipment", title: "Automated Hematology Analyzer", image: "https://images.unsplash.com/photo-1579156286657-39961f0b094f?q=80&w=600" },
-  { id: 12, category: "events", title: "Free Cardiac Screening Camp", image: cardiacCampImg },
-  { id: 13, category: "equipment", title: "3T Silent MRI Suite", image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600" },
-  { id: 14, category: "doctors", title: "Cardiology Conference", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" },
-  { id: 15, category: "equipment", title: "Advanced Cath Lab Suite", image: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=600" },
-  { id: 16, category: "infrastructure", title: "Ultra-Clean Operation Theatre (OT)", image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600" },
-  { id: 17, category: "doctors", title: "Dr. Vinay Kumar in Consultation", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600" }
+  { id: 1, category: "infrastructure", title: "Vindhya Eye Care Facade", image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=600" },
+  { id: 2, category: "infrastructure", title: "Premium Patient Vision Lounge", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600" },
+  { id: 3, category: "equipment", title: "Computerized Refraction Suite", image: equipment1 },
+  { id: 4, category: "operation", title: "Precision Microsurgery Operating Flow", image: operation },
+  { id: 5, category: "operation", title: "Emergency Trauma Micro-repair", image: emergency },
+  { id: 6, category: "operation", title: "Sterile Laser Ablation Suite", image: operation3 },
+  { id: 7, category: "infrastructure", title: "Specialty Diagnostic Center", image: advancedtech },
+  { id: 8, category: "events", title: "Free Blindness Prevention Mobile Camp", image: cardiacCampImg }
 ];
 
 export const FACILITIES = [
   {
-    name: "Intensive Care Unit (ICU)",
-    description: "Highly specialized ICU beds equipped with advanced multi-channel monitors, ventilators, and dedicated critical care specialists on standby 24/7.",
-    image: "https://images.unsplash.com/photo-1584515901387-a7a1a6373140?q=80&w=500",
-    features: ["Central monitoring systems", "Bedside dialysis facility", "Negative pressure isolation rooms", "1:1 nursing ratio for critical cases"]
-  },
-  {
-    name: "Neonatal Intensive Care Unit (NICU)",
-    description: "Advanced Level III NICU designed to support extremely premature, low birth weight, or critically ill infants under specialized neonatal experts.",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=500",
-    features: ["Advanced infant incubators", "Phototherapy units", "High-frequency ventilators", "Developmental supportive care environment"]
-  },
-  {
-    name: "Laminar Flow Operation Theatres (OT)",
-    description: "Hermetically sealed operating rooms featuring laminar airflow systems and HEPA filters to achieve near-zero infection rates during complex surgeries.",
+    name: "Sterile Ophthalmic Operation Suites",
+    description: "Ultra-clean surgical theatres engineered with vertical laminar airflow systems and high-efficiency particulate air (HEPA) units to eliminate micro-contamination parameters completely.",
     image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=500",
-    features: ["Computer-assisted navigation", "Pendant-mounted surgical tools", "C-Arm imaging machines", "Robotic-assisted surgical consoles"]
+    features: ["Real-time digital surgical overlays", "Pendant-mounted operating microscopes", "Automated phacoemulsification platforms", "Wavefront configuration consoles"]
   },
   {
-    name: "Advanced Pathology & Biochemistry Labs",
-    description: "Fully automated, high-throughput pathology laboratory performing advanced tissue, blood, molecular, and diagnostic screens.",
-    image: "https://images.unsplash.com/photo-1579156286657-39961f0b094f?q=80&w=500",
-    features: ["Barcoded blood collection track", "NABL accreditation standards", "Rapid turn-around on emergency samples", "Online secure report downloading"]
+    name: "Advanced Retinal Imaging Core",
+    description: "A centralized specialty diagnostic hub housing high-speed cross-sectional tracking sensors to capture micrometer-scale structural data of the macula and optic nerve layers.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+    features: ["Optical Coherence Tomography (OCT-A)", "Automated Perimetry Field Mapping", "Digital Fundus Fluorescein Angiography", "High-Resolution Ocular Ultrasound Probes"]
   },
   {
-    name: "Cardiac Life Support Ambulances",
-    description: "Our fleet of ambulances acts as mobile ICUs, enabling doctors to monitor vitals and start critical treatment before arriving at the hospital.",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=500",
-    features: ["Built-in transport ventilators", "Dual defibrillators & oxygen support", "GPS live tracking & ER coordinate relay", "Paramedics trained in trauma/ACLS"]
-  },
-  {
-    name: "Premium Inpatient Suites & Rooms",
-    description: "Spacious, comfortable rooms ranging from presidential suites and deluxe private rooms to semi-private halls, designed to feel like home.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=500",
-    features: ["Nurse call buttons", "Adjustable automated electric beds", "Sofa-bed for attendants", "High-speed WiFi & entertainment systems"]
+    name: "In-House Vision Studio & Refractive Labs",
+    description: "A custom dispensing framework that combines certified optometry assessments with computer-navigated lens centration tools to assure perfect alignment properties.",
+    image: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=500",
+    features: ["Automated Pupil Distance Calibrators", "Keratoconus Specialty Lens Customization", "Premium Anti-glare Protective Lenses", "Designer Brand Eyewear Studio Frameworks"]
   }
 ];
 
 export const CAREERS = [
   {
-    id: "senior-resident-cardiology",
-    title: "Senior Resident - Cardiology",
-    department: "Cardiology",
+    id: "fellow-vitreoretinal-surgery",
+    title: "Senior Fellow - Vitreoretinal Surgery",
+    department: "Retina & Vitreous Care",
     experience: "2 - 5 Years",
-    location: "Main Branch, Vindhya Healthcare",
+    location: "Main Branch, Vindhya Eye Care",
     mode: "Full-Time",
-    description: "Looking for an energetic Resident doctor with DM/DNB in Cardiology to assist in outpatient checkups, coronary units management, and cath-lab preparations under senior consultants."
+    description: "Looking for an agile ophthalmic professional with MS/DNB credentials to assist inside complex posterior segment surgeries, administer anti-VEGF therapeutic tracks, and handle emergency retinal procedures under senior consultants."
   },
   {
-    id: "icu-charge-nurse",
-    title: "ICU Charge Nurse",
-    department: "Nursing Services",
-    experience: "5+ Years",
-    location: "Main Branch, Vindhya Healthcare",
-    mode: "Full-Time (Rotational Shifts)",
-    description: "Require a B.Sc Nursing / GNM graduate with intensive critical care nursing experience. Candidate must lead shifts, monitor patient vitals, and handle code-blue emergencies with poise."
-  },
-  {
-    id: "consultant-pediatrician",
-    title: "Consultant Pediatrician",
-    department: "Pediatrics",
-    experience: "6+ Years",
-    location: "Main Branch, Vindhya Healthcare",
-    mode: "Full-Time",
-    description: "Seeking a qualified Pediatrician (MD/DNB) with pediatric ICU exposure. The doctor will manage OP clinics and support newborn emergency procedures."
-  },
-  {
-    id: "radiology-technician",
-    title: "Senior MRI/CT Technician",
-    department: "Diagnostics & Imaging",
+    id: "optometrist-charge-technician",
+    title: "Senior Clinical Optometrist",
+    department: "Specialty Diagnostics Studio",
     experience: "3+ Years",
-    location: "Diagnostic Wing, Vindhya Healthcare",
+    location: "Diagnostic Wing, Vindhya Eye Care",
     mode: "Full-Time",
-    description: "Candidate should hold a Degree/Diploma in Medical Imaging Technology. Proven capability in handling high-resolution 3T MRI scans and CT scans is essential."
+    description: "Require a Bachelor of Optometry (B.Optom) graduate proficient in running high-resolution automated topography grids, visual perimetry systems, A-scan biometry computing, and advanced contact lens fittings."
   }
 ];

@@ -1,4 +1,5 @@
-import { FaHistory, FaBullseye, FaHeart, FaRibbon, FaAward, FaHospital, FaChevronRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaHistory, FaBullseye, FaHeart, FaRibbon, FaAward, FaHospital, FaEye } from 'react-icons/fa';
 
 // 1. IMPORT YOUR BACKGROUND IMAGE ASSET WITH THE CORRECT EXTENSION
 import vindhyaBg from '../assets/image_9e2966.jpeg';
@@ -6,19 +7,19 @@ import equipment from '../assets/equipment1.jpg';
 
 export default function About() {
   const milestones = [
-    { year: "2006", title: "Inception", desc: "Vindhya Healthcare was founded as a 50-bed pediatric clinic in Telangana." },
-    { year: "2010", title: "Expansion into Multi-Specialty", desc: "Expanded capacity to 150 beds and added complete Cardiology and Neurology wings." },
-    { year: "2015", title: "NABH Accreditation", desc: "Recognized for clinical quality, patient safety, and premium operational safety protocols." },
-    { year: "2018", title: "State-of-the-Art Diagnostics", desc: "Installed Central India's first high-resolution 3T Silent MRI scanner and dual Cath labs." },
-    { year: "2022", title: "Robotic Surgery Launch", desc: "Introduced computer-navigated and robot-assisted joint reconstructions." },
-    { year: "2025", title: "Academic & Research Center", desc: "Launched dedicated PG fellowship programs and clinical research wings." }
+    { year: "2006", title: "Inception", desc: "Vindhya Healthcare was founded as a dedicated primary vision care clinic in Telangana." },
+    { year: "2010", title: "Expansion into Tertiary Eye Care", desc: "Upgraded capacity and added dedicated micro-surgical modules for Cataract and Glaucoma." },
+    { year: "2015", title: "NABH Accreditation", desc: "Recognized for superior ophthalmic clinical quality, patient safety, and sterile operational protocols." },
+    { year: "2018", title: "State-of-the-Art Retinal Imaging", desc: "Installed the region's first high-speed Optical Coherence Tomography (OCT) systems and digital fundus labs." },
+    { year: "2022", title: "Advanced LASIK & Refractive Wing", desc: "Introduced wavefront-guided and completely blade-free laser vision correction treatments." },
+    { year: "2025", title: "Academic & Vitreoretinal Fellowship", desc: "Launched dedicated postgraduate ophthalmic fellowship programs and specialty research wings." }
   ];
 
   const values = [
-    { title: "Patient First", desc: "All decisions, treatment paths, and services center around patient comfort and safety.", icon: <FaHeart /> },
-    { title: "Clinical Integrity", desc: "Strict adherence to ethical medical practices, evidence-based care, and transparency.", icon: <FaRibbon /> },
-    { title: "Innovation", desc: "Continual investment in next-gen diagnostic gear and advanced surgical training.", icon: <FaAward /> },
-    { title: "Empathy", desc: "Treating every patient and relative with compassion, kindness, and understanding.", icon: <FaHospital /> }
+    { title: "Patient First", desc: "All medical decisions, corrective paths, and services center around patient comfort and visual safety.", icon: <FaHeart /> },
+    { title: "Clinical Integrity", desc: "Strict adherence to ethical medical practices, evidence-based ophthalmic care, and diagnostic transparency.", icon: <FaRibbon /> },
+    { title: "Innovation", desc: "Continual investment in next-generation diagnostic gear and advanced laser-assisted surgical training.", icon: <FaAward /> },
+    { title: "Empathy", desc: "Treating every patient and relative with compassion, kindness, and customized vision counseling.", icon: <FaHospital /> }
   ];
 
   return (
@@ -36,9 +37,9 @@ export default function About() {
           <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/15 px-3 py-1.5 rounded-full backdrop-blur-sm border border-emerald-accent/20">
             Who We Are
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight drop-shadow-sm">About Vindhya Healthcare</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight drop-shadow-sm">About Vindhya Eye Care</h1>
           <p className="text-sm md:text-base text-slate-200 mt-4 leading-relaxed font-light drop-shadow max-w-2xl mx-auto">
-            An award-winning, advanced multi-specialty institution dedicated to clinical excellence, healthcare innovations, and patient trust since 2006.
+            An award-winning, advanced ophthalmic institution dedicated to clinical eye care excellence, visual innovations, and patient trust since 2006.
           </p>
         </div>
       </div>
@@ -52,9 +53,9 @@ export default function About() {
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm relative flex flex-col justify-between">
               <div>
                 <span className="text-xs font-bold text-emerald-accent uppercase tracking-wider block mb-2">Chairman's Address</span>
-                <h3 className="text-xl font-bold text-slate-800 mb-6">"Bringing World-Class Care Closer to You"</h3>
+                <h3 className="text-xl font-bold text-slate-800 mb-6">"Bringing World-Class Vision Care Closer to You"</h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-light italic mb-8">
-                  "At Vindhya Healthcare, our goal is simple: to make world-class medical treatments accessible, affordable, and highly ethical. Healthcare is more than treating illnesses; it is about building trust, providing empathy, and restoring hope. We invest constantly in high-end technologies so that our patients receive nothing less than global medical standards."
+                  "At Vindhya Eye Care, our goal is simple: to make world-class ophthalmic treatments accessible, affordable, and highly ethical. Healthcare is more than treating conditions; it is about building trust, providing empathy, and restoring pristine sight. We invest constantly in high-end laser technology and imaging diagnostics so that our patients receive nothing less than global medical standards."
                 </p>
               </div>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-5 mt-4">
@@ -72,9 +73,9 @@ export default function About() {
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm relative flex flex-col justify-between">
               <div>
                 <span className="text-xs font-bold text-emerald-accent uppercase tracking-wider block mb-2">Director's Message</span>
-                <h3 className="text-xl font-bold text-slate-800 mb-6">"Benchmarked Against Global Clinical Protocols"</h3>
+                <h3 className="text-xl font-bold text-slate-800 mb-6">"Benchmarked Against Global Ophthalmic Protocols"</h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-light italic mb-8">
-                  "Quality healthcare is defined by clinical precision and patient safety. Our clinical outcomes are audited closely to ensure we adhere to rigorous medical standards. Through continuous training programs for our nursing divisions and integration of robotic medical aids, we aim to lead surgical and diagnostic advancements in the region."
+                  "Quality vision restoration is defined by clinical precision and microsurgical safety. Our surgical outcomes are audited closely to ensure we adhere to rigorous safety protocols. Through continuous training programs for our optometry teams and integration of advanced imaging systems, we aim to lead diagnostic and refractive advancements in the region."
                 </p>
               </div>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-5 mt-4">
@@ -82,7 +83,7 @@ export default function About() {
                   <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=150" alt="Director" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <span className="block font-bold text-sm text-slate-800">Dr. Rajeshwari Nair</span>
+                  <span className="block font-bold text-sm text-slate-800">Dr. Rajeshwari Nair, MS (Ophth)</span>
                   <span className="block text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Medical Director</span>
                 </div>
               </div>
@@ -104,7 +105,7 @@ export default function About() {
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-4">Our History</h3>
               <p className="text-xs text-slate-500 leading-relaxed font-light">
-                What began as a localized child-care clinic in 2006 has evolved into a premier multi-specialty tertiary care referral destination. Over two decades, we have treated over half a million patients, consistently adding advanced oncology, cardiac catheterization labs, silent MRI machinery, and dedicated ICU wings to serve Bhopal and neighboring districts.
+                What began as a localized primary eye clinic in 2006 has evolved into a premier full-scale tertiary care ophthalmic referral destination. Over two decades, we have treated over half a million patients, consistently adding advanced vitreoretinal modules, automated visual field plotting tests, wavefront laser systems, and micro-incision cataract surgery setups to serve the community.
               </p>
             </div>
 
@@ -115,10 +116,10 @@ export default function About() {
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-4">Mission &amp; Vision</h3>
               <p className="text-xs text-slate-500 leading-relaxed font-light mb-4">
-                <strong>Our Mission:</strong> To provide premium-quality, patient-centric healthcare with empathy, ethical clinical standards, and diagnostic precision.
+                <strong>Our Mission:</strong> To provide premium-quality, patient-centric eye care with empathy, ethical clinical standards, and microsurgical precision.
               </p>
               <p className="text-xs text-slate-500 leading-relaxed font-light">
-                <strong>Our Vision:</strong> To be the leading choice in medical treatments, setting high standards of clinical outcomes, healthcare research, and patient safety.
+                <strong>Our Vision:</strong> To be the leading national choice in advanced ophthalmology, setting high standards of clinical vision outcomes, eye research, and safety.
               </p>
             </div>
 
@@ -195,7 +196,7 @@ export default function About() {
               </div>
               <h3 className="text-base font-bold text-slate-800 mb-2">NABH Certification</h3>
               <p className="text-xs text-slate-500 font-light leading-relaxed">
-                National Accreditation Board for Hospitals &amp; Healthcare Providers certification, recognizing our superior clinical quality and safety protocols.
+                National Accreditation Board for Hospitals &amp; Healthcare Providers certification, recognizing our superior clinical ophthalmic safety and microsurgical parameters.
               </p>
             </div>
             
@@ -204,9 +205,9 @@ export default function About() {
               <div className="w-16 h-16 rounded-full bg-medical-sky/10 text-medical-sky flex items-center justify-center mb-6">
                 <FaAward size={30} />
               </div>
-              <h3 className="text-base font-bold text-slate-800 mb-2">NABL Accredited Labs</h3>
+              <h3 className="text-base font-bold text-slate-800 mb-2">Advanced Diagnostics Panel</h3>
               <p className="text-xs text-slate-500 font-light leading-relaxed">
-                Our pathology laboratories and blood storage banks are NABL certified, assuring precision, automated handling, and quick report turnarounds.
+                Our imaging rooms and clinical labs conform to global standards, assuring precision micro-mapping of retinal structures and quick test turnarounds.
               </p>
             </div>
 
@@ -215,9 +216,9 @@ export default function About() {
               <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
                 <FaAward size={30} />
               </div>
-              <h3 className="text-base font-bold text-slate-800 mb-2">Best Hospital in Central India</h3>
+              <h3 className="text-base font-bold text-slate-800 mb-2">Excellence in Eye Care</h3>
               <p className="text-xs text-slate-500 font-light leading-relaxed">
-                Honored at the National Health Summit for outstanding services in critical cardiac interventions, neonatal care, and oncology diagnostics.
+                Honored at the National Health Summit for outstanding services in advanced vitreo-retinal procedures, modern cataract surgeries, and laser treatments.
               </p>
             </div>
           </div>
@@ -238,19 +239,19 @@ export default function About() {
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
               <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=500" alt="OT" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <span className="text-white font-bold text-sm">Ultra-Modern Laminar Flow OTs</span>
+                <span className="text-white font-bold text-sm">Sterile Ophthalmic Operation Theaters</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
               <img src={equipment} alt="ICU" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <span className="text-white font-bold text-sm">Level III Neonatal Intensive Care (NICU)</span>
+                <span className="text-white font-bold text-sm">Advanced Imaging &amp; Retinal Diagnostics Wing</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=500" alt="Suites" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
+              <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=500" alt="Suites" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <span className="text-white font-bold text-sm">Spacious Executive Patient Suites</span>
+                <span className="text-white font-bold text-sm">In-House Vision Studio &amp; Refractive Labs</span>
               </div>
             </div>
           </div>

@@ -8,7 +8,8 @@ import {
   FaVial, 
   FaCheck,
   FaCalendarCheck,
-  FaHeartbeat
+  FaHeartbeat,
+  FaGlasses 
 } from 'react-icons/fa';
 
 export default function Services() {
@@ -68,7 +69,22 @@ export default function Services() {
       description: 'Fully automated biochemistry, pathology, and microbiology labs that conform to strict quality guidelines to deliver quick and precise reports.',
       highlights: ['NABL certification standards', 'Barcode labeled sample vials', 'Home sample collection pick-ups', 'Secure online report PDF access'],
       timings: '24 Hours (OPD: 7:00 AM - 9:00 PM)'
+    },
+    {
+      id: 'optical',
+      name: 'In-House Vision Studio & Optical Center',
+      icon: <FaGlasses size={24} />,
+      description: 'Advanced dispensing methods for eyeglasses, contact lenses, and shades. Our certified optometrists ensure precise eye testing and help you find eyewear tailored for absolute clarity and comfort.',
+      highlights: ['Prescription glasses & contact lenses', 'Certified optometrist testing', 'Premium lifestyle & protection shades', 'Enhanced healthy vision calibration'],
+      timings: 'Daily: 9:00 AM - 8:00 PM'
     }
+  ];
+
+  const opticalBrands = [
+    'Cartier', 'PRADA', 'BURBERBERRY', 'MONTBLANC',
+    'TOM FORD', 'TOMMY HILFIGER', 'GUCCI', 'Calvin Klein',
+    'Ray-Ban', 'VOgUE', 'OAKLEY', 'FRENCH CONNECTION',
+    'ULTRA MARIN', 'MATIX', 'CUBS 9', 'SCOTT'
   ];
 
   return (
@@ -83,7 +99,7 @@ export default function Services() {
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Services</h1>
           <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Comprehensive medical care services ranging from routine outpatient checkups and diagnostic sweeps to high-end intensive care units.
+            Comprehensive medical care services ranging from routine outpatient checkups and diagnostic sweeps to high-end intensive care units and advanced optical solution centers.
           </p>
         </div>
       </div>
@@ -128,10 +144,10 @@ export default function Services() {
                 {/* Footer action buttons */}
                 <div className="border-t border-slate-50 pt-5 mt-4 flex items-center gap-4">
                   <Link 
-                    to="/appointment"
+                    to={service.id === 'optical' ? '/contact' : '/appointment'}
                     className="flex-1 text-center bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold py-3 rounded-xl text-xs transition-colors shadow-sm flex items-center justify-center gap-1.5"
                   >
-                    <FaCalendarCheck size={12} /> Book Appointment
+                    <FaCalendarCheck size={12} /> {service.id === 'optical' ? 'Eye Glasses Enquiry' : 'Book Appointment'}
                   </Link>
                   {service.id === 'labs' && (
                     <Link 
@@ -143,6 +159,30 @@ export default function Services() {
                   )}
                 </div>
 
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Featured Brands Studio */}
+      <section className="bg-white border-t border-slate-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <span className="text-medical-sky text-xs font-bold uppercase tracking-widest bg-medical-sky/10 px-3 py-1.5 rounded-full">
+            Vision Studio
+          </span>
+          <h2 className="text-2xl font-extrabold text-slate-800 mt-4 mb-2">Our Premium Brands</h2>
+          <p className="text-xs text-slate-400 font-light max-w-xl mx-auto mb-12">
+            We partner with the world's leading eyewear designers to bring you unmatched comfort, frame durability, and stylistic confidence.
+          </p>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {opticalBrands.map((brand, idx) => (
+              <div 
+                key={idx} 
+                className="bg-slate-50 border border-slate-100/50 rounded-2xl py-6 px-4 flex items-center justify-center font-serif text-sm tracking-wider font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 transition-all duration-200"
+              >
+                {brand}
               </div>
             ))}
           </div>
