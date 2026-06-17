@@ -6,7 +6,7 @@ import vindhyaBg from '../assets/image_9e2966.jpeg';
 import equipment from '../assets/equipment1.jpg';
 import eyeglasses1 from '../assets/eyeglasses1.jpg';
 import operation3 from '../assets/operation3.jpg';
-import chairman from '../assets/chairman.jpg';
+import chairman from '../assets/Chairman.jpg';
 import NavneethServey from '../assets/NavneethServey.jpg';
 
 export default function About() {
