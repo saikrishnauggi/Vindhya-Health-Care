@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { 
   FaUserMd, 
-  FaBed, 
   FaClinicMedical, 
-  FaAmbulance, 
   FaFilePrescription, 
   FaVial, 
   FaCheck,
   FaCalendarCheck,
   FaHeartbeat,
-  FaGlasses 
+  FaGlasses,
+  FaHospitalSymbol,
+  FaProcedures
 } from 'react-icons/fa';
 
 export default function Services() {
@@ -18,72 +18,56 @@ export default function Services() {
       id: 'opd',
       name: 'Outpatient Department (OPD)',
       icon: <FaUserMd size={24} />,
-      description: 'Consultation clinics covering 25+ medical specialities. Patients can schedule appointments, undergo primary physical assessments, and obtain prescriptions.',
-      highlights: ['Morning & evening clinics', 'Prioritized senior citizen waitlists', 'Electronic health records tracking', 'Digital prescription delivery'],
+      description: 'Multi-specialty consultation clinics including comprehensive Eye Specialist panels, Orthopedics, and Gynecology. Patients undergo primary tracking, physical assessments, and customized care plan mapping.',
+      highlights: ['Morning & evening slots available', 'Prioritized senior citizen waitlists', 'Electronic health records system', 'Digital prescription routing'],
       timings: 'Daily: 9:00 AM - 8:00 PM'
     },
     {
-      id: 'ipd',
-      name: 'Inpatient Department (IPD)',
-      icon: <FaBed size={24} />,
-      description: 'Spacious, premium recovery rooms and suites, providing high-end care, state-of-the-art telemetry monitors, and delicious nutritious meals planned by dietitians.',
-      highlights: ['Presidential & executive suites', '24/7 dedicated nursing shifts', 'Fully automated patient beds', 'Comfortable family attendant sofa-beds'],
-      timings: '24 Hours Open'
+      id: 'eye-ot',
+      name: 'Advanced Eye Surgery Theatre',
+      icon: <FaHospitalSymbol size={24} className="text-emerald-accent" />,
+      description: 'State-of-the-art microsurgical suite purpose-built for highly precise ophthalmic interventions, from modern premium cataract surgery to micro-incision vitrectomy treatments.',
+      highlights: ['Microscopic surgical guidance', 'Sutureless micro-incision setups', 'Advanced phacoemulsification systems', 'Sterilized micro-surgical conditions'],
+      timings: 'Scheduled Modular Shifts'
     },
     {
-      id: 'icu',
-      name: 'Intensive Care Units (ICU / NICU)',
-      icon: <FaClinicMedical size={24} />,
-      description: 'Highly advanced critical care centers. Equipped with advanced ventilators, automated dialysis machines, and 1:1 patient care supervised by intensive care specialists.',
-      highlights: ['Central telemetry consoles', 'Level III Neonatal ICU (NICU)', 'Negative pressure isolation wards', 'Sterilized laminar flow environments'],
-      timings: '24 Hours Open'
-    },
-    {
-      id: 'emergency',
-      name: '24/7 Emergency & Trauma',
-      icon: <FaClinicMedical className="text-red-500" size={24} />,
-      description: 'Immediate cardiac and trauma care. Managed by emergency medical officers and trauma surgeons ready to handle accidental emergencies or acute stroke setups.',
-      highlights: ['Dedicated code-blue emergency team', 'Instant triage diagnostic labs', 'State-of-the-art resuscitation bays', 'Direct telemetry transfer protocols'],
-      timings: '24 Hours (Year-Round)'
-    },
-    {
-      id: 'ambulance',
-      name: 'Advanced Life Support Ambulances',
-      icon: <FaAmbulance size={24} />,
-      description: 'Act as mobile ICUs on wheels. Equipped with ventilators, cardiac monitors, and defibrillators to start treatment en route to the hospital.',
-      highlights: ['Paramedics trained in advanced life support (ACLS)', 'GPS route navigation integration', 'Tele-medicine monitor connectivity', '24/7 centralized dispatch team'],
-      timings: '24 Hours Hotline'
-    },
-    {
-      id: 'pharmacy',
-      name: '24/7 In-House Pharmacy',
-      icon: <FaFilePrescription size={24} />,
-      description: 'Fully stocked clinical pharmacy delivering genuine, temperature-regulated medicines, vaccines, surgical consumables, and home healthcare aids.',
-      highlights: ['24/7 continuous operations', 'Computerized barcoded inventories', 'Hospital-delivery for inpatients', 'Authentic medicines sourcing'],
-      timings: '24 Hours Open'
+      id: 'daycare-ot',
+      name: 'Day Care Modular Operation Theatre',
+      icon: <FaProcedures size={24} />,
+      description: 'Advanced day care surgical block utilizing vertical laminar airflow systems. Engineered for rapid, minimally invasive surgical procedures that let you recover in the comfort of your home same-day.',
+      highlights: ['Ultra-sterile laminar flow system', 'Rapid, hassle-free day care admissions', 'Advanced orthopedic and regional blocks', 'Post-operative monitoring lounge'],
+      timings: 'Day Care Shifts Only'
     },
     {
       id: 'labs',
-      name: 'Accredited Pathology Laboratory',
+      name: 'Pathology Lab & Diagnostic Suite',
       icon: <FaVial size={24} />,
-      description: 'Fully automated biochemistry, pathology, and microbiology labs that conform to strict quality guidelines to deliver quick and precise reports.',
-      highlights: ['NABL certification standards', 'Barcode labeled sample vials', 'Home sample collection pick-ups', 'Secure online report PDF access'],
-      timings: '24 Hours (OPD: 7:00 AM - 9:00 PM)'
+      description: 'Comprehensive diagnostic tracking including precise Blood Testing panels, high-fidelity ECG tracking, blood pressure mapping, and biochemistry workups overseen by certified technicians.',
+      highlights: ['NABL standard tracking parameters', 'Rapid turnaround biochemistry panels', 'ECG tracking and physical diagnostic runs', 'Secure digital report downloads'],
+      timings: 'Daily: 7:00 AM - 8:00 PM'
     },
     {
       id: 'optical',
-      name: 'In-House Vision Studio & Optical Center',
+      name: 'In-House Optical Store & Vision Studio',
       icon: <FaGlasses size={24} />,
-      description: 'Advanced dispensing methods for eyeglasses, contact lenses, and shades. Our certified optometrists ensure precise eye testing and help you find eyewear tailored for absolute clarity and comfort.',
-      highlights: ['Prescription glasses & contact lenses', 'Certified optometrist testing', 'Premium lifestyle & protection shades', 'Enhanced healthy vision calibration'],
+      description: 'Advanced dispensing terminal for prescription lenses, specialty frames, and custom eyewear. Our resident optometrists deliver precise diagnostic refractions and assist you with premium, durable frame alignments.',
+      highlights: ['Premium corrective glass assemblies', 'Certified digital centration testing', 'High-end UV-protective lifestyle collections', 'Personalized vision care adjustments'],
       timings: 'Daily: 9:00 AM - 8:00 PM'
+    },
+    {
+      id: 'pharmacy',
+      name: 'In-House Clinical Pharmacy',
+      icon: <FaFilePrescription size={24} />,
+      description: 'Fully responsive medical counter providing immediate access to temperature-regulated post-operative eye drops, specialized prescriptions, essential medications, and home aids.',
+      highlights: ['Computerized batch tracking systems', 'Genuine medication source tracking', 'Post-op clinical care bundles', 'Direct inpatient delivery protocols'],
+      timings: 'Open Daily During Center Hours'
     }
   ];
 
   const opticalBrands = [
-    'Cartier', 'PRADA', 'BURBERBERRY', 'MONTBLANC',
+    'Cartier', 'PRADA', 'BURBERRY', 'MONTBLANC',
     'TOM FORD', 'TOMMY HILFIGER', 'GUCCI', 'Calvin Klein',
-    'Ray-Ban', 'VOgUE', 'OAKLEY', 'FRENCH CONNECTION',
+    'Ray-Ban', 'VOGUE', 'OAKLEY', 'FRENCH CONNECTION',
     'ULTRA MARIN', 'MATIX', 'CUBS 9', 'SCOTT'
   ];
 
@@ -98,8 +82,8 @@ export default function Services() {
             Clinical Care
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Services</h1>
-          <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Comprehensive medical care services ranging from routine outpatient checkups and diagnostic sweeps to high-end intensive care units and advanced optical solution centers.
+          <p className="text-sm md:text-base text-slate-300 mt-4 leading-relaxed font-light">
+            Comprehensive medical and ophthalmic care. From state-of-the-art modular day-care operation theaters and advanced diagnostic testing blocks to our premium in-house vision studio.
           </p>
         </div>
       </div>
@@ -107,8 +91,8 @@ export default function Services() {
       {/* 2. Services List grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {servicesList.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesList.map((service) => (
               <div 
                 key={service.id} 
                 className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between"
@@ -116,11 +100,11 @@ export default function Services() {
                 <div>
                   {/* Icon & Title */}
                   <div className="flex items-center gap-4 border-b border-slate-50 pb-5 mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-medical-sky/10 text-medical-sky flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-2xl bg-medical-sky/10 text-medical-sky flex items-center justify-center shrink-0">
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-slate-800">{service.name}</h3>
+                      <h3 className="text-sm md:text-base font-bold text-slate-800 leading-snug">{service.name}</h3>
                       <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">{service.timings}</span>
                     </div>
                   </div>
@@ -142,19 +126,19 @@ export default function Services() {
                 </div>
 
                 {/* Footer action buttons */}
-                <div className="border-t border-slate-50 pt-5 mt-4 flex items-center gap-4">
+                <div className="border-t border-slate-50 pt-5 mt-4 flex flex-col sm:flex-row items-center gap-3">
                   <Link 
                     to={service.id === 'optical' ? '/contact' : '/appointment'}
-                    className="flex-1 text-center bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold py-3 rounded-xl text-xs transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                    className="w-full text-center bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold py-3 rounded-xl text-xs transition-colors shadow-sm flex items-center justify-center gap-1.5"
                   >
                     <FaCalendarCheck size={12} /> {service.id === 'optical' ? 'Eye Glasses Enquiry' : 'Book Appointment'}
                   </Link>
                   {service.id === 'labs' && (
                     <Link 
                       to="/health-packages"
-                      className="flex-1 text-center bg-slate-50 text-slate-700 hover:bg-slate-100 font-bold py-3 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5"
+                      className="w-full text-center bg-slate-50 text-slate-700 hover:bg-slate-100 font-bold py-3 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5"
                     >
-                      <FaHeartbeat size={12} /> View Health Packages
+                      <FaHeartbeat size={12} /> View Packages
                     </Link>
                   )}
                 </div>

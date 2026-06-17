@@ -65,9 +65,9 @@ export default function Doctors() {
           <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/15 px-3 py-1.5 rounded-full">
             Ophthalmic Panel
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Meet Our Eye Specialists</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Meet Our Specialists</h1>
           <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Search and connect with experienced ophthalmologists, vitreo-retinal experts, corneal surgeons, and certified optometrists at Vindhya Eye Care.
+            Search and connect with experienced ophthalmologists, vitreo-retinal experts, corneal surgeons, gynaecologists and certified optometrists at Vindhya Eye Care.
           </p>
         </div>
       </div>

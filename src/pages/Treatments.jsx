@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FaInfoCircle, FaCalendarCheck, FaEye } from 'react-icons/fa';
 
-export default function HealthPackages() {
-  // Fixed and updated dataset mapping out the Solis Eye Care treatment matrix with live, verified image URLs
+export default function Treatments() {
+  // Fixed and updated dataset mapping out the clinical treatment matrix with live, verified image URLs
   const treatmentServices = [
     {
       id: 'cataract',
@@ -19,7 +19,6 @@ export default function HealthPackages() {
     {
       id: 'glaucoma',
       name: 'Glaucoma Management',
-      // Fixed image: Ophthalmic checkup using precision medical testing machinery
       image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600&auto=format&fit=crop',
       features: [
         'Early intraocular pressure screening',
@@ -44,7 +43,6 @@ export default function HealthPackages() {
     {
       id: 'uvea',
       name: 'Uvea Inflammation Clinic',
-      // Fixed image: Medical macro/microscopic analysis laboratory look
       image: 'https://images.unsplash.com/photo-1579153138244-3917a00811d0?q=80&w=600&auto=format&fit=crop',
       features: [
         'Ocular inflammation diagnosis',
@@ -69,7 +67,6 @@ export default function HealthPackages() {
     {
       id: 'diabetic-retinopathy',
       name: 'Diabetic Retinopathy Track',
-      // Fixed image: Professional optometrist scanning eyes in clinical dark room
       image: 'https://images.unsplash.com/photo-1504813184591-015578c17d25?q=80&w=600&auto=format&fit=crop',
       features: [
         'Early micro-aneurysm detection',
@@ -166,7 +163,6 @@ export default function HealthPackages() {
     {
       id: 'comprehensive',
       name: 'Comprehensive Ophthalmology',
-      // Fixed image: Standard diagnostic phoropter chart testing
       image: 'https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600&auto=format&fit=crop',
       features: [
         'Holistic preventive eye check-ups',
@@ -179,7 +175,6 @@ export default function HealthPackages() {
     {
       id: 'anterior-segment',
       name: 'Anterior Segment Disorders',
-      // Fixed image: Macro diagnostic view focusing on iris and cornea
       image: 'https://images.unsplash.com/photo-1612531388300-1730e9d3f796?q=80&w=600&auto=format&fit=crop',
       features: [
         'Front-third ocular structure checks',
@@ -210,28 +205,28 @@ export default function HealthPackages() {
           <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/15 px-3 py-1.5 rounded-full">
             Treatment & Diagnosis
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Ophthalmic Specialities</h1>
-          <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            A Center of Excellence in Advanced Eye Care for Every Stage of Life. Invest in targeted clinical evaluations to keep your vision pristine.
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Our Ophthalmic Treatments</h1>
+          <p className="text-sm md:text-base text-slate-300 mt-4 leading-relaxed font-light">
+            A Center of Excellence in Advanced Eye Care for Every Stage of Life. Invest in targeted clinical treatments to keep your vision pristine.
           </p>
         </div>
       </div>
 
-      {/* 2. Packages Grid */}
+      {/* 2. Treatments Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatmentServices.map((pkg) => (
+            {treatmentServices.map((treatment) => (
               <div 
-                key={pkg.id}
+                key={treatment.id}
                 className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group"
               >
                 {/* Image Section */}
                 <div className="aspect-[16/10] w-full bg-slate-200 overflow-hidden relative">
                   <img 
-                    src={pkg.image} 
-                    alt={pkg.name} 
-                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" 
+                    src={treatment.image} 
+                    alt={treatment.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
                   <div className="absolute top-4 left-4 bg-medical-sky text-white text-[9px] font-bold px-2.5 py-1 rounded uppercase tracking-wider flex items-center gap-1 shadow-sm">
                     <FaEye size={10} /> Ocular Care
@@ -241,15 +236,15 @@ export default function HealthPackages() {
                 <div className="p-6 md:p-8 flex-grow flex flex-col justify-between">
                   <div>
                     <h3 className="text-base font-extrabold text-slate-800 mb-2 group-hover:text-emerald-accent transition-colors">
-                      {pkg.name}
+                      {treatment.name}
                     </h3>
                     <p className="text-[11px] text-slate-400 font-light leading-relaxed mb-5">
-                      {pkg.description}
+                      {treatment.description}
                     </p>
                     
                     <div className="border-t border-slate-50 pt-4 mb-6">
                       <ul className="space-y-2 text-xs text-slate-500 font-light">
-                        {pkg.features.map((feat, idx) => (
+                        {treatment.features.map((feat, idx) => (
                           <li key={idx} className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent"></span>
                             {feat}
@@ -283,13 +278,13 @@ export default function HealthPackages() {
               <FaInfoCircle size={22} />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-slate-800">Pre-Checkup Preparation Guidelines</h2>
+              <h2 className="text-xl font-bold text-slate-800">Pre-Treatment Preparation Guidelines</h2>
               <p className="text-xs text-slate-500 font-light">Important instructions to ensure an efficient and precise clinical evaluation.</p>
             </div>
           </div>
 
           <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 md:p-8">
-            <ul className="space-y-4 text-xs text-slate-650 font-light leading-relaxed">
+            <ul className="space-y-4 text-xs text-slate-600 font-light leading-relaxed">
               {guidelines.map((tip, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="w-5 h-5 rounded-full bg-emerald-accent text-white flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">

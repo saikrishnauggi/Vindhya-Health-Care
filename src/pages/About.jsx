@@ -4,7 +4,7 @@ import { FaHistory, FaBullseye, FaHeart, FaRibbon, FaAward, FaHospital, FaEye } 
 // 1. IMPORT YOUR BACKGROUND IMAGE ASSET WITH THE CORRECT EXTENSION
 import vindhyaBg from '../assets/image_9e2966.jpeg';
 import equipment from '../assets/equipment1.jpg';
-import operation from '../assets/operation.jpg';
+import eyeglasses1 from '../assets/eyeglasses1.jpg';
 import operation3 from '../assets/operation3.jpg';
 
 export default function About() {
@@ -13,8 +13,8 @@ export default function About() {
     { year: "2010", title: "Expansion into Tertiary Eye Care", desc: "Upgraded capacity and added dedicated micro-surgical modules for Cataract and Glaucoma." },
     { year: "2015", title: "NABH Accreditation", desc: "Recognized for superior ophthalmic clinical quality, patient safety, and sterile operational protocols." },
     { year: "2018", title: "State-of-the-Art Retinal Imaging", desc: "Installed the region's first high-speed Optical Coherence Tomography (OCT) systems and digital fundus labs." },
-    { year: "2022", title: "Advanced LASIK & Refractive Wing", desc: "Introduced wavefront-guided and completely blade-free laser vision correction treatments." },
-    { year: "2025", title: "Academic & Vitreoretinal Fellowship", desc: "Launched dedicated postgraduate ophthalmic fellowship programs and specialty research wings." }
+    { year: "2022", title: "Advanced LASIK & Refractive Room", desc: "Introduced wavefront-guided and completely blade-free laser vision correction treatments." },
+    { year: "2025", title: "Academic & Vitreoretinal Fellowship", desc: "Launched dedicated postgraduate ophthalmic fellowship programs and specialty research rooms." }
   ];
 
   const values = [
@@ -74,7 +74,7 @@ export default function About() {
             {/* Director Message */}
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm relative flex flex-col justify-between">
               <div>
-                <span className="text-xs font-bold text-emerald-accent uppercase tracking-wider block mb-2">Director's Message</span>
+                <span className="text-xs font-bold text-emerald-accent uppercase tracking-wider block mb-2">Managing Director's Message</span>
                 <h3 className="text-xl font-bold text-slate-800 mb-6">"Benchmarked Against Global Ophthalmic Protocols"</h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-light italic mb-8">
                   "Quality vision restoration is defined by clinical precision and microsurgical safety. Our surgical outcomes are audited closely to ensure we adhere to rigorous safety protocols. Through continuous training programs for our optometry teams and integration of advanced imaging systems, we aim to lead diagnostic and refractive advancements in the region."
@@ -85,8 +85,8 @@ export default function About() {
                   <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=150" alt="Director" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <span className="block font-bold text-sm text-slate-800">Dr. Rajeshwari Nair, MS (Ophth)</span>
-                  <span className="block text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Medical Director</span>
+                  <span className="block font-bold text-sm text-slate-800">Dr. Navneeth Servey, M.B.B.S (Osm), M.S. (Ophthal) </span>
+                  <span className="block text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Managing Director</span>
                 </div>
               </div>
             </div>
@@ -247,11 +247,11 @@ export default function About() {
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
               <img src={equipment} alt="ICU" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                <span className="text-white font-bold text-sm">Advanced Imaging &amp; Retinal Diagnostics Wing</span>
+                <span className="text-white font-bold text-sm">Advanced Imaging &amp; Retinal Diagnostics Room</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-sm group">
-              <img src={operation} alt="Suites" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
+              <img src={eyeglasses1} alt="Suites" className="w-full h-64 object-cover group-hover:scale-103 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
                 <span className="text-white font-bold text-sm">In-House Vision Studio &amp; Refractive Labs</span>
               </div>

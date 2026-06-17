@@ -45,7 +45,7 @@ export default function Header() {
     { name: 'Departments', path: '/departments' },
     { name: 'Services', path: '/services' },
     { name: 'Facilities', path: '/facilities' },
-    { name: 'Health Packages', path: '/health-packages' },
+    { name: 'Treatments', path: '/treatments' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Blog', path: '/blog' },
     { name: 'Testimonials', path: '/testimonials' },
@@ -64,7 +64,7 @@ export default function Header() {
 
   const secondaryDesktopLinks = [
     { name: 'Facilities', path: '/facilities' },
-    { name: 'Health Packages', path: '/health-packages' },
+    { name: 'Treatments', path: '/treatments' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Blog', path: '/blog' },
     { name: 'Testimonials', path: '/testimonials' },
@@ -76,17 +76,17 @@ export default function Header() {
       {/* 1. STICKY INFORMATION BAR (Optimized & Reduced Footprint) */}
       <div className="bg-medical-dark text-white text-xs py-1.5 px-3 md:px-6 flex flex-wrap justify-between items-center gap-2 border-b border-white/10">
         <div className="flex flex-wrap items-center gap-4 md:gap-6">
-          <a href="tel:+919160854747" className="flex items-center gap-1.5 hover:text-emerald-accent transition-colors">
+          {/* <a href="tel:+919160854747" className="flex items-center gap-1.5 hover:text-emerald-accent transition-colors">
             <FaPhoneAlt className="text-emerald-accent" />
             <span className="font-semibold">Emergency:</span> +91 916 085 4747
-          </a>
+          </a> */}
           <a href="tel:108" className="flex items-center gap-1.5 hover:text-red-400 transition-colors animate-pulse">
             <FaAmbulance className="text-red-500" />
-            <span className="font-semibold text-red-400">Ambulance 24/7:</span> 108
+            <span className="font-semibold text-red-400">Emergency:</span> +91 916 085 4747
           </a>
           <span className="hidden sm:flex items-center gap-1.5">
             <FaClock className="text-medical-sky" />
-            <span>Mon - Sun: 24 Hours Open</span>
+            <span>Mon - Sun: 9am - 9pm</span>
           </span>
           <a href="mailto:care@vindhyahealthcare.in" className="hidden lg:flex items-center gap-1.5 hover:text-medical-sky transition-colors">
             <FaEnvelope className="text-medical-sky" />

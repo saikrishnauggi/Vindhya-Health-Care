@@ -23,8 +23,8 @@ export default function HeroSlider() {
       description: "Providing compassionate, state-of-the-art medical services with advanced diagnostic facilities and top-tier clinical outcomes.",
       ctaPrimary: "Book Appointment",
       ctaPrimaryPath: "/appointment",
-      ctaSecondary: "Explore Packages",
-      ctaSecondaryPath: "/health-packages"
+      ctaSecondary: "Explore Treatments",
+      ctaSecondaryPath: "/treatments"
     },
     {
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
@@ -49,23 +49,23 @@ export default function HeroSlider() {
     {
       image: infra,
       tagline: "HEALING IN COMFORT",
-      title: "Premium Patient Infrastructure",
-      description: "Rest easy in luxury recovery suites with dedicated 24/7 nursing care, designed to provide a warm and healing environment.",
+      title: "Premium Day Care Infrastructure",
+      description: "Rest easy in luxury post-operative recovery suites with dedicated daytime nursing care, designed to provide a warm and calm healing environment.",
       ctaPrimary: "Book Appointment",
       ctaPrimaryPath: "/appointment",
       ctaSecondary: "Read Reviews",
       ctaSecondaryPath: "/testimonials"
     },
     {
-      image: emergency,
-      tagline: "24/7 CRITICAL CARE",
-      title: "Rapid Emergency & Trauma Center",
-      description: "Equipped with advanced life support (ALS) ambulances, immediate cardiac resuscitation systems, and round-the-clock emergency doctors.",
-      ctaPrimary: "Call Emergency",
-      ctaPrimaryPath: "tel:+919160854747",
-      ctaSecondary: "Ambulance: 108",
-      ctaSecondaryPath: "tel:108"
-    }
+    image: emergency,
+    tagline: "9:00 AM - 9:00 PM DAY CARE TRAUMA",
+    title: "Rapid Ocular Trauma & Day Care Triage",
+    description: "Equipped for immediate stabilization, accidental eye injury management, and urgent foreign body removals during active operational center hours.",
+    ctaPrimary: "Call Clinic Hotline",
+    ctaPrimaryPath: "tel:+919160854747",
+    ctaSecondary: "View Treatments",
+    ctaSecondaryPath: "/treatments"
+  }
   ];
 
   return (
@@ -170,7 +170,7 @@ export default function HeroSlider() {
                       to={slide.ctaSecondaryPath}
                       className="bg-transparent border border-white/20 hover:bg-white hover:text-slate-950 hover:border-white text-white font-bold text-xs md:text-sm px-6 md:px-8 py-3.5 md:py-4 rounded-xl transition-all hover:-translate-y-0.5 inline-flex items-center gap-2"
                     >
-                      {slide.ctaSecondary.includes('Packages') ? <FaHeartbeat size={14} /> : null} {slide.ctaSecondary}
+                      {slide.ctaSecondary.includes('Treatments') ? <FaHeartbeat size={14} /> : null} {slide.ctaSecondary}
                     </Link>
                   )}
                 </motion.div>

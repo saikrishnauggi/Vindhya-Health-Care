@@ -39,23 +39,23 @@ export default function Footer() {
     { name: 'Comprehensive Checkups', path: '/services' },
     { name: 'Micro-Incision Surgery', path: '/services' },
     { name: 'Advanced Diagnostics Studio', path: '/services' },
-    { name: '24/7 Ocular Emergency', path: '/services' },
+    { name: 'Ocular Trauma & Triage', path: '/services' },
     { name: 'Vision Studio & Opticals', path: '/services' },
     { name: 'In-House Pharmacy', path: '/services' }
   ];
 
   const packages = [
-    { name: 'Primary Vision Review', path: '/health-packages' },
-    { name: 'Retina & Diabetic Track', path: '/health-packages' },
-    { name: 'Glaucoma Evaluation Pack', path: '/health-packages' },
-    { name: 'Pre-LASIK Fitness Profile', path: '/health-packages' }
+    { name: 'Primary Vision Review', path: '/treatments' },
+    { name: 'Retina & Diabetic Track', path: '/treatments' },
+    { name: 'Glaucoma Evaluation Pack', path: '/treatments' },
+    { name: 'Pre-LASIK Fitness Profile', path: '/treatments' }
   ];
 
   return (
     <footer className="bg-medical-dark text-slate-300 border-t border-slate-800 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         
-        {/* Top Emergency Highlight */}
+        {/* Top Emergency Highlight Box */}
         <div className="bg-gradient-to-r from-red-650 to-red-500 rounded-3xl p-6 md:p-10 mb-16 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)', border: '1px solid rgba(255,255,255,0.1)' }}>
           <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
           <div className="flex items-center gap-4 relative z-10">
@@ -64,19 +64,21 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="text-xl md:text-2xl font-bold">In Need of Emergency Ocular Care?</h3>
-              <p className="text-sm text-slate-300 mt-1">Our trauma unit handles foreign body extractions and eye injuries 24/7.</p>
+              <p className="text-sm text-slate-300 mt-1">Our trauma unit handles foreign body extractions and eye injuries.</p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-stretch gap-4 w-full md:w-auto relative z-10">
+          
+          {/* Layout Fixed Button Cluster Container */}
+          <div className="flex flex-col sm:flex-row items-stretch gap-4 w-full lg:w-auto relative z-10">
             <a 
               href="tel:+919160854747" 
-              className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
+              className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2 text-xs md:text-sm whitespace-nowrap"
             >
               <FaPhoneAlt size={14} /> Trauma Hotline: +91 916 085 4747
             </a>
             <a 
               href="tel:108" 
-              className="bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2"
+              className="bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2 text-xs md:text-sm whitespace-nowrap"
             >
               <FaPhoneAlt size={14} /> Emergency Request: 108
             </a>
@@ -111,12 +113,12 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2.5">
                 <FaClock className="text-emerald-accent shrink-0" />
-                <span>OPD Hours: 9:00 AM - 8:00 PM</span>
+                <span>OPD Hours: 9:00 AM - 9:00 PM</span>
               </p>
             </div>
           </div>
 
-          {/* Col 2: Quick Links (Fixed structure matching image_98d3d1.png) */}
+          {/* Col 2: Quick Links */}
           <div>
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-6 pb-2 border-b border-slate-800">
               Quick Links

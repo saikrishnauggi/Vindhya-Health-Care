@@ -40,7 +40,7 @@ export default function Facilities() {
       name: "Ocular Trauma & Emergency Desk",
       icon: <FaAmbulance size={24} />,
       desc: "A rapid-response emergency unit optimized to preserve vision during open-globe injuries, chemical burns, or deep corneal foreign body accidents.",
-      details: ["24/7 on-call trauma surgeons", "Emergency ocular surface irrigation", "Foreign body micro-extraction kits", "Acute pressure crisis protocols"],
+      details: ["On-call trauma surgeons", "Emergency ocular surface irrigation", "Foreign body micro-extraction kits", "Acute pressure crisis protocols"],
       image: "https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600"
     },
     {

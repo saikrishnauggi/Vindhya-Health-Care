@@ -36,12 +36,12 @@ export const DEPARTMENTS = [
     ]
   },
   {
-    id: "gynecology-obstetrics",
-    name: "Gynecology, Obstetrics & Fertility",
+    id: "gynecology",
+    name: "Gynecology & Fertility",
     icon: "FaVenus",
     image: "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=600",
     description: "Comprehensive women's healthcare focusing on high-risk obstetrics, laparoscopic surgeries, and reproductive fertility solution pathways.",
-    detailedDescription: "The Gynecology & Obstetrics Department at Vindhya Health Care delivers compassionate, end-to-end care for women across all stages of life. From early prenatal diagnostics and high-risk pregnancy management to modern minimally invasive laparoscopic procedures and comprehensive fertility evaluations, our specialists combine clinical excellence with state-of-the-art monitoring technologies.",
+    detailedDescription: "The Gynecology Department at Vindhya Health Care delivers compassionate, end-to-end care for women across all stages of life. From early prenatal diagnostics and high-risk pregnancy management to modern minimally invasive laparoscopic procedures and comprehensive fertility evaluations, our specialists combine clinical excellence with state-of-the-art monitoring technologies.",
     services: [
       "Comprehensive High-Risk Obstetric Care and Personalized Delivery Mapping",
       "Advanced Fertility Evaluations and Reproductive Endocrinology Pathways",
@@ -168,10 +168,10 @@ export const DEPARTMENTS = [
     name: "Ocular Trauma & Emergency",
     icon: "FaAmbulance",
     image: "https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600",
-    description: "24/7 dedicated emergency unit for accidental eye trauma, chemical burns, and foreign body removals.",
+    description: "Dedicated emergency unit for accidental eye trauma, chemical burns, and foreign body removals.",
     detailedDescription: "The Ocular Emergency and Trauma Wing is a rapid-response unit designed to save sight during critical emergencies. Manned by dedicated on-call trauma ophthalmologists, the center handles open-globe injuries, accidental perforations, corneal foreign body extractions, and acute micro-surgical repairs instantly.",
     services: [
-      "24/7 Reconstruction Care for Open-Globe and Perforating Injuries",
+      "Reconstruction Care for Open-Globe and Perforating Injuries",
       "Emergency Ocular Surface Irrigation Protocols for Chemical Burns",
       "Micro-surgical Repair of Eyelid Lacerations and Canalicular Tears",
       "Precision Surgical Extraction of Deep Intraocular Foreign Bodies",
@@ -266,61 +266,9 @@ export const DOCTORS = [
       "Dedicated to smooth, stress-free care navigation for new patients"
     ]
   },
-  {
-    id: "dr-anand-vardhan",
-    name: "Dr. Anand Vardhan",
-    photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
-    qualification: "MD, FRCS (Ophthalmology), Fellowship in Retina",
-    departmentId: "retina",
-    departmentName: "Retina & Vitreous Care",
-    specialization: "Vitreoretinal Specialist",
-    experience: "15+ Years",
-    timings: "Mon, Wed, Fri: 11:00 AM - 05:00 PM",
-    bio: "Dr. Anand Vardhan specializes in advanced micro-incision vitrectomy surgeries (MIVS) and complex posterior segment retinal repair. He supervises our diabetic retinopathy clinic and complex macular tracking programs.",
-    achievements: ["Gold Medalist in Ophthalmic Micro-surgery (AIIMS)", "Designed the regional fast-track screening guidelines for Diabetic Retinopathy", "Active panelist in the Global Vitreoretinal Research Society"]
-  },
-  {
-    id: "dr-smriti-saxena",
-    name: "Dr. Smriti Alok Saxena",
-    photo: "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=400",
-    qualification: "MS (Ophth), Fellowship in Glaucoma",
-    departmentId: "glaucoma",
-    departmentName: "Glaucoma Management",
-    specialization: "Glaucoma Consultant",
-    experience: "12+ Years",
-    timings: "Tue, Thu, Sat: 10:00 AM - 04:00 PM",
-    bio: "Dr. Smriti Saxena has deep clinical experience in long-term pressure regulation protocols, automated visual field diagnostics, and micro-stent drainage surgical applications for progressive glaucoma cases.",
-    achievements: ["Established the Advanced Humphrey Perimetry Lab", "Ocular Safety and Vision Preservation Award 2025", "Conducted over 150 community glaucoma tracking camps"]
-  },
-  {
-    id: "dr-vikram-kiran",
-    name: "Dr. Vikram Kiran",
-    photo: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=400",
-    qualification: "MS, Fellowship in Cornea & Refractive Surgery",
-    departmentId: "lasik-refractive",
-    departmentName: "LASIK & Refractive Studio",
-    specialization: "LASIK & Cornea Specialist",
-    experience: "16+ Years",
-    timings: "Mon - Sat: 11:00 AM - 07:00 PM",
-    bio: "Dr. Vikram Kiran is a senior refractive specialist focused on touchless laser vision updates. He coordinates blade-free custom contour tracking and specialized corneal transplantation layouts.",
-    achievements: ["Trained in Wavefront Laser Ablation systems in Germany", "Successfully processed over 5,000 refractive laser treatments", "Active contributor to corneal collagen cross-linking data registries"]
-  },
-  {
-    id: "dr-neha-reddy",
-    name: "Dr. Neha Reddy",
-    photo: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=400",
-    qualification: "MS (Ophth), Fellowship in Pediatric Strabismus",
-    departmentId: "pediatric-squint",
-    departmentName: "Pediatric & Squint Division",
-    specialization: "Pediatric Ophthalmologist",
-    experience: "10+ Years",
-    timings: "Mon - Fri: 09:00 AM - 02:00 PM",
-    bio: "Dr. Neha Reddy provides dedicated screening tracking for pediatric structural variances, childhood amblyopia optimization, and precise strabismus muscle re-alignment surgical plans.",
-    achievements: ["Fellowship in Pediatric Strabismus (USA)", "Pioneered specialized binocular balance screening modules for children", "Recipient of the National Childhood Blindness Control Award"]
-  }
 ];
 
-export const HEALTH_PACKAGES = [
+export const TREATMENTS_DATA = [
   {
     id: "basic-eye-screen",
     title: "Primary Vision Review",
@@ -390,7 +338,7 @@ export const TESTIMONIALS = [
     age: 67,
     rating: 5,
     storyTitle: "Saved My Sight From Retinal Tear",
-    text: "I experienced sudden floaters and flashes of light while traveling. I rushed to Vindhya's 24/7 emergency trauma room where Dr. Anand Vardhan diagnosed a retinal tear. Immediate barrier laser photocoagulation saved my vision. Exceptional clinical response time!",
+    text: "I experienced sudden floaters and flashes of light while traveling. I rushed to Vindhya's emergency trauma room where Dr. Anand Vardhan diagnosed a retinal tear. Immediate barrier laser photocoagulation saved my vision. Exceptional clinical response time!",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200",
     videoUrl: ""
   }
@@ -486,21 +434,66 @@ export const FACILITIES = [
 
 export const CAREERS = [
   {
-    id: "fellow-vitreoretinal-surgery",
-    title: "Senior Fellow - Vitreoretinal Surgery",
-    department: "Retina & Vitreous Care",
-    experience: "2 - 5 Years",
-    location: "Main Branch, Vindhya Eye Care",
+    id: "clinical-optometrist",
+    title: "Clinical Optometrist",
+    department: "Ophthalmology & Refractive Wing",
+    experience: "2+ Years",
+    location: "Main Branch, Vindhya Healthcare",
     mode: "Full-Time",
-    description: "Looking for an agile ophthalmic professional with MS/DNB credentials to assist inside complex posterior segment surgeries, administer anti-VEGF therapeutic tracks, and handle emergency retinal procedures under senior consultants."
+    description: "Seeking a qualified Optometrist (B.Optom) experienced in handling comprehensive refractions, computer-navigated vision screening, contact lens evaluations, and baseline diagnostic data tracking."
   },
   {
-    id: "optometrist-charge-technician",
-    title: "Senior Clinical Optometrist",
-    department: "Specialty Diagnostics Studio",
+    id: "consultant-ophthalmologist",
+    title: "Consultant Ophthalmologist",
+    department: "Ophthalmology Department",
     experience: "3+ Years",
-    location: "Diagnostic Wing, Vindhya Eye Care",
+    location: "Main Branch, Vindhya Healthcare",
     mode: "Full-Time",
-    description: "Require a Bachelor of Optometry (B.Optom) graduate proficient in running high-resolution automated topography grids, visual perimetry systems, A-scan biometry computing, and advanced contact lens fittings."
+    description: "Looking for a dedicated ophthalmic surgeon with MS/DNB credentials. The candidate will manage outpatient specialities, perform core day-care procedures (such as phacoemulsification surgeries), and oversee treatment planning."
+  },
+  {
+    id: "medical-receptionist",
+    title: "Front Desk Medical Receptionist",
+    department: "Administration & Triage Desk",
+    experience: "2+ Years",
+    location: "Main Branch, Vindhya Healthcare",
+    mode: "Full-Time",
+    description: "Position open for a compassionate, billing-literate front desk executive. Responsibilities include patient registrations, appointment tracking, managing inbound helpdesk enquiries, and cross-department routing."
+  },
+  {
+    id: "ot-staff-nurse",
+    title: "OT Staff Nurse",
+    department: "Modular Operation Theatre",
+    experience: "2+ Years",
+    location: "Main Branch, Vindhya Healthcare",
+    mode: "Full-Time",
+    description: "Seeking a registered nursing professional (B.Sc / GNM) specializing in perioperative care. Must be adept at scrubbing, circulating, managing sterile fields, and coordinating post-op recovery protocols."
+  },
+  {
+    id: "ot-technician",
+    title: "Operation Theatre Technician",
+    department: "Modular Operation Theatre",
+    experience: "2+ Years",
+    location: "Main Branch, Vindhya Healthcare",
+    mode: "Full-Time",
+    description: "Urgent requirement for an OT Technician certified in maintaining sterile environments, prepping advanced micro-surgical equipment, coordinating laminar flow systems, and assisting surgeons during day-care blocks."
+  },
+  {
+    id: "security-personnel",
+    title: "Security Guard / Staff",
+    department: "Facilities & Security Division",
+    experience: "2+ Years",
+    location: "Main Branch, Vindhya Healthcare",
+    mode: "Full-Time",
+    description: "Looking for disciplined security personnel to monitor campus safety, assist patients with mobility tracking at the entrance block, manage parking flows, and secure premises during operational shifts."
+  },
+  {
+    id: "patient-counsellor",
+    title: "Patient Counsellor",
+    department: "Patient Relations & Triage Desk",
+    experience: "2+ Years",
+    location: "Main Branch, Vindhya Healthcare",
+    mode: "Full-Time",
+    description: "Seeking an empathetic patient relation officer to guide families through treatment timelines, explain pre-op preparation guidelines, assist with cashless insurance processing options, and smooth out procedural handovers."
   }
 ];

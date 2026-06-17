@@ -6,7 +6,7 @@ import Doctors from './pages/Doctors';
 import Departments from './pages/Departments';
 import Services from './pages/Services';
 import Facilities from './pages/Facilities';
-import HealthPackages from './pages/HealthPackages';
+import Treatments from './pages/Treatments';  // Updated import path to Treatments
 import Appointment from './pages/Appointment';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
@@ -26,7 +26,7 @@ export default function App() {
           <Route path="departments" element={<Departments />} />
           <Route path="services" element={<Services />} />
           <Route path="facilities" element={<Facilities />} />
-          <Route path="health-packages" element={<HealthPackages />} />
+          <Route path="treatments" element={<Treatments />} />
           <Route path="appointment" element={<Appointment />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="blog" element={<Blog />} />

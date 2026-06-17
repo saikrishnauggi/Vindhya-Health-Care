@@ -47,7 +47,7 @@ export default function FloatingActionPanel() {
     {
       label: 'Book Health Checkup',
       icon: <FaHeartbeat />,
-      path: '/health-packages',
+      path: '/treatments',
       color: 'bg-emerald-accent hover:bg-emerald-dark',
       isLink: true
     },
