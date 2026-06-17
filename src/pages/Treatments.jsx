@@ -1,5 +1,19 @@
 import { Link } from 'react-router-dom';
 import { FaInfoCircle, FaCalendarCheck, FaEye } from 'react-icons/fa';
+import cataract from '../assets/cataract.png';
+import glaucoma from '../assets/glaucoma.png';
+import retina from '../assets/retina.png';
+import cornea from '../assets/cornea.png';
+import diabetic from '../assets/diabetic.png';
+import pediatric from '../assets/pediatric.png';
+import advancedtech from '../assets/advancedtech.jpg';
+import lasik from '../assets/lasik.png';
+import emergency from '../assets/emergency.jpg';
+import anterior from '../assets/anterior.png';
+import operation from '../assets/operation.jpg';
+import lenses from '../assets/lenses.png';
+import oculoplasty from '../assets/oculoplasty.png';
+import uvea from '../assets/uvea.png';
 
 export default function Treatments() {
   // Fixed and updated dataset mapping out the clinical treatment matrix with live, verified image URLs
@@ -7,7 +21,7 @@ export default function Treatments() {
     {
       id: 'cataract',
       name: 'Cataract Surgery',
-      image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=600&auto=format&fit=crop',
+      image: cataract,
       features: [
         'AI-assisted surgical mapping',
         'Navigation-guided alignment systems',
@@ -19,7 +33,7 @@ export default function Treatments() {
     {
       id: 'glaucoma',
       name: 'Glaucoma Management',
-      image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600&auto=format&fit=crop',
+      image: glaucoma,
       features: [
         'Early intraocular pressure screening',
         'Optic nerve tracking analysis',
@@ -31,7 +45,7 @@ export default function Treatments() {
     {
       id: 'retina',
       name: 'Retina & Vitreous Care',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop',
+      image: retina,
       features: [
         'Diabetic retinopathy management',
         'Retinal detachment repairs',
@@ -43,7 +57,7 @@ export default function Treatments() {
     {
       id: 'uvea',
       name: 'Uvea Inflammation Clinic',
-      image: 'https://images.unsplash.com/photo-1579153138244-3917a00811d0?q=80&w=600&auto=format&fit=crop',
+      image: uvea,
       features: [
         'Ocular inflammation diagnosis',
         'Immunosuppressive treatment tracks',
@@ -55,7 +69,7 @@ export default function Treatments() {
     {
       id: 'cornea',
       name: 'Cornea & External Disease',
-      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600&auto=format&fit=crop',
+      image: cornea,
       features: [
         'Corneal transplant procedures',
         'Infection & injury therapeutics',
@@ -67,7 +81,7 @@ export default function Treatments() {
     {
       id: 'diabetic-retinopathy',
       name: 'Diabetic Retinopathy Track',
-      image: 'https://images.unsplash.com/photo-1504813184591-015578c17d25?q=80&w=600&auto=format&fit=crop',
+      image: diabetic,
       features: [
         'Early micro-aneurysm detection',
         'Targeted retinal laser therapies',
@@ -79,7 +93,7 @@ export default function Treatments() {
     {
       id: 'pediatric',
       name: 'Pediatric Ophthalmology',
-      image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
+      image: pediatric,
       features: [
         'Lazy eye (Amblyopia) treatment plans',
         'Squint correction optimization',
@@ -103,7 +117,7 @@ export default function Treatments() {
     {
       id: 'trauma',
       name: 'Trauma & Emergency Care',
-      image: 'https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600&auto=format&fit=crop',
+      image: emergency,
       features: [
         'Accidental injury reconstruction',
         'Acute structural repair procedures',
@@ -115,7 +129,7 @@ export default function Treatments() {
     {
       id: 'lasik',
       name: 'LASIK & ICL Surgery',
-      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop',
+      image: lasik,
       features: [
         'Advanced laser vision corrections',
         'Implantable contact lenses (ICL)',
@@ -127,7 +141,7 @@ export default function Treatments() {
     {
       id: 'oculoplasty',
       name: 'Oculoplasty & Squint Surgery',
-      image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop',
+      image: oculoplasty,
       features: [
         'Eyelid & tear duct interventions',
         'Orbital structural adjustments',
@@ -139,7 +153,7 @@ export default function Treatments() {
     {
       id: 'contact-lens',
       name: 'Specialty Contact Lenses',
-      image: 'https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600&auto=format&fit=crop',
+      image: lenses,
       features: [
         'Precision multi-focal lens custom sizing',
         'Therapeutic lens allocations',
@@ -151,7 +165,7 @@ export default function Treatments() {
     {
       id: 'diagnostics',
       name: 'Specialty Diagnostics',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop',
+      image: advancedtech,
       features: [
         'High-speed optical coherence topography',
         'Digital fundus photography displays',
@@ -163,7 +177,7 @@ export default function Treatments() {
     {
       id: 'comprehensive',
       name: 'Comprehensive Ophthalmology',
-      image: 'https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600&auto=format&fit=crop',
+      image: operation,
       features: [
         'Holistic preventive eye check-ups',
         'Refractive prescription updates',
@@ -175,7 +189,7 @@ export default function Treatments() {
     {
       id: 'anterior-segment',
       name: 'Anterior Segment Disorders',
-      image: 'https://images.unsplash.com/photo-1612531388300-1730e9d3f796?q=80&w=600&auto=format&fit=crop',
+      image: anterior,
       features: [
         'Front-third ocular structure checks',
         'Iris and crystalline lens tracking',

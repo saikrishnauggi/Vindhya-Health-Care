@@ -19,6 +19,18 @@ import eyeglasses1 from '../assets/eyeglasses1.jpg';
 import eyeglasses2 from '../assets/eyeglasses2.jpg';
 import glaucoma from '../assets/glaucoma.png';
 import diabetic from '../assets/diabetic.png';
+import cataract from '../assets/cataract.png';
+import gynecology from '../assets/gynecology.png';
+import lasik from '../assets/lasik.png';
+import pediatric from '../assets/pediatric.png';
+import orthopedic from '../assets/orthopedic.png';
+import NavneethServey from '../assets/NavneethServey.jpg';
+import TejeswiniNese from '../assets/TejeswiniNese.jpg';
+import RahulKuraganti from '../assets/RahulKuraganti.jpg';
+import General from '../assets/General.jpg';
+import retina from '../assets/retina.png';
+import cornea from '../assets/cornea.png';
+
 export const DEPARTMENTS = [
   {
     id: "general-medicine",
@@ -39,7 +51,7 @@ export const DEPARTMENTS = [
     id: "gynecology",
     name: "Gynecology & Fertility",
     icon: "FaVenus",
-    image: "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=600",
+    image: gynecology,
     description: "Comprehensive women's healthcare focusing on high-risk obstetrics, laparoscopic surgeries, and reproductive fertility solution pathways.",
     detailedDescription: "The Gynecology Department at Vindhya Health Care delivers compassionate, end-to-end care for women across all stages of life. From early prenatal diagnostics and high-risk pregnancy management to modern minimally invasive laparoscopic procedures and comprehensive fertility evaluations, our specialists combine clinical excellence with state-of-the-art monitoring technologies.",
     services: [
@@ -55,7 +67,7 @@ export const DEPARTMENTS = [
     id: "orthopedics-rheumatology",
     name: "Orthopedic Surgery & Rheumatology",
     icon: "FaBone",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600",
+    image: orthopedic,
     description: "Advanced joint replacements, minimally invasive fracture reconstructions, and clinical management for chronic autoimmune rheumatic conditions.",
     detailedDescription: "Our Orthopedics and Rheumatology Division offers international-standard surgical and therapeutic solutions for musculoskeletal and chronic joint conditions. Specializing in advanced joint reconstructions (arthroplasty), trauma care, and complex clinical rheumatology workflows, the department provides comprehensive recovery models for arthritis, sports injuries, and degenerative bone health issues.",
     services: [
@@ -71,7 +83,7 @@ export const DEPARTMENTS = [
     id: "cataract",
     name: "Cataract Services",
     icon: "FaEye",
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=600",
+    image: cataract,
     description: "Advanced clear vision restoration using AI-assisted planning and navigation-guided microsurgeries.",
     detailedDescription: "The Cataract Department at Vindhya Eye Care handles advanced clear lens restorations utilizing stitch-less micro-incision cataract surgery (MICS). Equipped with real-time digital overlays and high-resolution operating microscopes, our specialists customize premium monofocal, multifocal, and toric intraocular lens (IOL) implantations to restore sharp, crystal-clear vision.",
     services: [
@@ -87,7 +99,7 @@ export const DEPARTMENTS = [
     id: "retina",
     name: "Retina & Vitreous Care",
     icon: "FaProcedures",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600",
+    image: retina,
     description: "Comprehensive medical and surgical interventions for complex posterior segment disorders.",
     detailedDescription: "Our Retina and Vitreous Center specializes in the diagnostic screening and surgical repair of delicate posterior eye complications. Utilizing high-speed Optical Coherence Tomography (OCT) systems and micro-incision vitrectomy instruments, our vitreoretinal surgeons effectively manage diabetic retinopathy, age-related macular degeneration (ARMD), retinal detachments, and severe vascular blockages.",
     services: [
@@ -103,7 +115,7 @@ export const DEPARTMENTS = [
     id: "lasik-refractive",
     name: "LASIK & Refractive Studio",
     icon: "FaGlasses",
-    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600",
+    image: lasik,
     description: "Blade-free laser vision correction and implantable contact lenses designed for spectacle-free living.",
     detailedDescription: "Eliminate dependency on glasses and standard contact lenses safely. Our Refractive Studio features advanced wavefront-guided laser systems that precisely map corneal irregularities. We provide advanced touchless laser variations (SMILE/Contoura Vision) and premium Implantable Collamer Lenses (ICL) for patients with thin corneas or high prescriptions.",
     services: [
@@ -119,7 +131,7 @@ export const DEPARTMENTS = [
     id: "glaucoma",
     name: "Glaucoma Management",
     icon: "FaEyeSlash",
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=600",
+    image: glaucoma,
     description: "Early intraocular pressure screening and progressive management to protect optic nerve health.",
     detailedDescription: "Often labeled as the silent thief of sight, glaucoma requires early tracking. This department relies on highly automated visual field analyzers, precise tonometry, and laser diagnostics to arrest disease progression, regulate fluid pressure imbalances, and preserve optimal peripheral visual fields.",
     services: [
@@ -135,7 +147,7 @@ export const DEPARTMENTS = [
     id: "pediatric-squint",
     name: "Pediatric & Squint Division",
     icon: "FaChild",
-    image: "https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600",
+    image: pediatric,
     description: "Dedicated clinical checkups and muscle balance corrections for lazy eyes and congenital anomalies in children.",
     detailedDescription: "Our Pediatric Ophthalmology unit provides customized, stress-free clinical screening for infants and children. We focus heavily on resolving refractive variances early, treating lazy eyes (amblyopia), and performing precise muscle adjustment surgeries to resolve squint alignments (strabismus) to secure proper visual development.",
     services: [
@@ -151,7 +163,7 @@ export const DEPARTMENTS = [
     id: "cornea-surface",
     name: "Cornea & Ocular Surface Center",
     icon: "FaStethoscope",
-    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600",
+    image: cornea,
     description: "Expert corneal transplantation and therapeutic treatments for severe ocular surface diseases.",
     detailedDescription: "The Cornea and Ocular Surface division offers top-tier surgical treatments for corneal dystrophies, severe scars, keratoconus, and traumatic eye burns. We feature modern preservation storage parameters and specialize in partial-thickness corneal tissue grafts to minimize rejection profiles.",
     services: [
@@ -167,7 +179,7 @@ export const DEPARTMENTS = [
     id: "ocular-trauma",
     name: "Ocular Trauma & Emergency",
     icon: "FaAmbulance",
-    image: "https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600",
+    image: emergency,
     description: "Dedicated emergency unit for accidental eye trauma, chemical burns, and foreign body removals.",
     detailedDescription: "The Ocular Emergency and Trauma Wing is a rapid-response unit designed to save sight during critical emergencies. Manned by dedicated on-call trauma ophthalmologists, the center handles open-globe injuries, accidental perforations, corneal foreign body extractions, and acute micro-surgical repairs instantly.",
     services: [
@@ -183,7 +195,7 @@ export const DEPARTMENTS = [
     id: "diagnostics-opticals",
     name: "Specialty Diagnostics Studio",
     icon: "FaMicroscope",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600",
+    image: advancedtech,
     description: "State-of-the-art diagnostic imaging, digital visual fields mapping, and custom lens dispensing setups.",
     detailedDescription: "The Specialty Diagnostics Department utilizes ultra-modern imaging modalities to support our clinical teams with unmatched analytical clarity. From mapping corneal curvature maps via automated systems to computing optical coherence structures, we ensure precise baseline matrices to formulate accurate ocular treatment plans.",
     services: [
@@ -201,7 +213,7 @@ export const DOCTORS = [
   {
     "id": "dr-navneeth-servey",
     "name": "Dr. Navneeth Servey",
-    "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400",
+    "photo": NavneethServey,
     "qualification": "M.B.B.S (Osm), M.S. Ophthal (GMC, Sarojini Devi Eye Hospital), Fellow in Phaco Surgery (Aravind Eye Hospital), Fellow in Refractive & Lasik Surgeries",
     "departmentId": "ophthalmology",
     "departmentName": "Ophthalmology & Laser Eye Surgery",
@@ -218,7 +230,7 @@ export const DOCTORS = [
   {
     "id": "dr-tejeswini-nese",
     "name": "Dr. Tejeswini Nese",
-    "photo": "https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=400",
+    "photo": TejeswiniNese,
     "qualification": "M.B.B.S (Osm), M.S. OBG (Gandhi)",
     "departmentId": "gynecology",
     "departmentName": "Gynecology & Obstetrics",
@@ -235,7 +247,7 @@ export const DOCTORS = [
   {
     "id": "dr-rahul-kuraganti",
     "name": "Dr. Rahul Kuraganti",
-    "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400",
+    "photo": RahulKuraganti,
     "qualification": "M.B.B.S (Osm), M.S. Ortho (Osm), Fellow in Arthroplasty, Fellow Orthopaediae (Germany), PGP Rheumatology (Johns Hopkins, USA)",
     "departmentId": "orthopedics",
     "departmentName": "Orthopedic Surgery & Rheumatology",
@@ -252,7 +264,7 @@ export const DOCTORS = [
   {
     id: "dr-general-triage",
     name: "General Medicine Desk (Unsure of Specialist)",
-    photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400",
+    photo: General,
     qualification: "M.B.B.S / Consultant Physicians",
     departmentId: "general-medicine",
     departmentName: "General Medicine & Triage Desk",

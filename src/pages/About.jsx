@@ -6,6 +6,8 @@ import vindhyaBg from '../assets/image_9e2966.jpeg';
 import equipment from '../assets/equipment1.jpg';
 import eyeglasses1 from '../assets/eyeglasses1.jpg';
 import operation3 from '../assets/operation3.jpg';
+import chairman from '../assets/chairman.jpg';
+import NavneethServey from '../assets/NavneethServey.jpg';
 
 export default function About() {
   const milestones = [
@@ -62,7 +64,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-5 mt-4">
                 <div className="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150" alt="Chairman" className="w-full h-full object-cover" />
+                  <img src={chairman} alt="Chairman" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <span className="block font-bold text-sm text-slate-800">Shri Alok Kumar Saxena</span>
@@ -82,7 +84,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-5 mt-4">
                 <div className="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=150" alt="Director" className="w-full h-full object-cover" />
+                  <img src={NavneethServey} alt="Director" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <span className="block font-bold text-sm text-slate-800">Dr. Navneeth Servey, M.B.B.S (Osm), M.S. (Ophthal) </span>

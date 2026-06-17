@@ -3,15 +3,22 @@ import {
   FaHospital, 
   FaFlask, 
   FaAmbulance, 
-  FaBed, 
   FaChair, 
   FaCheck,
-  FaEye,
-  FaGlasses
+  FaGlasses,
+  FaUserCheck,    // For Reception
+  FaParking,      // For Parking
+  FaWater         // For Drinking Water
 } from 'react-icons/fa';
 import operation from '../assets/operation.jpg';
 import emergency from '../assets/emergency.jpg';
-import waitinghall from '../assets/waitinghall.jpg';
+import waitinghall2 from '../assets/waitinghall2.jpg';
+import eyeglasses1 from '../assets/eyeglasses1.jpg';
+import reception4 from '../assets/reception4.jpg';
+import equipment1 from '../assets/equipment1.jpg';
+import operation3 from '../assets/operation3.jpg';
+import drinkingwater1 from '../assets/drinkingwater1.jpg';
+import parking1 from '../assets/parking1.jpg';
 
 export default function Facilities() {
   const facilityItems = [
@@ -27,7 +34,7 @@ export default function Facilities() {
       icon: <FaClinicMedical size={24} />,
       desc: "A high-precision diagnostic facility featuring micrometer-scale structural sensors to scan the posterior segment, vital for tracking macular mapping and progressive optic disc changes.",
       details: ["High-speed 3D OCT Angiography", "Digital Fundus Fluorescein imaging", "Visual Field Plotting (Perimetry)", "High-resolution B-Scan ultrasound probes"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600"
+      image: equipment1
     },
     {
       name: "Refractive Vision Correction Lab",
@@ -37,25 +44,46 @@ export default function Facilities() {
       image: emergency
     },
     {
+      name: "Patient Helpdesk & Central Reception",
+      icon: <FaUserCheck size={24} />,
+      desc: "Our primary reception deck streamlines the hospital entry process. Dedicated care coordinators assist with fast-track digital registrations, token distributions, and multi-specialty triage routing.",
+      details: ["Digital QR-based registrations", "Cashless TPA file processing desks", "Instant specialty token generation", "Patient care coordination guides"],
+      image: reception4
+    },
+    {
       name: "Ocular Trauma & Emergency Desk",
       icon: <FaAmbulance size={24} />,
       desc: "A rapid-response emergency unit optimized to preserve vision during open-globe injuries, chemical burns, or deep corneal foreign body accidents.",
       details: ["On-call trauma surgeons", "Emergency ocular surface irrigation", "Foreign body micro-extraction kits", "Acute pressure crisis protocols"],
-      image: "https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=600"
+      image: operation3
     },
     {
       name: "In-House Vision Studio & Optical Center",
       icon: <FaGlasses size={24} />,
       desc: "A premium eyeglass and lens dispensing framework combining accurate automated optometry metrics with computer-navigated frame alignment grids.",
       details: ["Computerized centration parameters", "Keratoconus specialty lens sizing", "Premium anti-glare coatings", "Designer brand lifestyle collection"],
-      image: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600"
+      image: eyeglasses1
     },
     {
       name: "Patient Counseling & Waiting Lounges",
       icon: <FaChair size={24} />,
       desc: "Designed to lower pre-consultation stress, our premium OPD waiting spaces provide ergonomic seating, charging docks, quiet air filters, and visual token dashboard queues.",
       details: ["Ergonomic high-back seating rows", "Custom eye drop application desks", "Electronic token status layouts", "Clean air filtration filters"],
-      image: waitinghall
+      image: waitinghall2
+    },
+    {
+      name: "RO Drinking Water Stations",
+      icon: <FaWater size={24} />,
+      desc: "To maintain hygienic comfort, multiple points across our outpatient blocks are equipped with continuous multi-stage reverse osmosis (RO) drinking water units.",
+      details: ["Multi-stage RO purification loops", "Chilled and ambient temperature options", "Contactless disposable glass dispensers", "Routine clinical sanitation checks"],
+      image: drinkingwater1
+    },
+    {
+      name: "Valet Parking & Patient Drop-off Zones",
+      icon: <FaParking size={24} />,
+      desc: "Equipped with wide drop-off lanes right at the main entrance, providing seamless navigation for vision-compromised patients alongside convenient, secure parking facilities.",
+      details: ["Zero-step wheelchair drop-off bays", "Dedicated valet vehicle tracking", "Spacious and secure parking lanes", "24/7 guard surveillance monitoring"],
+      image: parking1
     }
   ];
 
@@ -70,8 +98,8 @@ export default function Facilities() {
             Infrastructure
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Hospital Facilities</h1>
-          <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            An overview of the ophthalmic clinical infrastructure, micro-surgical suites, high-end imaging diagnostics, and optical studios that support your vision restoration.
+          <p className="text-sm md:text-base text-slate-300 mt-4 leading-relaxed font-light">
+            An overview of the ophthalmic clinical infrastructure, micro-surgical suites, high-end imaging diagnostics, and comfort-driven patient utilities that support your vision restoration.
           </p>
         </div>
       </div>
