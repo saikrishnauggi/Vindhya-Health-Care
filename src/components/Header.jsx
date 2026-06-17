@@ -48,7 +48,7 @@ export default function Header() {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Blog', path: '/blog' },
     { name: 'Testimonials', path: '/testimonials' },
-    /* { name: 'Careers', path: '/careers' }, */
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact Us', path: '/contact' }
   ];
 
