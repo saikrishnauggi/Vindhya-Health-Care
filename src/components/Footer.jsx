@@ -71,10 +71,10 @@ export default function Footer() {
           {/* Layout Fixed Button Cluster Container */}
           <div className="flex flex-col sm:flex-row items-stretch gap-4 w-full lg:w-auto relative z-10">
             <a 
-              href="tel:+919160854747" 
+              href="tel:+919030757575" 
               className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2 text-xs md:text-sm whitespace-nowrap"
             >
-              <FaPhoneAlt size={14} /> Trauma Hotline: +91 916 085 4747
+              <FaPhoneAlt size={14} /> Trauma Hotline: +91 903 075 7575
             </a>
             <a 
               href="tel:108" 

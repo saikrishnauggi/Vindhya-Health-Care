@@ -114,12 +114,12 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Telephone Contacts</span>
-                      <a href="tel:+919160854747" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        Emergency 24/7: +91 916 085 4747
+                      <a href="tel:+919030757575" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        Emergency 24/7: +91 903 075 7575
                       </a>
-                      <a href="tel:0755123456" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                      {/* <a href="tel:0755123456" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
                         OPD Desk: 0755 123 456
-                      </a>
+                      </a> */}
                     </div>
                   </div>
 

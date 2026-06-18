@@ -9,7 +9,9 @@ import {
   FaHeartbeat,
   FaGlasses,
   FaHospitalSymbol,
-  FaProcedures
+  FaProcedures,
+  FaShieldAlt,
+  FaHandHoldingMedical
 } from 'react-icons/fa';
 
 export default function Services() {
@@ -69,6 +71,32 @@ export default function Services() {
     'TOM FORD', 'TOMMY HILFIGER', 'GUCCI', 'Calvin Klein',
     'Ray-Ban', 'VOGUE', 'OAKLEY', 'FRENCH CONNECTION',
     'ULTRA MARIN', 'MATIX', 'CUBS 9', 'SCOTT'
+  ];
+
+  // Grouped insurance partners based on official hospital empanelment data
+  const insurancePartners = [
+    { name: "Star Health Insurance", type: "Major Network" },
+    { name: "Chola MS", type: "General" },
+    { name: "Aditya Birla Health", type: "Major Network" },
+    { name: "Bharti AXA", type: "General" },
+    { name: "Apollo Munich", type: "Major Network" },
+    { name: "MedSave TPA", type: "TPA" },
+    { name: "Reliance General", type: "General" },
+    { name: "Religare / Care Health", type: "Major Network" },
+    { name: "Vidal Health TPA", type: "TPA" },
+    { name: "United India Insurance", type: "PSU Support" },
+    { name: "Oriental Insurance", type: "PSU Support" },
+    { name: "FHPL", type: "TPA" },
+    { name: "Bajaj Allianz", type: "General" },
+    { name: "UnitedHealthcare", type: "Global TPA" },
+    { name: "IFFCO-TOKIO", type: "General" },
+    { name: "Medicare TPA", type: "TPA" },
+    { name: "Future Generali", type: "General" },
+    { name: "Tata AIG / Raksha TPA", type: "TPA Run" },
+    { name: "HDFC ERGO", type: "Major Network" },
+    { name: "Max Health Insurance", type: "Major Network" },
+    { name: "Vipul MedCorp TPA", type: "TPA" },
+    { name: "MDIndia", type: "TPA" }
   ];
 
   return (
@@ -170,6 +198,65 @@ export default function Services() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 4. Cashless Insurance & TPA Network Section */}
+      <section className="bg-slate-50 border-t border-slate-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
+              <FaShieldAlt /> Cashless Facilities
+            </span>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-800 mt-4 leading-tight">
+              Empaneled Insurance &amp; TPA Support
+            </h2>
+            <p className="text-xs md:text-sm text-slate-500 mt-3 leading-relaxed font-light">
+              We offer dynamic, hassle-free cashless treatment protocols for listed insurance companies and Third-Party Administrators (TPAs). Our hospital is fully recognized for medical reimbursement configurations.
+            </p>
+          </div>
+
+          {/* Grid View of all Insurance Partners */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+            {insurancePartners.map((partner, idx) => (
+              <div 
+                key={idx}
+                className="bg-white border border-slate-100 rounded-2xl p-4 shadow-2xs hover:shadow-md hover:border-emerald-accent/20 transition-all duration-200 flex flex-col justify-between"
+              >
+                <div className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent mt-1.5 shrink-0"></span>
+                  <p className="text-xs font-bold text-slate-700 tracking-tight leading-snug">
+                    {partner.name}
+                  </p>
+                </div>
+                <span className="text-[9px] text-slate-400 font-medium uppercase mt-2 block tracking-wider text-right border-t border-slate-50 pt-1">
+                  {partner.type}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Government Recognition Footer Banner */}
+          <div className="mt-12 bg-white border border-emerald-accent/20 rounded-2xl p-5 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+            <div className="flex items-center gap-3.5 text-left">
+              <div className="w-10 h-10 rounded-xl bg-emerald-accent/10 text-emerald-accent flex items-center justify-center shrink-0">
+                <FaHandHoldingMedical size={20} />
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">Government Reimbursement Approved</h4>
+                <p className="text-[11px] text-slate-500 font-light mt-0.5 leading-relaxed">
+                  Our hospital processes are fully acknowledged and certified by the State Government for quick, streamlined medical reimbursement configurations.
+                </p>
+              </div>
+            </div>
+            <Link 
+              to="/contact" 
+              className="bg-slate-900 hover:bg-emerald-accent text-white text-[11px] font-bold px-4 py-2.5 rounded-xl transition-all whitespace-nowrap"
+            >
+              Insurance Helpdesk
+            </Link>
+          </div>
+
         </div>
       </section>
 

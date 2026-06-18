@@ -58,15 +58,38 @@ export default function Appointment() {
     }
   }, [searchParams]);
 
-  // Sync doctor listings when department is selected
+  // Sync doctor listings when department is selected (Strict mapping for 4-doctor panel)
   useEffect(() => {
     if (department) {
-      const filtered = DOCTORS.filter(
-        (doc) => doc.departmentName.toLowerCase().includes(department.toLowerCase()) ||
-                  department.toLowerCase().includes(doc.departmentName.toLowerCase())
-      );
+      const filtered = DOCTORS.filter((doc) => {
+        const selectedDeptLower = department.toLowerCase();
+        const docDeptIdLower = doc.departmentId ? doc.departmentId.toLowerCase() : '';
+        const docDeptNameLower = doc.departmentName ? doc.departmentName.toLowerCase() : '';
+
+        // 1. Explicit Direct ID Match (e.g. "gynecology" matching "gynecology")
+        if (docDeptIdLower === selectedDeptLower || selectedDeptLower.includes(docDeptIdLower)) {
+          return true;
+        }
+
+        // 2. Loose string parsing match (e.g. "Gynecology & Fertility" matching "Gynecology")
+        if (docDeptNameLower.includes(selectedDeptLower) || selectedDeptLower.includes(docDeptNameLower)) {
+          return true;
+        }
+
+        // 3. Fallback routing map for all Eye Care sub-departments to Dr. Navneeth
+        const eyeCareKeywords = ['cataract', 'retina', 'lasik', 'glaucoma', 'cornea', 'trauma', 'squint', 'pediatric'];
+        const isEyeCareSelection = eyeCareKeywords.some(keyword => selectedDeptLower.includes(keyword));
+        
+        if (isEyeCareSelection && docDeptIdLower === 'ophthalmology') {
+          return true;
+        }
+
+        return false;
+      });
+      
       setFilteredDoctors(filtered);
       
+      // Reset selected doctor dropdown context if it doesn't align with the parsed sub-department lists
       const isDocValid = filtered.some((doc) => doc.name === doctor);
       if (!isDocValid && doctor) {
         setDoctor('');
@@ -171,6 +194,7 @@ export default function Appointment() {
       });
       setErrors({ emailDispatchWarning: 'Appointment registered! However, notification delivery failed.' });
     } finally {
+      document.documentElement.scrollTop = 0; // Reset visual viewport layer upwards on confirmation
       setIsLoading(false);
     }
   };
@@ -186,7 +210,7 @@ export default function Appointment() {
             Fast Bookings
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Book A Consultation</h1>
-          <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
+          <p className="text-sm md:text-base text-slate-300 mt-4 leading-relaxed font-light">
             Fill out the details below. Our help desk will verify available slots and issue a confirmation receipt within minutes.
           </p>
         </div>
@@ -215,44 +239,44 @@ export default function Appointment() {
                 </div>
               )}
 
-              /* Receipt Summary Card */
-              <div className="bg-slate-50 rounded-2xl p-6 text-left border border-slate-150 max-w-lg mx-auto mb-8 space-y-3.5 text-xs text-slate-650">
+              {/* Receipt Summary Card */}
+              <div className="bg-slate-50 rounded-2xl p-6 text-left border border-slate-200 max-w-lg mx-auto mb-8 space-y-3.5 text-xs text-slate-600">
                 <div className="flex justify-between border-b border-slate-200 pb-3 font-semibold text-slate-800">
                   <span>Booking Reference:</span>
                   <span className="text-emerald-accent font-extrabold">{successData.appointmentId}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Patient Name:</span>
-                  <span className="font-bold text-slate-850">{successData.name}</span>
+                  <span className="font-bold text-slate-800">{successData.name}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Mobile Number:</span>
-                  <span className="font-bold text-slate-850">{successData.phone}</span>
+                  <span className="font-bold text-slate-800">{successData.phone}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Email Address:</span>
-                  <span className="font-bold text-slate-850">{successData.email}</span>
+                  <span className="font-bold text-slate-800">{successData.email}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Department:</span>
-                  <span className="font-bold text-slate-850">{successData.department}</span>
+                  <span className="font-bold text-slate-800">{successData.department}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Consultant Doctor:</span>
-                  <span className="font-bold text-slate-850 text-emerald-accent">{successData.doctor}</span>
+                  <span className="font-bold text-emerald-accent">{successData.doctor}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Preferred Date:</span>
-                  <span className="font-bold text-slate-850">{successData.date}</span>
+                  <span className="font-bold text-slate-800">{successData.date}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Preferred Time:</span>
-                  <span className="font-bold text-slate-850">{successData.time}</span>
+                  <span className="font-bold text-slate-800">{successData.time}</span>
                 </div>
                 {successData.message && (
                   <div className="border-t border-slate-200 pt-3">
                     <span className="block text-[10px] text-slate-400 mb-1">Additional Message:</span>
-                    <p className="bg-white p-2.5 rounded-lg border border-slate-150 text-[11px] leading-relaxed italic">{successData.message}</p>
+                    <p className="bg-white p-2.5 rounded-lg border border-slate-200 text-[11px] leading-relaxed italic">{successData.message}</p>
                   </div>
                 )}
               </div>
@@ -267,7 +291,7 @@ export default function Appointment() {
                 </Link>
                 <Link
                   to="/contact"
-                  className="flex-1 bg-medical-dark hover:bg-medical-blue text-white font-extrabold py-3.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-medical-dark hover:bg-slate-800 text-white font-extrabold py-3.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2"
                 >
                   <FaAddressBook size={13} /> Contact Hospital
                 </Link>
@@ -294,13 +318,13 @@ export default function Appointment() {
                   </p>
                   
                   <div className="space-y-6 text-xs">
-                    <a href="tel:+919160854747" className="flex items-center gap-3 hover:text-emerald-accent transition-colors">
+                    <a href="tel:+919030757575" className="flex items-center gap-3 hover:text-emerald-accent transition-colors">
                       <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                         <FaPhoneAlt size={12} />
                       </div>
                       <div>
                         <span className="block text-[10px] text-slate-400">Reception Support</span>
-                        <span className="font-bold">+91 916 085 4747</span>
+                        <span className="font-bold">+91 903 075 7575</span>
                       </div>
                     </a>
 
@@ -330,7 +354,7 @@ export default function Appointment() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Name field */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Patient Full Name*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Patient Full Name*</label>
                     <input
                       type="text"
                       required
@@ -344,7 +368,7 @@ export default function Appointment() {
 
                   {/* Phone field */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Mobile Number (10 Digit)*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Mobile Number (10 Digit)*</label>
                     <input
                       type="tel"
                       required
@@ -360,7 +384,7 @@ export default function Appointment() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Email field */}
                   <div className="sm:col-span-2">
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Email Address*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Email Address*</label>
                     <input
                       type="text"
                       required
@@ -376,7 +400,7 @@ export default function Appointment() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Department select */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Select Department*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Select Department*</label>
                     <select
                       required
                       value={department}
@@ -393,7 +417,7 @@ export default function Appointment() {
 
                   {/* Doctor select */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Select Doctor*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Select Doctor*</label>
                     <select
                       required
                       value={doctor}
@@ -414,7 +438,7 @@ export default function Appointment() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Date field */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Appointment Date*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Appointment Date*</label>
                     <input
                       type="date"
                       required
@@ -428,7 +452,7 @@ export default function Appointment() {
 
                   {/* Time field */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-655 mb-2">Preferred Slot Time*</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-2">Preferred Slot Time*</label>
                     <select
                       required
                       value={time}
@@ -450,10 +474,10 @@ export default function Appointment() {
 
                 {/* Message notes */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-655 mb-2">Symptoms or Medical History (Optional)</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-2">Symptoms or Medical History (Optional)</label>
                   <textarea
                     rows="3"
-                    placeholder="e.g. Regular heart checkup"
+                    placeholder="e.g. Regular health checkup"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-xs focus:outline-none focus:border-emerald-accent"

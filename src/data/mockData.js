@@ -212,7 +212,7 @@ export const DEPARTMENTS = [
 export const DOCTORS = [
   {
     "id": "dr-navneeth-servey",
-    "name": "Dr. Navneeth Servey",
+    "name": "Dr. Navneeth Servey (Managing Director)",
     "photo": NavneethServey,
     "qualification": "M.B.B.S (Osm), M.S. Ophthal (GMC, Sarojini Devi Eye Hospital), Fellow in Phaco Surgery (Aravind Eye Hospital), Fellow in Refractive & Lasik Surgeries",
     "departmentId": "ophthalmology",
@@ -233,11 +233,11 @@ export const DOCTORS = [
     "photo": TejeswiniNese,
     "qualification": "M.B.B.S (Osm), M.S. OBG (Gandhi)",
     "departmentId": "gynecology",
-    "departmentName": "Gynecology & Obstetrics",
-    "specialization": "Gynaecologist, Obstetrician & Fertility Specialist",
+    "departmentName": "Gynecology & Fertility",
+    "specialization": "Gynaecologist & Fertility Specialist",
     "experience": "10+ Years",
     "timings": "Mon - Sat: 11:00 AM - 03:00 PM, 06:00 PM - 08:30 PM",
-    "bio": "Dr. Tejeswini Nese is a dedicated Gynaecologist, Obstetrician, and Fertility Specialist with extensive postgraduate training from the prestigious Gandhi Medical College. She specializes in high-risk pregnancies, reproductive health issues, and comprehensive infertility evaluations.",
+    "bio": "Dr. Tejeswini Nese is a dedicated Gynaecologist and Fertility Specialist with extensive postgraduate training from the prestigious Gandhi Medical College. She specializes in high-risk pregnancies, reproductive health issues, and comprehensive infertility evaluations.",
     "attachments": [
       "Alumnus of Osmania Medical College and Gandhi Medical College",
       "Expertise in High-Risk Obstetrics and Laparoscopic Gynecology",
@@ -263,7 +263,7 @@ export const DOCTORS = [
   },
   {
     id: "dr-general-triage",
-    name: "General Medicine Desk (Unsure of Specialist)",
+    name: "General Medicine Desk",
     photo: General,
     qualification: "M.B.B.S / Consultant Physicians",
     departmentId: "general-medicine",

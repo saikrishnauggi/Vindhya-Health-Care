@@ -18,7 +18,9 @@ import {
   FaHeartbeat,
   FaEye,
   FaCheckCircle,
-  FaHospital
+  FaHospital,
+  FaChevronDown,
+  FaChevronUp
 } from 'react-icons/fa';
 
 import HeroSlider from '../components/HeroSlider';
@@ -71,6 +73,19 @@ function StatCounter({ target, label, suffix = '', icon }) {
 export default function Home() {
   const featuredDocs = DOCTORS.slice(0, 4);
   const latestBlogs = BLOG_POSTS.slice(0, 3);
+  
+  // Local state to toggle insurance view panel
+  const [showInsurances, setShowInsurances] = useState(false);
+
+  // Extracted Insurance Companies / TPAs list from brochure imagery
+  const hospitalInsurances = [
+    "Star Health Insurance", "Chola MS", "Aditya Birla Health", "Bharti AXA", 
+    "Apollo Munich", "MedSave", "Reliance General", "Religare / Care Health", 
+    "Vidal Health TPA", "United India Insurance", "Oriental Insurance", "FHPL", 
+    "Bajaj Allianz", "UnitedHealthcare", "IFFCO-TOKIO", "Medicare TPA", 
+    "Future Generali", "Tata AIG / Raksha TPA", "HDFC ERGO", "Max Health Insurance", 
+    "Vipul MedCorp TPA", "MDIndia"
+  ];
 
   // Interactive Multi-Specialty Core Matrix
   const specialtiesData = [
@@ -169,13 +184,13 @@ export default function Home() {
     { title: "Advanced Orthopedics", desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", icon: <FaBone /> },
     { title: "Comprehensive Gynecology", desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", icon: <FaBaby /> },
     { title: "In-House Pharmacy", desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", icon: <FaPills /> },
-    { title: "Intensive Care Capabilities", desc: "Equipped with clinical monitoring systems for stabilizing high-risk case transitions safely.", icon: <FaHeartbeat /> },
     { title: "Patient-Centered Comfort", desc: "Dedicated patient coordinators, streamlined dilated waiting zones, and clear workflows.", icon: <FaShieldAlt /> },
     { title: "Advanced Vision Studio", desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
     { 
       title: "Empaneled Insurance & TPA Support", 
-      desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement.", 
-      icon: <FaAward /> 
+      desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
+      icon: <FaAward />,
+      isInsurance: true // marked flag to wire click functionality
     },
     { title: "Sterile Microsurgery OTs", desc: "Dedicated operating rooms featuring vertical laminar flow systems for optimal safety.", icon: <FaHospital /> },
     { title: "Certified Optometrists", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", icon: <FaUserMd /> }
@@ -232,10 +247,20 @@ export default function Home() {
             {whyChooseUsData.map((item, idx) => (
               <div 
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
+                onClick={() => item.isInsurance && setShowInsurances(!showInsurances)}
+                className={`p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 group ${
+                  item.isInsurance ? 'cursor-pointer border-emerald-accent/20 bg-emerald-accent/5' : ''
+                }`}
               >
-                <div className="w-12 h-12 rounded-xl bg-medical-sky/10 text-medical-sky flex items-center justify-center text-xl mb-5 group-hover:bg-emerald-accent group-hover:text-white transition-colors duration-300">
-                  {item.icon}
+                <div className="flex justify-between items-start mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-medical-sky/10 text-medical-sky flex items-center justify-center text-xl group-hover:bg-emerald-accent group-hover:text-white transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  {item.isInsurance && (
+                    <div className="text-emerald-accent text-xs font-bold flex items-center gap-1 bg-white px-2 py-1 rounded-md shadow-xs">
+                      {showInsurances ? <><FaChevronUp /> Hide List</> : <><FaChevronDown /> View List</>}
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-base font-bold text-slate-800 mb-2.5 group-hover:text-emerald-accent transition-colors">
                   {item.title}
@@ -243,6 +268,31 @@ export default function Home() {
                 <p className="text-xs text-slate-500 leading-relaxed font-light">
                   {item.desc}
                 </p>
+
+                {/* EXPANDABLE INSURANCE PANEL */}
+                {item.isInsurance && (
+                  <AnimatePresence>
+                    {showInsurances && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="overflow-hidden mt-4 pt-4 border-t border-slate-200"
+                        onClick={(e) => e.stopPropagation()} // Stop toggle when picking names
+                      >
+                        <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wide mb-3">Empaneled Insurance / TPAs:</h4>
+                        <div className="grid grid-cols-2 gap-2">
+                          {hospitalInsurances.map((ins, i) => (
+                            <div key={i} className="flex items-center gap-1.5 text-[11px] text-slate-600 bg-white border border-slate-100 p-1.5 rounded-lg shadow-2xs">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent shrink-0"></span>
+                              <span className="truncate font-medium">{ins}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
               </div>
             ))}
           </div>
@@ -313,7 +363,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 5 - FEATURED DEPARTMENTS (INCREASED TYPOGRAPHY SCALING FOR HEADERS AND BOX CONTENT) */}
+      {/* SECTION 5 - FEATURED DEPARTMENTS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
@@ -329,7 +379,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Primary Top Level Navigation Tabs (Increased Font Sizes) */}
+          {/* Primary Top Level Navigation Tabs */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 max-w-4xl mx-auto mb-12 bg-slate-50 p-2.5 rounded-2xl border border-slate-100">
             {specialtiesData.map((tab) => (
               <button
@@ -347,7 +397,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Sub-Specialties Render Zone (Increased text size & line spacing) */}
+          {/* Sub-Specialties Render Zone */}
           <div className="border border-slate-100 rounded-3xl p-6 md:p-12 bg-slate-50/50">
             <div className="max-w-5xl mx-auto">
               <div className="mb-10 border-b border-slate-200 pb-6">
@@ -629,7 +679,7 @@ export default function Home() {
                     to={`/blog?post=${post.id}`} 
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-medical-sky group-hover:text-emerald-accent transition-all"
                   >
-                    Read Full Article <FaArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
+                    Read Full Article <FaArrowRight size={10} />
                   </Link>
                 </div>
               </div>
