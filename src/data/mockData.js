@@ -30,6 +30,7 @@ import RahulKuraganti from '../assets/RahulKuraganti.jpg';
 import General from '../assets/General.jpg';
 import retina from '../assets/retina.png';
 import cornea from '../assets/cornea.png';
+import event2 from '../assets/event2.jpeg';
 
 export const DEPARTMENTS = [
   {
@@ -420,7 +421,8 @@ export const GALLERY_ITEMS = [
   { id: 16, category: "infrastructure", title: "Spacious Waiting Hall for Patients", image: waitinghall2 },
   { id: 17, category: "opticals", title: "Premium Eyeglasses Collection", image: eyeglasses1 },
   { id: 18, category: "opticals", title: "Designer Eyewear Frames & Lenses", image: eyeglasses2 },
-  { id: 8, category: "events", title: "Free Blindness Prevention Mobile Camp", image: cardiacCampImg }
+  { id: 8, category: "events", title: "Free Blindness Prevention Mobile Camp", image: cardiacCampImg },
+  { id: 19, category: "events", title: "Independence day Celebration", image: event2 }
 ];
 
 export const FACILITIES = [
