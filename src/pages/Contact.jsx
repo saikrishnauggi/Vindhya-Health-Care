@@ -146,8 +146,8 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Working Hours</span>
-                      <span className="block text-slate-500 font-light">Emergency / Critical: 24 Hours Open</span>
-                      <span className="block text-slate-500 font-light">OPD Consultations: Mon-Sat: 9AM - 8PM</span>
+                      <span className="block text-slate-500 font-light">Emergency / Critical: Day Care</span>
+                      <span className="block text-slate-500 font-light">OPD Consultations: Mon-Sat: 9AM - 9PM</span>
                     </div>
                   </div>
                 </div>
