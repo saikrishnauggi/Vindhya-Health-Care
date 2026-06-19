@@ -115,7 +115,7 @@ export default function Contact() {
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Telephone Contacts</span>
                       <a href="tel:+919030757575" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        Emergency 24/7: +91 903 075 7575
+                        Emergency : +91 903 075 7575
                       </a>
                       {/* <a href="tel:0755123456" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
                         OPD Desk: 0755 123 456
