@@ -102,7 +102,7 @@ export default function Home() {
         { title: "Glaucoma Services", details: "Preventive peripheral field profiling, automated tonometry pressure tracking, and Selective Laser Trabeculoplasty (SLT)." },
         { title: "Cornea Services & Treatments", details: "Expert care for corneal surface diseases, structural dystrophies, specialized collagen cross-linking (C3R), and dry-eye remediation." },
         { title: "Squint & Pediatric Eye Services", details: "Dedicated infantile evaluation plans, lazy eye (amblyopia) therapies, and binocular structural alignment corrections." },
-        { title: "Opticals & Spectacles", details: "Precision in-house digital vision measurements with a designer collection of protective lenses and premium frame brands." }
+        { title: "Oculoplasty - Opticals & Spectacles", details: "Precision in-house digital vision measurements with a designer collection of protective lenses and premium frame brands." }
       ]
     },
     {
@@ -178,23 +178,68 @@ export default function Home() {
   };
 
   const whyChooseUsData = [
-    { title: "Expert Specialists", desc: "Consult board-certified ophthalmologists and gynecologists with specialized fellowship training.", icon: <FaUserMd /> },
-    { title: "Modern Precision Diagnostics", desc: "Equipped with ultra-high speed 3D OCT Angiography and laser diagnostic tracking.", icon: <FaMicroscope /> },
-    { title: "Day Care Surgery Centre", desc: "Efficient, state-of-the-art day care procedures allowing patients to recover comfortably at home same-day.", icon: <FaProcedures /> },
-    { title: "Advanced Orthopedics", desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", icon: <FaBone /> },
-    { title: "Comprehensive Gynecology", desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", icon: <FaBaby /> },
-    { title: "In-House Pharmacy", desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", icon: <FaPills /> },
-    { title: "Patient-Centered Comfort", desc: "Dedicated patient coordinators, streamlined dilated waiting zones, and clear workflows.", icon: <FaShieldAlt /> },
-    { title: "Advanced Vision Studio", desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
-    { 
-      title: "Empaneled Insurance & TPA Support", 
-      desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
-      icon: <FaAward />,
-      isInsurance: true // marked flag to wire click functionality
-    },
-    { title: "Sterile Microsurgery OTs", desc: "Dedicated operating rooms featuring vertical laminar flow systems for optimal safety.", icon: <FaHospital /> },
-    { title: "Certified Optometrists", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", icon: <FaUserMd /> }
-  ];
+  { 
+    title: "Expert Specialists", 
+    desc: "Consult board-certified ophthalmologists and gynecologists with specialized fellowship training.", 
+    icon: <FaUserMd /> 
+  },
+  { 
+    title: "Modern Precision Diagnostics", 
+    desc: "Equipped with ultra-high speed 3D OCT Angiography and laser diagnostic tracking.", 
+    icon: <FaMicroscope /> 
+  },
+  { 
+    title: "Day Care Surgery Centre", 
+    desc: "Efficient, state-of-the-art day care procedures allowing patients to recover comfortably at home same-day.", 
+    icon: <FaProcedures /> 
+  },
+  { 
+    title: "Certified Optometrists", 
+    desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", 
+    icon: <FaUserMd /> 
+  }, // Fixed: Added missing comma here
+  { 
+    title: "Orthopedics, Sports Medicine & Pain Clinic", 
+    desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", 
+    icon: <FaBone /> 
+  },
+  { 
+    title: "Gynecology and Fertility", 
+    desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", 
+    icon: <FaBaby /> 
+  },
+  { 
+    title: "In-House Pharmacy", 
+    desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", 
+    icon: <FaPills /> 
+  },
+  { 
+    title: "Advanced Vision Studio", 
+    desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", 
+    icon: <FaGlasses /> 
+  },
+  { 
+    title: "Empaneled Insurance & TPA Support", 
+    desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
+    icon: <FaAward />,
+    isInsurance: true 
+  },
+  { 
+    title: "State Govt Employees and Reimbursement Services", 
+    desc: "Facilitating seamless medical reimbursement processing for Telangana State Government employees.", // Fixed: Replaced "." with descriptive text
+    icon: <FaAward /> // Fixed: Replaced broken <Fa /> with a valid icon
+  },
+  { 
+    title: "Advanced Sterile Microsurgery OTs", 
+    desc: "Dedicated operating rooms featuring vertical laminar flow systems for optimal safety.", 
+    icon: <FaHospital /> 
+  },
+  { 
+    title: "Patient-Centered Comfort", 
+    desc: "Dedicated patient coordinators, streamlined dilated waiting zones, and clear workflows.", 
+    icon: <FaShieldAlt /> 
+  }
+];
 
   return (
     <div className="w-full">

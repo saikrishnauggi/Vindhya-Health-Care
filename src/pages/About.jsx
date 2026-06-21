@@ -11,12 +11,12 @@ import NavneethServey from '../assets/NavneethServey.jpg';
 
 export default function About() {
   const milestones = [
-    { year: "2006", title: "Inception", desc: "Vindhya Healthcare was founded as a dedicated primary vision care clinic in Telangana." },
-    { year: "2010", title: "Expansion into Tertiary Eye Care", desc: "Upgraded capacity and added dedicated micro-surgical modules for Cataract and Glaucoma." },
-    { year: "2015", title: "NABH Accreditation", desc: "Recognized for superior ophthalmic clinical quality, patient safety, and sterile operational protocols." },
-    { year: "2018", title: "State-of-the-Art Retinal Imaging", desc: "Installed the region's first high-speed Optical Coherence Tomography (OCT) systems and digital fundus labs." },
-    { year: "2022", title: "Advanced LASIK & Refractive Room", desc: "Introduced wavefront-guided and completely blade-free laser vision correction treatments." },
-    { year: "2025", title: "Academic & Vitreoretinal Fellowship", desc: "Launched dedicated postgraduate ophthalmic fellowship programs and specialty research rooms." }
+    { year: "2023", title: "Inception", desc: "Vindhya Healthcare was founded as a dedicated primary vision care clinic in Telangana." },
+    { year: "2024", title: "Expansion into Tertiary Eye Care", desc: "Upgraded capacity and added dedicated micro-surgical modules for Cataract and Glaucoma." },
+    { year: "2024", title: "NABH Accreditation", desc: "Recognized for superior ophthalmic clinical quality, patient safety, and sterile operational protocols." },
+    { year: "2025", title: "State-of-the-Art Retinal Imaging", desc: "Installed the region's first high-speed Optical Coherence Tomography (OCT) systems and digital fundus labs." },
+    { year: "2025", title: "Advanced LASIK & Refractive Room", desc: "Introduced wavefront-guided and completely blade-free laser vision correction treatments." },
+    { year: "2026", title: "Academic & Vitreoretinal Fellowship", desc: "Launched dedicated postgraduate ophthalmic fellowship programs and specialty research rooms." }
   ];
 
   const values = [
@@ -43,7 +43,7 @@ export default function About() {
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight drop-shadow-sm">About Vindhya Eye Care</h1>
           <p className="text-sm md:text-base text-slate-200 mt-4 leading-relaxed font-light drop-shadow max-w-2xl mx-auto">
-            An award-winning, advanced ophthalmic institution dedicated to clinical eye care excellence, visual innovations, and patient trust since 2006.
+            An award-winning, advanced ophthalmic institution dedicated to clinical eye care excellence, visual innovations, and patient trust since 2023.
           </p>
         </div>
       </div>
@@ -53,25 +53,6 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             
-            {/* Chairman Message */}
-            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm relative flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-bold text-emerald-accent uppercase tracking-wider block mb-2">Chairman's Address</span>
-                <h3 className="text-xl font-bold text-slate-800 mb-6">"Bringing World-Class Vision Care Closer to You"</h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light italic mb-8">
-                  "At Vindhya Eye Care, our goal is simple: to make world-class ophthalmic treatments accessible, affordable, and highly ethical. Healthcare is more than treating conditions; it is about building trust, providing empathy, and restoring pristine sight. We invest constantly in high-end laser technology and imaging diagnostics so that our patients receive nothing less than global medical standards."
-                </p>
-              </div>
-              <div className="flex items-center gap-4 border-t border-slate-200 pt-5 mt-4">
-                <div className="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
-                  <img src={chairman} alt="Chairman" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <span className="block font-bold text-sm text-slate-800">Shri Alok Kumar Saxena</span>
-                  <span className="block text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Chairman &amp; Founder</span>
-                </div>
-              </div>
-            </div>
 
             {/* Director Message */}
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm relative flex flex-col justify-between">
@@ -109,7 +90,7 @@ export default function About() {
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-4">Our History</h3>
               <p className="text-xs text-slate-500 leading-relaxed font-light">
-                What began as a localized primary eye clinic in 2006 has evolved into a premier full-scale tertiary care ophthalmic referral destination. Over two decades, we have treated over half a million patients, consistently adding advanced vitreoretinal modules, automated visual field plotting tests, wavefront laser systems, and micro-incision cataract surgery setups to serve the community.
+                What began as a localized primary eye clinic in 2023 has evolved into a premier full-scale tertiary care ophthalmic referral destination. Over two decades, we have treated over half a million patients, consistently adding advanced vitreoretinal modules, automated visual field plotting tests, wavefront laser systems, and micro-incision cataract surgery setups to serve the community.
               </p>
             </div>
 

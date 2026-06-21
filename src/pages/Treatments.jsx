@@ -129,7 +129,7 @@ export default function Treatments() {
     {
       id: 'lasik',
       name: 'LASIK & ICL Surgery',
-      image: lasik,
+      image: operation,
       features: [
         'Advanced laser vision corrections',
         'Implantable contact lenses (ICL)',

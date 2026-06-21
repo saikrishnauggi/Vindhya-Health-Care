@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { 
   FaUserMd, 
-  FaClinicMedical, 
   FaFilePrescription, 
   FaVial, 
   FaCheck,
@@ -26,7 +25,7 @@ export default function Services() {
     },
     {
       id: 'eye-ot',
-      name: 'Advanced Eye Surgery Theatre',
+      name: 'Advanced Eye Surgery Theatre\'s',
       icon: <FaHospitalSymbol size={24} className="text-emerald-accent" />,
       description: 'State-of-the-art microsurgical suite purpose-built for highly precise ophthalmic interventions, from modern premium cataract surgery to micro-incision vitrectomy treatments.',
       highlights: ['Microscopic surgical guidance', 'Sutureless micro-incision setups', 'Advanced phacoemulsification systems', 'Sterilized micro-surgical conditions'],
@@ -34,7 +33,7 @@ export default function Services() {
     },
     {
       id: 'daycare-ot',
-      name: 'Day Care Modular Operation Theatre',
+      name: 'Day Care Modular Operation Theatre\'s',
       icon: <FaProcedures size={24} />,
       description: 'Advanced day care surgical block utilizing vertical laminar airflow systems. Engineered for rapid, minimally invasive surgical procedures that let you recover in the comfort of your home same-day.',
       highlights: ['Ultra-sterile laminar flow system', 'Rapid, hassle-free day care admissions', 'Advanced orthopedic and regional blocks', 'Post-operative monitoring lounge'],

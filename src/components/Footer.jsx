@@ -27,12 +27,9 @@ export default function Footer() {
   ];
 
   const departments = [
-    { name: 'Cataract Services', path: '/departments' },
-    { name: 'Retina & Vitreous Care', path: '/departments' },
-    { name: 'LASIK & Refractive Studio', path: '/departments' },
-    { name: 'Glaucoma Management', path: '/departments' },
-    { name: 'Pediatric & Squint Division', path: '/departments' },
-    { name: 'Cornea & Surface Center', path: '/departments' }
+    { name: 'Ophthalmology', path: '/departments' },
+    { name: 'Orthopedic Services', path: '/departments' },
+    { name: 'Gynecology and Fertility', path: '/departments' }
   ];
 
   const services = [
