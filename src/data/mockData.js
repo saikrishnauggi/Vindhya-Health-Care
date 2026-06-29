@@ -31,6 +31,7 @@ import General from '../assets/General.jpg';
 import retina from '../assets/retina.png';
 import cornea from '../assets/cornea.png';
 import event2 from '../assets/event2.jpeg';
+import review from '../assets/review.jpg';
 
 export const DEPARTMENTS = [
   {
@@ -332,7 +333,7 @@ export const TESTIMONIALS = [
     rating: 5,
     storyTitle: "Pristine Sight Restored Instantly",
     text: "I was diagnosed with an advanced nuclear cataract that severely limited my night driving. Dr. Rajeshwari Nair performed micro-incision phaco surgery and implanted a multifocal lens. The structural speed, lack of pain, and crystal-clear outcomes are truly life-changing.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
+    image: review,
     videoUrl: ""
   },
   {
@@ -342,7 +343,7 @@ export const TESTIMONIALS = [
     rating: 5,
     storyTitle: "Glasses-Free Life Post LASIK",
     text: "Being a medical professional, wearing thick prescription lenses inside sterile settings was tedious. The Pre-LASIK data profiling at Vindhya Eye Care was exceptionally thorough, and the blade-free laser modification by Dr. Vikram Kiran gave me perfect 6/6 vision within 24 hours.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200",
+    image: review,
     videoUrl: ""
   },
   {
@@ -352,7 +353,7 @@ export const TESTIMONIALS = [
     rating: 5,
     storyTitle: "Saved My Sight From Retinal Tear",
     text: "I experienced sudden floaters and flashes of light while traveling. I rushed to Vindhya's emergency trauma room where Dr. Anand Vardhan diagnosed a retinal tear. Immediate barrier laser photocoagulation saved my vision. Exceptional clinical response time!",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200",
+    image: review,
     videoUrl: ""
   }
 ];
