@@ -13,6 +13,30 @@ import {
   FaHandHoldingMedical
 } from 'react-icons/fa';
 
+// Import Insurance Logos from src/assets/insurance/
+import starHealthLogo from '../assets/insurance/star-health.png';
+import hdfcErgoLogo from '../assets/insurance/hdfc-ergo.png';
+import careHealthLogo from '../assets/insurance/care-health.png';
+import bajajAllianzLogo from '../assets/insurance/bajaj-allianz.png';
+import fhplLogo from '../assets/insurance/fhpl.png';
+import mdindiaLogo from '../assets/insurance/mdindia.png';
+import adityaBirlaLogo from '../assets/insurance/aditya-birla.png';
+import orientalLogo from '../assets/insurance/oriental.png';
+import unitedIndiaLogo from '../assets/insurance/united-india.png';
+import iffcoTokioLogo from '../assets/insurance/iffco-tokio.png';
+import relianceLogo from '../assets/insurance/reliance.png';
+import futureGeneraliLogo from '../assets/insurance/future-generali.png';
+import CholaLogo from '../assets/insurance/chola.png';
+import apolloMunichLogo from '../assets/insurance/apollo.png';
+import vidalHealthLogo from '../assets/insurance/Vidal.png';
+import medicareLogo from '../assets/insurance/Medicare.png';
+import vipulMedCorpLogo from '../assets/insurance/Vipul.png';
+import maxHealthLogo from '../assets/insurance/Max.png';
+import rakshaLogo from '../assets/insurance/Tata.png';
+import bhartiAxaLogo from '../assets/insurance/Bharti.png';
+import unitedHealthcareLogo from '../assets/insurance/UnitedHealthcare.png';
+import medsaveLogo from '../assets/insurance/MedSave.png';
+
 export default function Services() {
   const servicesList = [
     {
@@ -72,35 +96,51 @@ export default function Services() {
     'ULTRA MARIN', 'MATIX', 'CUBS 9', 'SCOTT'
   ];
 
-  // Grouped insurance partners based on official hospital empanelment data
+  // Grouped insurance partners along with imported local image variables
   const insurancePartners = [
-    { name: "Star Health Insurance", type: "Major Network" },
-    { name: "Chola MS", type: "General" },
-    { name: "Aditya Birla Health", type: "Major Network" },
-    { name: "Bharti AXA", type: "General" },
-    { name: "Apollo Munich", type: "Major Network" },
-    { name: "MedSave TPA", type: "TPA" },
-    { name: "Reliance General", type: "General" },
-    { name: "Religare / Care Health", type: "Major Network" },
-    { name: "Vidal Health TPA", type: "TPA" },
-    { name: "United India Insurance", type: "PSU Support" },
-    { name: "Oriental Insurance", type: "PSU Support" },
-    { name: "FHPL", type: "TPA" },
-    { name: "Bajaj Allianz", type: "General" },
-    { name: "UnitedHealthcare", type: "Global TPA" },
-    { name: "IFFCO-TOKIO", type: "General" },
-    { name: "Medicare TPA", type: "TPA" },
-    { name: "Future Generali", type: "General" },
-    { name: "Tata AIG / Raksha TPA", type: "TPA Run" },
-    { name: "HDFC ERGO", type: "Major Network" },
-    { name: "Max Health Insurance", type: "Major Network" },
-    { name: "Vipul MedCorp TPA", type: "TPA" },
-    { name: "MDIndia", type: "TPA" }
+    { name: "Star Health Insurance", type: "Major Network", logo: starHealthLogo },
+    { name: "Chola MS", type: "General", logo: CholaLogo },
+    { name: "Aditya Birla Health", type: "Major Network", logo: adityaBirlaLogo },
+    { name: "Bharti AXA", type: "General", logo: bhartiAxaLogo },
+    { name: "Apollo Munich", type: "Major Network", logo: apolloMunichLogo },
+    { name: "MedSave TPA", type: "TPA", logo: medsaveLogo },
+    { name: "Reliance General", type: "General", logo: relianceLogo },
+    { name: "Religare / Care Health", type: "Major Network", logo: careHealthLogo },
+    { name: "Vidal Health TPA", type: "TPA", logo: vidalHealthLogo },
+    { name: "United India Insurance", type: "PSU Support", logo: unitedIndiaLogo },
+    { name: "Oriental Insurance", type: "PSU Support", logo: orientalLogo },
+    { name: "FHPL", type: "TPA", logo: fhplLogo },
+    { name: "Bajaj Allianz", type: "General", logo: bajajAllianzLogo },
+    { name: "UnitedHealthcare", type: "Global TPA", logo: unitedHealthcareLogo   },
+    { name: "IFFCO-TOKIO", type: "General", logo: iffcoTokioLogo },
+    { name: "Medicare TPA", type: "TPA", logo: medicareLogo },
+    { name: "Future Generali", type: "General", logo: futureGeneraliLogo },
+    { name: "Tata AIG / Raksha TPA", type: "TPA Run", logo: rakshaLogo },
+    { name: "HDFC ERGO", type: "Major Network", logo: hdfcErgoLogo },
+    { name: "Max Health Insurance", type: "Major Network", logo: maxHealthLogo },
+    { name: "Vipul MedCorp TPA", type: "TPA", logo: vipulMedCorpLogo },
+    { name: "MDIndia", type: "TPA", logo: mdindiaLogo }
   ];
 
   return (
     <div className="bg-slate-50 min-h-screen">
       
+      {/* Dynamic Keyframe Injection for Seamless Infinite Scrolling */}
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          width: max-content;
+          animation: marquee 40s linear infinite;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       {/* 1. Page Header */}
       <div className="bg-medical-dark text-white py-16 px-4 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)' }}>
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -200,8 +240,8 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 4. Cashless Insurance & TPA Network Section */}
-      <section className="bg-slate-50 border-t border-slate-100 py-20">
+      {/* 4. Cashless Insurance & Infinite Scrolling TPA Network Section */}
+      <section className="bg-slate-50 border-t border-slate-100 py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
@@ -214,29 +254,50 @@ export default function Services() {
               We offer dynamic, hassle-free cashless treatment protocols for listed insurance companies and Third-Party Administrators (TPAs). Our hospital is fully recognized for medical reimbursement configurations.
             </p>
           </div>
+        </div>
 
-          {/* Grid View of all Insurance Partners */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-            {insurancePartners.map((partner, idx) => (
+        {/* Infinite Continuous Slider */}
+        <div className="relative w-full flex items-center Mask-edges">
+          {/* Gradient Blurring overlays to make edges blend beautifully */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+
+          {/* Marquee Scroller Wrapper Container */}
+          <div className="animate-marquee gap-6 py-4 px-3">
+            {/* Array duplicated twice inline to create seamless layout boundaries */}
+            {[...insurancePartners, ...insurancePartners].map((partner, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-slate-100 rounded-2xl p-4 shadow-2xs hover:shadow-md hover:border-emerald-accent/20 transition-all duration-200 flex flex-col justify-between"
+                className="w-56 bg-white border border-slate-100 rounded-2xl p-4 shadow-xs hover:shadow-md hover:border-emerald-accent/20 transition-all duration-200 flex flex-col justify-between shrink-0 select-none"
               >
-                <div className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent mt-1.5 shrink-0"></span>
-                  <p className="text-xs font-bold text-slate-700 tracking-tight leading-snug">
-                    {partner.name}
-                  </p>
+                <div className="flex flex-col items-center justify-center h-20 mb-2">
+                  {partner.logo ? (
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} Logo`} 
+                      className="max-h-12 max-w-[85%] object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      draggable="false"
+                    />
+                  ) : (
+                    <div className="flex items-start gap-2 text-center px-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent mt-1.5 shrink-0"></span>
+                      <p className="text-xs font-bold text-slate-700 tracking-tight leading-snug">
+                        {partner.name}
+                      </p>
+                    </div>
+                  )}
                 </div>
-                <span className="text-[9px] text-slate-400 font-medium uppercase mt-2 block tracking-wider text-right border-t border-slate-50 pt-1">
+                <span className="text-[9px] text-slate-400 font-medium uppercase block tracking-wider text-right border-t border-slate-50 pt-1">
                   {partner.type}
                 </span>
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Government Recognition Footer Banner */}
-          <div className="mt-12 bg-white border border-emerald-accent/20 rounded-2xl p-5 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+        {/* Government Recognition Footer Banner */}
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mt-12">
+          <div className="bg-white border border-emerald-accent/20 rounded-2xl p-5 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
             <div className="flex items-center gap-3.5 text-left">
               <div className="w-10 h-10 rounded-xl bg-emerald-accent/10 text-emerald-accent flex items-center justify-center shrink-0">
                 <FaHandHoldingMedical size={20} />
@@ -255,7 +316,6 @@ export default function Services() {
               Insurance Helpdesk
             </Link>
           </div>
-
         </div>
       </section>
 
