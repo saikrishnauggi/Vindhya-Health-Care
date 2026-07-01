@@ -111,7 +111,7 @@ export default function Services() {
     { name: "Oriental Insurance", type: "PSU Support", logo: orientalLogo },
     { name: "FHPL", type: "TPA", logo: fhplLogo },
     { name: "Bajaj Allianz", type: "General", logo: bajajAllianzLogo },
-    { name: "UnitedHealthcare", type: "Global TPA", logo: unitedHealthcareLogo   },
+    { name: "UnitedHealthcare", type: "Global TPA", logo: unitedHealthcareLogo },
     { name: "IFFCO-TOKIO", type: "General", logo: iffcoTokioLogo },
     { name: "Medicare TPA", type: "TPA", logo: medicareLogo },
     { name: "Future Generali", type: "General", logo: futureGeneraliLogo },
@@ -131,12 +131,18 @@ export default function Services() {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
         }
-        .animate-marquee {
+        .animate-marquee-insurance {
           display: flex;
           width: max-content;
-          animation: marquee 40s linear infinite;
+          animation: marquee 45s linear infinite;
         }
-        .animate-marquee:hover {
+        .animate-marquee-brands {
+          display: flex;
+          width: max-content;
+          animation: marquee 30s linear infinite;
+        }
+        .animate-marquee-insurance:hover,
+        .animate-marquee-brands:hover {
           animation-play-state: paused;
         }
       `}</style>
@@ -216,22 +222,29 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 3. Featured Brands Studio */}
-      <section className="bg-white border-t border-slate-100 py-16">
+      {/* 3. Featured Brands Studio with Infinite Scrolling */}
+      <section className="bg-white border-t border-slate-100 py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
           <span className="text-medical-sky text-xs font-bold uppercase tracking-widest bg-medical-sky/10 px-3 py-1.5 rounded-full">
             Vision Studio
           </span>
           <h2 className="text-2xl font-extrabold text-slate-800 mt-4 mb-2">Our Premium Brands</h2>
-          <p className="text-xs text-slate-400 font-light max-w-xl mx-auto mb-12">
+          <p className="text-xs text-slate-400 font-light max-w-xl mx-auto mb-10">
             We partner with the world's leading eyewear designers to bring you unmatched comfort, frame durability, and stylistic confidence.
           </p>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {opticalBrands.map((brand, idx) => (
+        </div>
+
+        {/* Infinite Continuous Slider for Brands */}
+        <div className="relative w-full flex items-center">
+          {/* Fading Edge Masks */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+          <div className="animate-marquee-brands gap-6 py-2 px-3">
+            {[...opticalBrands, ...opticalBrands].map((brand, idx) => (
               <div 
                 key={idx} 
-                className="bg-slate-50 border border-slate-100/50 rounded-2xl py-6 px-4 flex items-center justify-center font-serif text-sm tracking-wider font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 transition-all duration-200"
+                className="w-48 bg-slate-50 border border-slate-100 rounded-2xl py-6 px-4 flex items-center justify-center font-serif text-xs md:text-sm tracking-wider font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 transition-all duration-200 shrink-0 select-none shadow-3xs"
               >
                 {brand}
               </div>
@@ -256,15 +269,13 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Infinite Continuous Slider */}
-        <div className="relative w-full flex items-center Mask-edges">
-          {/* Gradient Blurring overlays to make edges blend beautifully */}
+        {/* Infinite Continuous Slider for Insurance */}
+        <div className="relative w-full flex items-center">
+          {/* Fading Edge Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
 
-          {/* Marquee Scroller Wrapper Container */}
-          <div className="animate-marquee gap-6 py-4 px-3">
-            {/* Array duplicated twice inline to create seamless layout boundaries */}
+          <div className="animate-marquee-insurance gap-6 py-4 px-3">
             {[...insurancePartners, ...insurancePartners].map((partner, idx) => (
               <div 
                 key={idx}

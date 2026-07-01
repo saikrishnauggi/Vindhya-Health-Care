@@ -20,7 +20,8 @@ import {
   FaCheckCircle,
   FaHospital,
   FaChevronDown,
-  FaChevronUp
+  FaChevronUp,
+  FaHandHoldingMedical
 } from 'react-icons/fa';
 
 import HeroSlider from '../components/HeroSlider';
@@ -29,6 +30,30 @@ import outdoor4 from '../assets/outdoor4.jpg';
 import DiabeticRetinopathy from '../assets/DiabeticRetinopathy.png';
 import ICL from '../assets/ICL.png';
 import { DOCTORS, TESTIMONIALS, BLOG_POSTS } from '../data/mockData';
+
+// --- Extracted Insurance Logo Imports from Services ---
+import starHealthLogo from '../assets/insurance/star-health.png';
+import hdfcErgoLogo from '../assets/insurance/hdfc-ergo.png';
+import careHealthLogo from '../assets/insurance/care-health.png';
+import bajajAllianzLogo from '../assets/insurance/bajaj-allianz.png';
+import fhplLogo from '../assets/insurance/fhpl.png';
+import mdindiaLogo from '../assets/insurance/mdindia.png';
+import adityaBirlaLogo from '../assets/insurance/aditya-birla.png';
+import orientalLogo from '../assets/insurance/oriental.png';
+import unitedIndiaLogo from '../assets/insurance/united-india.png';
+import iffcoTokioLogo from '../assets/insurance/iffco-tokio.png';
+import relianceLogo from '../assets/insurance/reliance.png';
+import futureGeneraliLogo from '../assets/insurance/future-generali.png';
+import CholaLogo from '../assets/insurance/chola.png';
+import apolloMunichLogo from '../assets/insurance/apollo.png';
+import vidalHealthLogo from '../assets/insurance/Vidal.png';
+import medicareLogo from '../assets/insurance/Medicare.png';
+import vipulMedCorpLogo from '../assets/insurance/Vipul.png';
+import maxHealthLogo from '../assets/insurance/Max.png';
+import rakshaLogo from '../assets/insurance/Tata.png';
+import bhartiAxaLogo from '../assets/insurance/Bharti.png';
+import unitedHealthcareLogo from '../assets/insurance/UnitedHealthcare.png';
+import medsaveLogo from '../assets/insurance/MedSave.png';
 
 // Custom Auto-Increment Stat Counter
 function StatCounter({ target, label, suffix = '', icon }) {
@@ -77,15 +102,33 @@ export default function Home() {
   // Local state to toggle insurance view panel
   const [showInsurances, setShowInsurances] = useState(false);
 
-  // Extracted Insurance Companies / TPAs list from brochure imagery
-  const hospitalInsurances = [
-    "Star Health Insurance", "Chola MS", "Aditya Birla Health", "Bharti AXA", 
-    "Apollo Munich", "MedSave", "Reliance General", "Religare / Care Health", 
-    "Vidal Health TPA", "United India Insurance", "Oriental Insurance", "FHPL", 
-    "Bajaj Allianz", "UnitedHealthcare", "IFFCO-TOKIO", "Medicare TPA", 
-    "Future Generali", "Tata AIG / Raksha TPA", "HDFC ERGO", "Max Health Insurance", 
-    "Vipul MedCorp TPA", "MDIndia"
+  // --- Extracted Fully Loaded Insurance Object Array ---
+  const insurancePartners = [
+    { name: "Star Health Insurance", type: "Major Network", logo: starHealthLogo },
+    { name: "Chola MS", type: "General", logo: CholaLogo },
+    { name: "Aditya Birla Health", type: "Major Network", logo: adityaBirlaLogo },
+    { name: "Bharti AXA", type: "General", logo: bhartiAxaLogo },
+    { name: "Apollo Munich", type: "Major Network", logo: apolloMunichLogo },
+    { name: "MedSave TPA", type: "TPA", logo: medsaveLogo },
+    { name: "Reliance General", type: "General", logo: relianceLogo },
+    { name: "Religare / Care Health", type: "Major Network", logo: careHealthLogo },
+    { name: "Vidal Health TPA", type: "TPA", logo: vidalHealthLogo },
+    { name: "United India Insurance", type: "PSU Support", logo: unitedIndiaLogo },
+    { name: "Oriental Insurance", type: "PSU Support", logo: orientalLogo },
+    { name: "FHPL", type: "TPA", logo: fhplLogo },
+    { name: "Bajaj Allianz", type: "General", logo: bajajAllianzLogo },
+    { name: "UnitedHealthcare", type: "Global TPA", logo: unitedHealthcareLogo },
+    { name: "IFFCO-TOKIO", type: "General", logo: iffcoTokioLogo },
+    { name: "Medicare TPA", type: "TPA", logo: medicareLogo },
+    { name: "Future Generali", type: "General", logo: futureGeneraliLogo },
+    { name: "Tata AIG / Raksha TPA", type: "TPA Run", logo: rakshaLogo },
+    { name: "HDFC ERGO", type: "Major Network", logo: hdfcErgoLogo },
+    { name: "Max Health Insurance", type: "Major Network", logo: maxHealthLogo },
+    { name: "Vipul MedCorp TPA", type: "TPA", logo: vipulMedCorpLogo },
+    { name: "MDIndia", type: "TPA", logo: mdindiaLogo }
   ];
+
+  const hospitalInsurances = insurancePartners.map(p => p.name);
 
   // Interactive Multi-Specialty Core Matrix
   const specialtiesData = [
@@ -138,9 +181,7 @@ export default function Home() {
     }
   ];
 
-  // Active Main tab tracking hook
   const [activeTab, setActiveTab] = useState("ophthalmology");
-
   const currentSpecialty = specialtiesData.find(spec => spec.id === activeTab) || specialtiesData[0];
 
   const featuredEyeTreatments = [
@@ -178,71 +219,43 @@ export default function Home() {
   };
 
   const whyChooseUsData = [
-  { 
-    title: "Expert Specialists", 
-    desc: "Consult board-certified ophthalmologists and gynecologists with specialized fellowship training.", 
-    icon: <FaUserMd /> 
-  },
-  { 
-    title: "Modern Precision Diagnostics", 
-    desc: "Equipped with ultra-high speed 3D OCT Angiography and laser diagnostic tracking.", 
-    icon: <FaMicroscope /> 
-  },
-  { 
-    title: "Day Care Surgery Centre", 
-    desc: "Efficient, state-of-the-art day care procedures allowing patients to recover comfortably at home same-day.", 
-    icon: <FaProcedures /> 
-  },
-  { 
-    title: "Certified Optometrists", 
-    desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", 
-    icon: <FaUserMd /> 
-  }, // Fixed: Added missing comma here
-  { 
-    title: "Orthopedics, Sports Medicine & Pain Clinic", 
-    desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", 
-    icon: <FaBone /> 
-  },
-  { 
-    title: "Gynecology and Fertility", 
-    desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", 
-    icon: <FaBaby /> 
-  },
-  { 
-    title: "In-House Pharmacy", 
-    desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", 
-    icon: <FaPills /> 
-  },
-  { 
-    title: "Advanced Vision Studio", 
-    desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", 
-    icon: <FaGlasses /> 
-  },
-  { 
-    title: "Empaneled Insurance & TPA Support", 
-    desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
-    icon: <FaAward />,
-    isInsurance: true 
-  },
-  { 
-    title: "State Govt Employees and Reimbursement Services", 
-    desc: "Facilitating seamless medical reimbursement processing for Telangana State Government employees.", // Fixed: Replaced "." with descriptive text
-    icon: <FaAward /> // Fixed: Replaced broken <Fa /> with a valid icon
-  },
-  { 
-    title: "Advanced Sterile Microsurgery OTs", 
-    desc: "Dedicated operating rooms featuring vertical laminar flow systems for optimal safety.", 
-    icon: <FaHospital /> 
-  },
-  { 
-    title: "Patient-Centered Comfort", 
-    desc: "Dedicated patient coordinators, streamlined dilated waiting zones, and clear workflows.", 
-    icon: <FaShieldAlt /> 
-  }
-];
+    { title: "Expert Specialists", desc: "Consult board-certified ophthalmologists and gynecologists with specialized fellowship training.", icon: <FaUserMd /> },
+    { title: "Modern Precision Diagnostics", desc: "Equipped with ultra-high speed 3D OCT Angiography and laser diagnostic tracking.", icon: <FaMicroscope /> },
+    { title: "Day Care Surgery Centre", desc: "Efficient, state-of-the-art day care procedures allowing patients to recover comfortably at home same-day.", icon: <FaProcedures /> },
+    { title: "Certified Optometrists", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", icon: <FaUserMd /> },
+    { title: "Orthopedics, Sports Medicine & Pain Clinic", desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", icon: <FaBone /> },
+    { title: "Gynecology and Fertility", desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", icon: <FaBaby /> },
+    { title: "In-House Pharmacy", desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", icon: <FaPills /> },
+    { title: "Advanced Vision Studio", desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
+    { 
+      title: "Empaneled Insurance & TPA Support", 
+      desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
+      icon: <FaAward />,
+      isInsurance: true 
+    },
+    { title: "State Govt Employees and Reimbursement Services", desc: "Facilitating seamless medical reimbursement processing for Telangana State Government employees.", icon: <FaAward /> },
+    { title: "Advanced Sterile Microsurgery OTs", desc: "Dedicated operating rooms featuring vertical laminar flow systems for optimal safety.", icon: <FaHospital /> },
+    { title: "Patient-Centered Comfort", desc: "Dedicated patient coordinators, streamlined dilated waiting zones, and clear workflows.", icon: <FaShieldAlt /> }
+  ];
 
   return (
     <div className="w-full">
+      {/* Dynamic Keyframe Injection for Marquee Smooth Scrolling Animations */}
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-insurance {
+          display: flex;
+          width: max-content;
+          animation: marquee 45s linear infinite;
+        }
+        .animate-marquee-insurance:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       {/* SECTION 1 - HERO SLIDER */}
       <HeroSlider />
 
@@ -274,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3 - WHY CHOOSE US */}
-      <section className="py-20 bg-white border-y border-slate-100">
+      <section className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-extrabold tracking-widest text-emerald-accent uppercase bg-emerald-accent/10 px-3.5 py-1.5 rounded-full">
@@ -323,7 +336,7 @@ export default function Home() {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         className="overflow-hidden mt-4 pt-4 border-t border-slate-200"
-                        onClick={(e) => e.stopPropagation()} // Stop toggle when picking names
+                        onClick={(e) => e.stopPropagation()}
                       >
                         <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wide mb-3">Empaneled Insurance / TPAs:</h4>
                         <div className="grid grid-cols-2 gap-2">
@@ -411,7 +424,6 @@ export default function Home() {
       {/* SECTION 5 - FEATURED DEPARTMENTS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs md:text-sm font-extrabold tracking-widest text-emerald-accent uppercase bg-emerald-accent/10 px-4 py-2 rounded-full">
               Hospital Architecture
@@ -595,6 +607,82 @@ export default function Home() {
               className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold px-6 py-3.5 rounded-xl text-xs transition-all inline-flex items-center gap-1.5"
             >
               Explore All Specialty Eye Services <FaArrowRight size={10} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* --- PLACED HERE: Cashless Insurance & Infinite Scrolling TPA Network Section --- */}
+      <section className="bg-slate-50 border-y border-slate-100 py-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-emerald-accent text-xs font-bold uppercase tracking-widest bg-emerald-accent/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
+              <FaShieldAlt /> Cashless Facilities
+            </span>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-800 mt-4 leading-tight">
+              Empaneled Insurance &amp; TPA Support
+            </h2>
+            <p className="text-xs md:text-sm text-slate-500 mt-3 leading-relaxed font-light">
+              We offer dynamic, hassle-free cashless treatment protocols for listed insurance companies and Third-Party Administrators (TPAs). Our hospital is fully recognized for medical reimbursement configurations.
+            </p>
+          </div>
+        </div>
+
+        {/* Infinite Continuous Slider for Insurance */}
+        <div className="relative w-full flex items-center">
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+
+          <div className="animate-marquee-insurance gap-6 py-4 px-3">
+            {[...insurancePartners, ...insurancePartners].map((partner, idx) => (
+              <div 
+                key={idx}
+                className="w-56 bg-white border border-slate-100 rounded-2xl p-4 shadow-xs hover:shadow-md hover:border-emerald-accent/20 transition-all duration-200 flex flex-col justify-between shrink-0 select-none"
+              >
+                <div className="flex flex-col items-center justify-center h-20 mb-2">
+                  {partner.logo ? (
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} Logo`} 
+                      className="max-h-12 max-w-[85%] object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      draggable="false"
+                    />
+                  ) : (
+                    <div className="flex items-start gap-2 text-center px-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent mt-1.5 shrink-0"></span>
+                      <p className="text-xs font-bold text-slate-700 tracking-tight leading-snug">
+                        {partner.name}
+                      </p>
+                    </div>
+                  )}
+                </div>
+                <span className="text-[9px] text-slate-400 font-medium uppercase block tracking-wider text-right border-t border-slate-50 pt-1">
+                  {partner.type}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Government Recognition Footer Banner */}
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mt-10">
+          <div className="bg-white border border-emerald-accent/20 rounded-2xl p-5 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+            <div className="flex items-center gap-3.5 text-left">
+              <div className="w-10 h-10 rounded-xl bg-emerald-accent/10 text-emerald-accent flex items-center justify-center shrink-0">
+                <FaHandHoldingMedical size={20} />
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">Government Reimbursement Approved</h4>
+                <p className="text-[11px] text-slate-500 font-light mt-0.5 leading-relaxed">
+                  Our hospital processes are fully acknowledged and certified by the State Government for quick, streamlined medical reimbursement configurations.
+                </p>
+              </div>
+            </div>
+            <Link 
+              to="/contact" 
+              className="bg-slate-900 hover:bg-emerald-accent text-white text-[11px] font-bold px-4 py-2.5 rounded-xl transition-all whitespace-nowrap"
+            >
+              Insurance Helpdesk
             </Link>
           </div>
         </div>
