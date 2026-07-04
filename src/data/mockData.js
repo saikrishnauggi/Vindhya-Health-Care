@@ -132,7 +132,7 @@ export const DEPARTMENTS = [
     id: "lasik-refractive",
     name: "LASIK & Refractive Studio",
     icon: "FaGlasses",
-    image: lasik,
+    image: operation,
     description: "Blade-free laser vision correction and implantable contact lenses designed for spectacle-free living.",
     detailedDescription: "Eliminate dependency on glasses and standard contact lenses safely. Our Refractive Studio features advanced wavefront-guided laser systems that precisely map corneal irregularities. We provide advanced touchless laser variations (SMILE/Contoura Vision) and premium Implantable Collamer Lenses (ICL) for patients with thin corneas or high prescriptions.",
     services: [

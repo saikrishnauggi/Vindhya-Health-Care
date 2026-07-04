@@ -225,7 +225,7 @@ export default function Home() {
     { title: "Orthopedics, Sports Medicine & Pain Clinic", desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", icon: <FaBone /> },
     { title: "Gynecology and Fertility", desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", icon: <FaBaby /> },
     { title: "In-House Pharmacy", desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", icon: <FaPills /> },
-    { title: "Certified Optometrists & Advanced Vision Studio", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses. In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
+    { title: "Certified Optometrists + Advanced Vision Studio & Opticals", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses. In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
     { 
       title: "Empaneled Insurance & TPA Support", 
       desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
@@ -264,7 +264,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             <StatCounter target="50000" label="Visions Restored" suffix="+" icon={<FaEye />} />
             <StatCounter target="20" label="Recovery Beds" suffix="+" icon={<FaBed />} />
-            <StatCounter target="15" label="Years Experience" suffix="+" icon={<FaAward />} />
+            <StatCounter target="17+" label="Years Experience" suffix="+" icon={<FaAward />} />
             <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center h-full min-h-[160px]">
               <div className="text-emerald-accent text-3xl mb-4">
                 <FaUserMd />
