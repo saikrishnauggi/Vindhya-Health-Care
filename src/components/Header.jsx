@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  FaPhoneAlt, 
   FaAmbulance, 
   FaEnvelope, 
   FaClock, 
@@ -86,7 +85,7 @@ export default function Header() {
           </a>
           <span className="hidden sm:flex items-center gap-1.5">
             <FaClock className="text-medical-sky" />
-            <span>Mon - Sun: 9am - 9pm</span>
+            <span>Mon - Sat: 9am - 9pm</span>
           </span>
           <a href="mailto:care@vindhyahealthcare.in" className="hidden lg:flex items-center gap-1.5 hover:text-medical-sky transition-colors">
             <FaEnvelope className="text-medical-sky" />

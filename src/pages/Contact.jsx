@@ -78,7 +78,7 @@ export default function Contact() {
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-tight">Contact Us</h1>
           <p className="text-sm md:text-base text-slate-350 mt-4 leading-relaxed font-light">
-            Have a question about our specialties or billing procedures? Send us a note or call our coordinates.
+            Have a question about our clinical day care setups or pharmaceutical availability? Send us a note or view our official maps coordinates below.
           </p>
         </div>
       </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Our Location</span>
                       <span className="text-slate-500 leading-relaxed font-light">
-                        13-94 & 95, Vindhya Healthcare, beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri, Hyderabad, Secunderabad, Telangana - 500047
+                        H No. 13-94 & 13-95, Near SBI Bank, Sanjay Nagar, Malkajgiri, Hyderabad, Telangana - 500047 
                       </span>
                     </div>
                   </div>
@@ -115,11 +115,8 @@ export default function Contact() {
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Telephone Contacts</span>
                       <a href="tel:+919030757575" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        Emergency : +91 903 075 7575
+                        Mobile: +91 90307 57575
                       </a>
-                      {/* <a href="tel:0755123456" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        OPD Desk: 0755 123 456
-                      </a> */}
                     </div>
                   </div>
 
@@ -130,12 +127,9 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Email Support</span>
-                      <a href="mailto:care@vindhyahealthcare.in" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        care@vindhyahealthcare.in
+                      <a href="mailto:care@vindhyahealthcare.com" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        care@vindhyahealthcare.com
                       </a>
-                      {/* <a href="mailto:appointments@vindhyahealthcare.in" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        appointments@vindhyahealthcare.in
-                      </a> */}
                     </div>
                   </div>
 
@@ -146,8 +140,8 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Working Hours</span>
-                      <span className="block text-slate-500 font-light">Emergency / Critical: Day Care</span>
-                      <span className="block text-slate-500 font-light">OPD Consultations: Mon-Sat: 9AM - 9PM</span>
+                      <span className="block text-slate-500 font-light">Allopathic Day Care Operations</span>
+                      <span className="block text-slate-500 font-light">Mon - Sat: 9:00 AM - 9:00 PM</span>
                     </div>
                   </div>
                 </div>
@@ -232,7 +226,7 @@ export default function Contact() {
                     <label className="block text-xs font-bold text-slate-655 mb-2">Inquiry Subject</label>
                     <input
                       type="text"
-                      placeholder="e.g. Billing disputes, corporate tie-ups..."
+                      placeholder="e.g. Pharmacy availability, medical reimbursements..."
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                       className="w-full px-4 py-3 border border-slate-200 bg-slate-50 rounded-xl text-xs focus:outline-none focus:border-emerald-accent"
@@ -267,17 +261,17 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* 3. Google Maps Integration */}
-      <section className="h-[400px] w-full border-t border-slate-200 bg-slate-200 select-none">
+      {/* 3. Google Maps Embed Integration */}
+      <section className="h-[450px] w-full border-t border-slate-200 bg-slate-200 select-none">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2234551184803!2d78.5248232!3d17.4489814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b2e2868954b%3A0xe8ded595d57d245f!2sLaser%20Eye%20Hospital%20%40%20Vindhya%20Health%20Care!5e0!3m2!1sen!2sin!4v1718465000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2291410118326!2d78.532831!3d17.4488304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b2e2868954b%3A0xe8de4295d57d245f!2sLaser%20Eye%20Hospital%20%40%20Vindhya%20Health%20Care!5e0!3m2!1sen!2sin!4v1718465000000!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Vindhya Healthcare Malkajgiri Location Map"
+          title="M/S Vindhya Health Care Sanjay Nagar Malkajgiri Location Map"
         ></iframe>
       </section>
 

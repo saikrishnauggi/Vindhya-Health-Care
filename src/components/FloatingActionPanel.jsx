@@ -16,7 +16,6 @@ export default function FloatingActionPanel() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  // Monitor scroll height to show back-to-top trigger
   useEffect(() => {
     const checkScroll = () => {
       if (window.scrollY > 300) {
@@ -44,7 +43,7 @@ export default function FloatingActionPanel() {
       color: 'bg-medical-sky hover:bg-sky-600',
       isLink: true
     },
-   {
+    {
       label: 'Check Insurance',
       icon: <FaHeartbeat />,
       path: '/services',
@@ -54,9 +53,10 @@ export default function FloatingActionPanel() {
     {
       label: 'Hospital Location',
       icon: <FaMapMarkerAlt />,
-      path: '/contact',
+      // Replaced embed link with your direct maps application navigation link
+      path: 'https://maps.app.goo.gl/3pojRBzN5tBEjffXA',
       color: 'bg-amber-500 hover:bg-amber-600',
-      isLink: true
+      isLink: false
     },
     {
       label: 'WhatsApp Chat',
@@ -84,16 +84,14 @@ export default function FloatingActionPanel() {
   return (
     <div className="relative">
       
-      {/* 1. DESKTOP PANEL (Fixed side panel on right edge) */}
+      {/* 1. DESKTOP PANEL */}
       <div className="hidden lg:flex flex-col gap-2.5 fixed right-0 top-1/2 -translate-y-1/2 z-55 mr-0 pr-3">
         {actionItems.map((item, index) => {
           const content = (
             <div className={`flex items-center justify-end group cursor-pointer text-white`}>
-              {/* Tooltip text - slides out from right */}
               <span className="bg-medical-dark text-white text-[11px] font-bold py-2 px-3 rounded-l-lg opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-md">
                 {item.label}
               </span>
-              {/* Floating Circle Button */}
               <div className={`w-11 h-11 rounded-lg flex items-center justify-center text-base shadow-lg transition-all duration-300 hover:scale-110 ${item.color}`}>
                 {item.icon}
               </div>
@@ -105,13 +103,12 @@ export default function FloatingActionPanel() {
               {content}
             </Link>
           ) : (
-            <a key={index} href={item.path} target={item.path.startsWith('http') ? '_blank' : '_self'} rel="noreferrer">
+            <a key={index} href={item.path} target="_blank" rel="noreferrer">
               {content}
             </a>
           );
         })}
 
-        {/* Back To Top Button (Desktop) */}
         {showScrollTop && (
           <button 
             onClick={scrollToTop}
@@ -128,9 +125,8 @@ export default function FloatingActionPanel() {
         )}
       </div>
 
-      {/* 2. MOBILE PANEL (Expandable floating circular FAB) */}
+      {/* 2. MOBILE PANEL */}
       <div className="lg:hidden fixed bottom-6 right-6 z-55 flex flex-col items-center gap-3">
-        {/* Back To Top (Mobile) */}
         {showScrollTop && (
           <button
             onClick={scrollToTop}
@@ -141,7 +137,6 @@ export default function FloatingActionPanel() {
           </button>
         )}
 
-        {/* Expandable options stack */}
         {isMobileOpen && (
           <div className="flex flex-col gap-2.5 mb-2 items-end">
             {actionItems.map((item, index) => {
@@ -161,7 +156,7 @@ export default function FloatingActionPanel() {
                   {content}
                 </Link>
               ) : (
-                <a key={index} href={item.path} onClick={() => setIsMobileOpen(false)} target={item.path.startsWith('http') ? '_blank' : '_self'} rel="noreferrer">
+                <a key={index} href={item.path} onClick={() => setIsMobileOpen(false)} target="_blank" rel="noreferrer">
                   {content}
                 </a>
               );
@@ -169,7 +164,6 @@ export default function FloatingActionPanel() {
           </div>
         )}
 
-        {/* Main Floating Toggle FAB */}
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           className={`w-14 h-14 rounded-full text-white flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 ${

@@ -15,7 +15,6 @@ import {
   FaBaby,
   FaPills,
   FaProcedures,
-  FaHeartbeat,
   FaEye,
   FaCheckCircle,
   FaHospital,
