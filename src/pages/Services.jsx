@@ -286,7 +286,7 @@ export default function Services() {
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} Logo`} 
-                      className="max-h-12 max-w-[85%] object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      className="max-h-12 max-w-[85%] object-contain hover:scale-105 transition-all duration-300"
                       draggable="false"
                     />
                   ) : (

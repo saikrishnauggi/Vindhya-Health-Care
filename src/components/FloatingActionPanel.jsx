@@ -44,13 +44,13 @@ export default function FloatingActionPanel() {
       color: 'bg-medical-sky hover:bg-sky-600',
       isLink: true
     },
-    /* {
-      label: 'Book Health Checkup',
+   {
+      label: 'Check Insurance',
       icon: <FaHeartbeat />,
-      path: '/treatments',
+      path: '/services',
       color: 'bg-emerald-accent hover:bg-emerald-dark',
       isLink: true
-    }, */
+    },
     {
       label: 'Hospital Location',
       icon: <FaMapMarkerAlt />,

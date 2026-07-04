@@ -222,11 +222,11 @@ export default function Home() {
     { title: "Expert Specialists", desc: "Consult board-certified ophthalmologists and gynecologists with specialized fellowship training.", icon: <FaUserMd /> },
     { title: "Modern Precision Diagnostics", desc: "Equipped with ultra-high speed 3D OCT Angiography and laser diagnostic tracking.", icon: <FaMicroscope /> },
     { title: "Day Care Surgery Centre", desc: "Efficient, state-of-the-art day care procedures allowing patients to recover comfortably at home same-day.", icon: <FaProcedures /> },
-    { title: "Certified Optometrists", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses.", icon: <FaUserMd /> },
+    { title: "Comprehensive Ophthalmology", desc: "Advanced vision care encompassing routine eye exams, cataracts, glaucoma, and advanced retinal treatments.", icon: <FaUserMd /> },
     { title: "Orthopedics, Sports Medicine & Pain Clinic", desc: "Comprehensive bone, joint, and spine care managed by experienced musculoskeletal specialists.", icon: <FaBone /> },
     { title: "Gynecology and Fertility", desc: "Dedicated women's health wing covering routine screenings, prenatal guidance, and specialized care.", icon: <FaBaby /> },
     { title: "In-House Pharmacy", desc: "Immediate access to verified ophthalmic medications, post-op scripts, and essential healthcare supplies.", icon: <FaPills /> },
-    { title: "Advanced Vision Studio", desc: "In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
+    { title: "Certified Optometrists & Advanced Vision Studio", desc: "Compassionate, fully-trained refractive technicians and clinical eye drop nurses. In-house optical center with precise digital centration systems and premium eyewear brands.", icon: <FaGlasses /> },
     { 
       title: "Empaneled Insurance & TPA Support", 
       desc: "Cashless health insurance facility available for eye surgeries. Our hospital has been recognized by the Telangana State Government for medical reimbursement. Click to view listed partners.", 
@@ -358,11 +358,12 @@ export default function Home() {
       </section>
 
       {/* SECTION 4 - ABOUT HOSPITAL PREVIEW */}
+      {/* SECTION 4 - ABOUT HOSPITAL PREVIEW */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="w-full lg:w-1/2 relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-medical-sky/20 to-emerald-accent/20 rounded-3xl -rotate-3 scale-102"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-sky-200/20 to-emerald-accent/20 rounded-3xl -rotate-3 scale-102"></div>
               <img 
                 src={outdoor4}
                 alt="Eye Clinic Consultation" 
@@ -373,34 +374,34 @@ export default function Home() {
                   <FaAward size={22} />
                 </div>
                 <div>
-                  <span className="block font-black text-base text-slate-800">NABH Accredited</span>
-                  <span className="block text-[10px] text-slate-500 font-medium leading-tight">National safety and quality eye hospital standards</span>
+                  <span className="block font-black text-base text-slate-800">ROHINI Enrolled</span>
+                  <span className="block text-[10px] text-slate-500 font-medium leading-tight">Registered hospital asset within insurance network panels</span>
                 </div>
               </div>
             </div>
 
             <div className="w-full lg:w-1/2">
               <span className="text-xs font-extrabold tracking-widest text-emerald-accent uppercase bg-emerald-accent/10 px-3.5 py-1.5 rounded-full">
-                About Vindhya Healthcare
+                About Vindhya Health Care
               </span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-800 mt-4 leading-tight">
-                An Institution of Trust, Sight, and Microsurgical Excellence
+                An Institution of Statutory Trust, Vision Tracking, and Clinical Safety
               </h2>
               <p className="text-sm text-slate-500 mt-4 leading-relaxed font-light">
-                Founded with a mission to bring world-class ophthalmic and multi-specialty daycare treatments to the region, Vindhya Healthcare integrates global clinical experience with the latest technological modules to offer secure patient outcomes.
+                Established as an authorized private private medical care day-care setup, Vindhya Health Care integrates experienced diagnostic methodologies with a licensed on-premises pharmacy to safeguard community eye wellness.
               </p>
               
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 pb-8 border-b border-slate-200">
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Our Mission</h4>
                   <p className="text-xs text-slate-500 font-light leading-relaxed">
-                    To deliver premium-quality, patient-centric healthcare with empathy, ethical clinical protocols, and precise operational metrics.
+                    To deliver premium-quality, patient-centric day care solutions backed by authentic clinical licenses, transparent guidelines, and clinical precision.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Our Vision</h4>
                   <p className="text-xs text-slate-500 font-light leading-relaxed">
-                    To be the leading regional hub for surgical excellence, setting outstanding benchmarks in clinical research, medical metrics, and safety.
+                    To remain a reliable localized hub for safe allopathic evaluations, setting clear performance benchmarks in regional health delivery.
                   </p>
                 </div>
               </div>
@@ -408,11 +409,11 @@ export default function Home() {
               <div className="mt-8 flex items-center gap-6">
                 <Link 
                   to="/about" 
-                  className="bg-medical-dark hover:bg-emerald-accent text-white font-extrabold px-6 py-3.5 rounded-xl text-xs shadow-md transition-all flex items-center gap-1.5"
+                  className="bg-slate-900 hover:bg-emerald-accent text-white font-extrabold px-6 py-3.5 rounded-xl text-xs shadow-md transition-all flex items-center gap-1.5"
                 >
-                  Read Hospital History <FaArrowRight size={10} />
+                  Read Clinic Profile <FaArrowRight size={10} />
                 </Link>
-                <Link to="/contact" className="text-xs font-extrabold text-medical-sky hover:text-emerald-accent transition-colors">
+                <Link to="/contact" className="text-xs font-extrabold text-sky-600 hover:text-emerald-accent transition-colors">
                   Contact Helpdesk
                 </Link>
               </div>
@@ -644,7 +645,7 @@ export default function Home() {
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} Logo`} 
-                      className="max-h-12 max-w-[85%] object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      className="max-h-12 max-w-[85%] object-contain hover:scale-105 transition-all duration-300"
                       draggable="false"
                     />
                   ) : (

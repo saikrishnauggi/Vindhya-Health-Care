@@ -50,6 +50,21 @@ export const DEPARTMENTS = [
     ]
   },
   {
+  id: "general-ophthalmology",
+  name: "General Ophthalmology & Vision Triage Desk",
+  icon: "FaEye",
+  image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600",
+  description: "Unsure about your vision symptoms? Book an initial evaluation with our eye care desk for comprehensive diagnostic routing.",
+  detailedDescription: "The General Ophthalmology and Vision Triage Desk acts as the primary health evaluation layer for your visual health. If you are experiencing blurry vision, eye strain, or are uncertain which eye care sub-specialty you require, our clinical team will perform baseline visual acuity tests, examine core ocular tracking parameters, and guide you directly to the appropriate targeted care workflow.",
+  services: [
+    "Comprehensive Visual Acuity Screenings & Refraction Audits",
+    "Symptom Evaluation and Specialized Eye Care Routing",
+    "Routine Eye Checks and Baseline Digital Tonometry Sweeps",
+    "Initial Ocular Health Assessments (Strain, Dry Eye, Blur Remediation)",
+    "General Vision Wellness Consultations & Preventive Eye Care Guidelines"
+  ]
+},
+  {
     id: "gynecology",
     name: "Gynecology & Fertility",
     icon: "FaVenus",
