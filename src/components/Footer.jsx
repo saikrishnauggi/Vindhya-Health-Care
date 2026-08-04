@@ -16,6 +16,7 @@ export default function Footer() {
 
   const quickLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Eye Care in Malkajgiri', path: '/eye-care-hospital-malkajgiri' },
     { name: 'About Us', path: '/about' },
     { name: 'Specialists', path: '/doctors' },
     { name: 'Facilities', path: '/facilities' },

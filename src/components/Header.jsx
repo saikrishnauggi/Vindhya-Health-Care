@@ -39,6 +39,7 @@ export default function Header() {
   // Comprehensive link catalog used explicitly for the Mobile Drawer
   const allNavLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Eye Care in Malkajgiri', path: '/eye-care-hospital-malkajgiri' },
     { name: 'About Us', path: '/about' },
     { name: 'Doctors', path: '/doctors' },
     { name: 'Departments', path: '/departments' },

@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,6 +14,8 @@ import Blog from './pages/Blog';
 import Testimonials from './pages/Testimonials';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import MalkajgiriEyeCare from './pages/MalkajgiriEyeCare';
+
 
 export default function App() {
   return (
@@ -33,11 +36,13 @@ export default function App() {
           <Route path="testimonials" element={<Testimonials />} />
           <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="eye-care-hospital-malkajgiri" element={<MalkajgiriEyeCare />} />
           
           {/* Fallback to homepage index for invalid links */}
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }

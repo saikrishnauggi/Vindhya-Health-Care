@@ -116,59 +116,6 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Video Testimonials Section */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold text-emerald-accent uppercase tracking-wider bg-emerald-accent/15 px-3 py-1.5 rounded-full border border-emerald-accent/25">Multimedia</span>
-            <h2 className="text-2xl md:text-3xl font-extrabold mt-4">Video Reviews</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* V1 */}
-            <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-lg group relative aspect-[16/10] bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e901a?q=80&w=500" alt="Video cover" className="w-full h-full object-cover filter brightness-50" />
-              <div className="absolute inset-0 flex flex-col justify-between p-6">
-                <div className="flex justify-end">
-                  <span className="bg-red-600 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">Maternity Care</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <button className="w-12 h-12 rounded-full bg-emerald-accent hover:bg-emerald-dark text-white flex items-center justify-center shadow-lg transition-transform group-hover:scale-105" aria-label="Play video review">
-                    <FaPlay size={14} className="ml-1" />
-                  </button>
-                  <div>
-                    <span className="block font-bold text-sm">"Beautiful birthing suites care"</span>
-                    <span className="block text-[10px] text-slate-450">Review by Dr. Shruti Iyer</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* V2 */}
-            <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-lg group relative aspect-[16/10] bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500" alt="Video cover" className="w-full h-full object-cover filter brightness-50" />
-              <div className="absolute inset-0 flex flex-col justify-between p-6">
-                <div className="flex justify-end">
-                  <span className="bg-blue-650 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase" style={{ backgroundColor: '#1e40af' }}>Cardiac Surgery</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <button className="w-12 h-12 rounded-full bg-emerald-accent hover:bg-emerald-dark text-white flex items-center justify-center shadow-lg transition-transform group-hover:scale-105" aria-label="Play video review">
-                    <FaPlay size={14} className="ml-1" />
-                  </button>
-                  <div>
-                    <span className="block font-bold text-sm">"Emergency Angioplasty success"</span>
-                    <span className="block text-[10px] text-slate-450">Review by Arun Venkat</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       {/* Submit review form */}
       <section className="py-20 bg-white">
         <div className="max-w-xl mx-auto px-4">
