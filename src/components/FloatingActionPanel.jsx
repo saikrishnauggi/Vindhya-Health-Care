@@ -68,14 +68,14 @@ export default function FloatingActionPanel() {
     {
       label: 'Call Hospital',
       icon: <FaPhoneAlt />,
-      path: 'tel:+919030757575',
+      path: 'tel:+919030597575',
       color: 'bg-blue-600 hover:bg-blue-700',
       isLink: false
     },
     {
       label: 'Emergency Help',
       icon: <FaAmbulance />,
-      path: 'tel:+919030757575',
+      path: 'tel:+919030597575',
       color: 'bg-red-600 hover:bg-red-750 animate-pulse',
       isLink: false
     }

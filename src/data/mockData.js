@@ -343,31 +343,261 @@ export const TREATMENTS_DATA = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Arun Venkat",
-    age: 54,
+    name: "Marie Prazer",
+    age: "N/A",
     rating: 5,
-    storyTitle: "Pristine Sight Restored Instantly",
-    text: "I was diagnosed with an advanced nuclear cataract that severely limited my night driving. Dr. Rajeshwari Nair performed micro-incision phaco surgery and implanted a multifocal lens. The structural speed, lack of pain, and crystal-clear outcomes are truly life-changing.",
+    storyTitle: "Cataract Eye Surgery",
+    text: "I would highly recommend Dr. Navneeth Servey! He is very kind , respectful, compassionate listened to me and made me feel comfortable. Dr. Navneeth, gently explained the process and procedure of my cataract eye surgery . I was extremely nervous and Dr. calmed my anxiety. He is a great and wonderful surgeon. 👍 I also appreciate the staff/nurses their willingness and dedication. Post- operation, I can see with greater clarity, brightness and color.!! God bless",
     image: review,
     videoUrl: ""
   },
   {
     id: 2,
-    name: "Dr. Shruti Iyer",
-    age: 28,
+    name: "George Christopher Gaddam",
+    age: "N/A",
     rating: 5,
-    storyTitle: "Glasses-Free Life Post LASIK",
-    text: "Being a medical professional, wearing thick prescription lenses inside sterile settings was tedious. The Pre-LASIK data profiling at Vindhya Eye Care was exceptionally thorough, and the blade-free laser modification by Dr. Vikram Kiran gave me perfect 6/6 vision within 24 hours.",
+    storyTitle: "Experienced Doctor and Eye Surgeon",
+    text: "Dr Navneeth garu is a good and experienced doctor and eye surgen, He thoroughly explains and suggests in a best way. The clinic ambience is awesome and the staff and nurses are polite,with moto of service.",
     image: review,
     videoUrl: ""
   },
   {
     id: 3,
-    name: "Ramanathan K.",
-    age: 67,
+    name: "Srinivas Koyyoda",
+    age: "N/A",
     rating: 5,
-    storyTitle: "Saved My Sight From Retinal Tear",
-    text: "I experienced sudden floaters and flashes of light while traveling. I rushed to Vindhya's emergency trauma room where Dr. Anand Vardhan diagnosed a retinal tear. Immediate barrier laser photocoagulation saved my vision. Exceptional clinical response time!",
+    storyTitle: "Satisfied with Cataract Surgery",
+    text: "Good experience with Dr naveeth servey I have done by cataract surgery tq sir I have very satisfied with my eye surgery",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 4,
+    name: "Ssanthi Priya",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Daughter's Treatment Experience",
+    text: "I visited clinic for my daughter's treatment. Dr Navneeth garu explained everything in detail very patiently Hospitality is good. Staff behaved with every person with good manners Taking of treatment in Vindhya is very much satisfying for me",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 5,
+    name: "Parashuram Alle",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Mother's Cataract Surgery",
+    text: "My mother underwent cataract surgery in Vindhya Health Care. Dr. Navneeth is very friendly and make me understand the whole process. The staff also made me comfortable and answered my queries with patience. I am very happy.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 6,
+    name: "Nawya Medepalli",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "ICL Surgery",
+    text: "I got my ICL surgery done here, really sweet staff and knowledgeable doctor Dr.Navneeth Servey. So far so good, always responsive and happy to help nature.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 7,
+    name: "Sunitha Boorugu",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Smooth Surgery Experience",
+    text: "Amazing experience with doctor navneeth sir. I had smooth experience for surgery with navneeth sir. Highly recommend.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 8,
+    name: "Srikanth Badavath",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Best Cataract Surgeon in Hyderabad",
+    text: "I had consulted Dr Navneeth Sarvey Eye Specialist for my mother’s cataract surgery at Vindhya Health care , Malkajgiri. We are extremely happy with the overall experience at Vindhya Healthcare, Dr Navneeth surgical expertise was excellent he is an amazing eye surgeon with good experience.My mother has clear vision now thanks to lenses advised by the doctor. Would recommend Dr Navneeth ,Vindhya Health care one of the best cataract surgeon in Hyderabad.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 9,
+    name: "Karthik Karanam",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Comprehensive Knee Treatment",
+    text: "I had consulted with Dr Rahul Kuraganti for my mother for a chronic knee problem. We had visited multiple doctors and never seemed to get better until we have been here. This has been the best thing to happen and now my mother is pain free and back to her normal self. Dr Rahul is the best doctor we have ever visited who takes time to sit with the patient and address all concerns patiently. He has given us a comprehensive clear and holistic treatment plan which helped us manage the problem with ease. I would recommend this doctor to anyone looking for a proper solution to the orthopedic problems that one may be facing. He is the best in the twin cities.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 10,
+    name: "Elizabeth Sujani",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Best Gynecologist in Malkajgiri",
+    text: "Dr. Tejeswini is the best gynecologist in Malkajgiri. For my visit, she explained and helped me to understand my situation. She made things easier and gave best possible treatment Thank you so much doctor I would recommend her for the best experience during pregnancy at Vindhya Healthcare Speciality clinics.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 11,
+    name: "G Pravalika",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Eye PRK Surgery",
+    text: "I have undergone my eye PRK surgery in vindhya health care Dr . Navneeth servey. Is very friendly & staff is also so supportive and so carring I am very happy with there treatment 🙂",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 12,
+    name: "Laxminarayana Koraboina",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Very Satisfied with Cataract Surgery",
+    text: "I went through my cataract surgery in vindhya health care I am very satisfied with there treatment and I am very happy with Dr Naveenth servey",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 13,
+    name: "Venkateswarlu Kukkadapu",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "STBRVO Treatment & Care",
+    text: "Visited the clinic for eye checkup with Dr. Navneeth Servey and underwent Accentrix injection for treatment of STBRVO on 27/04/2024. We are very much satisfied with the treatment, care and concern by Dr. Navneeth as well as the staff. I certainly recommend Dr. Navneeth for your eye care.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 14,
+    name: "Aharonu",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Grandfather's Knee Pain Relief",
+    text: "I visited Dr Rahul at Vindhya Healthcare Speciality Clinics for my grandfather's knee pain. He being a true expert, provided a comprehensive treatment plan and helped to alleviate his pain. Highly satisfied with the treatment. Thank You Rahul sir",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 15,
+    name: "Khader MD",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Good & Humble Doctor",
+    text: "Dr navneet is very good & humble ever seen , hospital ambience is also good",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 16,
+    name: "Syam Sunder",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Multi-Speciality Care",
+    text: "Recently started. Has Eye care, Orthopaedic and Gynecology departments. Orthopedic doctor is very good.",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 17,
+    name: "Murali Mohan Pappu",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Best Cataract Operation",
+    text: "Most satisfied services.. Strongly recommend for opton .. Thanks for best cataract operation undergone..",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 18,
+    name: "Amere John",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Good Experience",
+    text: "Had an good experience",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 19,
+    name: "Susheel Kumar",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Satisfied with Treatment",
+    text: "Very much satisfied with the treatment",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 20,
+    name: "Dandi Durgesh",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Nice Experience",
+    text: "Nice experience with the Dr navaneeth sir",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 21,
+    name: "Sreenivasa Chary Poloju",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Good Service",
+    text: "Good",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 22,
+    name: "Kadire Kalyani",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Best Doctor",
+    text: "Excellent 👌 Dr.Navaneeth sir is best",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 23,
+    name: "Samba Sivarao",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Satisfactory Treatment",
+    text: "Good Response.and satisfactory treatment",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 24,
+    name: "Sudheer Singh",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Good Service",
+    text: "Good service",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 25,
+    name: "Priya Akula",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Supportive Staff and Doctor",
+    text: "We are very happy with this mr Dr.Navneet sir and staff,responding very quietly and very supportive and motivated to the patient.ovetall very good",
+    image: review,
+    videoUrl: ""
+  },
+  {
+    id: 26,
+    name: "Santhosh Kumar",
+    age: "N/A",
+    rating: 5,
+    storyTitle: "Mother's Cataract Surgery",
+    text: "We had a wonderful experience at Vindhya Healthcare for my mother's cataract surgery. Dr. Navneeth and Dr. Kapil were highly professional, patient, and reassuring throughout the entire process. The surgery went smoothly, and the care was excellent.",
     image: review,
     videoUrl: ""
   }

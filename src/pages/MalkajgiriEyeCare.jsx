@@ -91,7 +91,7 @@ export default function MalkajgiriEyeCare() {
             <div className="mt-6 space-y-5 text-sm text-slate-300">
               <p className="flex items-start gap-3"><FaMapMarkerAlt className="mt-1 shrink-0 text-emerald-accent" />13-94 & 95, beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri, Hyderabad, Telangana 500047</p>
               <p className="flex items-center gap-3"><FaClock className="shrink-0 text-emerald-accent" />Open daily, 9:00 AM – 9:00 PM</p>
-              <a href="tel:+919030757575" className="flex items-center gap-3 font-bold text-white hover:text-emerald-accent"><FaPhoneAlt className="shrink-0 text-emerald-accent" />+91 90307 57575</a>
+              <a href="tel:+919030597575" className="flex items-center gap-3 font-bold text-white hover:text-emerald-accent"><FaPhoneAlt className="shrink-0 text-emerald-accent" />+91 90305 97575</a>
             </div>
             <a href={mapUrl} target="_blank" rel="noreferrer" className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-extrabold text-medical-dark transition-colors hover:bg-slate-100">
               <FaMapMarkerAlt /> Get Directions
@@ -147,7 +147,7 @@ export default function MalkajgiriEyeCare() {
           <p className="mt-4 text-sm leading-relaxed text-slate-300">Book online or call our Malkajgiri clinic for assistance.</p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link to="/appointment" className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-accent px-6 py-3.5 text-sm font-extrabold hover:bg-emerald-dark"><FaCalendarCheck /> Book Appointment</Link>
-            <a href="tel:+919030757575" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-6 py-3.5 text-sm font-bold hover:bg-white/10"><FaPhoneAlt /> Call +91 90307 57575</a>
+            <a href="tel:+919030597575" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-6 py-3.5 text-sm font-bold hover:bg-white/10"><FaPhoneAlt /> Call +91 90305 97575</a>
           </div>
         </div>
       </section>

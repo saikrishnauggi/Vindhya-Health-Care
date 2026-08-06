@@ -114,8 +114,8 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Telephone Contacts</span>
-                      <a href="tel:+919030757575" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        Mobile: +91 90307 57575
+                      <a href="tel:+919030597575" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        Mobile: +91 90305 97575
                       </a>
                     </div>
                   </div>
@@ -127,8 +127,8 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Email Support</span>
-                      <a href="mailto:care@vindhyahealthcare.com" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        care@vindhyahealthcare.com
+                      <a href="mailto:care@vindhyahealthcare.in" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        care@vindhyahealthcare.in
                       </a>
                     </div>
                   </div>

@@ -318,13 +318,13 @@ export default function Appointment() {
                   </p>
                   
                   <div className="space-y-6 text-xs">
-                    <a href="tel:+919030757575" className="flex items-center gap-3 hover:text-emerald-accent transition-colors">
+                    <a href="tel:+919030597575" className="flex items-center gap-3 hover:text-emerald-accent transition-colors">
                       <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                         <FaPhoneAlt size={12} />
                       </div>
                       <div>
                         <span className="block text-[10px] text-slate-400">Reception Support</span>
-                        <span className="font-bold">+91 903 075 7575</span>
+                        <span className="font-bold">+91 903 059 7575</span>
                       </div>
                     </a>
 

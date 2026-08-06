@@ -34,7 +34,7 @@ export default function HeroSlider() {
       ctaPrimary: "Find A Doctor",
       ctaPrimaryPath: "/doctors",
       ctaSecondary: "Emergency Call",
-      ctaSecondaryPath: "tel:+919030757575"
+      ctaSecondaryPath: "tel:+919030597575"
     },
     {
       image: advancedtech,
@@ -62,7 +62,7 @@ export default function HeroSlider() {
     title: "Rapid Ocular Trauma & Day Care Triage",
     description: "Equipped for immediate stabilization, accidental eye injury management.",
     ctaPrimary: "Call Clinic Hotline",
-    ctaPrimaryPath: "tel:+919030757575",
+    ctaPrimaryPath: "tel:+919030597575",
     ctaSecondary: "View Treatments",
     ctaSecondaryPath: "/treatments"
   }
