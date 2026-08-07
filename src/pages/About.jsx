@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaHistory, FaBullseye, FaHeart, FaRibbon, FaAward, FaHospital } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 // 1. IMPORT YOUR BACKGROUND IMAGE ASSET WITH THE CORRECT EXTENSION
 import vindhyaBg from '../assets/image_9e2966.jpeg';
@@ -27,6 +28,12 @@ export default function About() {
 
   return (
     <div className="bg-slate-50">
+      <SEO
+        title="About Vindhya Healthcare | Eye Hospital and Multi-Specialty Clinic"
+        description="Learn about Vindhya Healthcare, a trusted eye hospital and multi-specialty clinic in Malkajgiri, Hyderabad covering ophthalmology, orthopedics, gynaecology, fertility and IVF care."
+        canonical="https://www.vindhyahealthcare.in/about"
+        keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'about hospital']}
+      />
       
       {/* 1. Header Banner - WITH STYLISH OVERLAY & ACCURATE IMAGE BACKGROUND */}
       <div 

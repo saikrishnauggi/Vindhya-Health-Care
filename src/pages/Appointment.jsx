@@ -16,6 +16,7 @@ import {
 import emailjs from '@emailjs/browser';
 import { apiService } from '../services/api';
 import { notificationService } from '../services/notificationService';
+import SEO from '../components/SEO';
 
 // Defined list of departments
 const CLINICAL_DEPARTMENTS = [
@@ -218,6 +219,12 @@ export default function Appointment() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Book Appointment | Eye, Orthopedics, Gynaecology & IVF"
+        description="Book an appointment at Vindhya Healthcare for eye and ophthalmology consultations, orthopedics, gynaecology, fertility, and IVF care in Hyderabad."
+        canonical="https://www.vindhyahealthcare.in/appointment"
+        keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'appointment']}
+      />
       
       {/* Page Header */}
       <div className="bg-medical-dark text-white py-16 px-4 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)' }}>

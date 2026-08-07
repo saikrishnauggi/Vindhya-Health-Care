@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fa';
 // 1. Import EmailJS browser library
 import emailjs from '@emailjs/browser';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   // Form states
@@ -68,6 +69,12 @@ export default function Contact() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Contact Vindhya Healthcare | Eye, Orthopedics, Gynaecology & IVF"
+        description="Contact Vindhya Healthcare in Malkajgiri, Hyderabad for eye and ophthalmology care, orthopedics, gynaecology, fertility, IVF, appointments, and support."
+        canonical="https://www.vindhyahealthcare.in/contact"
+        keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'contact']}
+      />
       
       {/* Page Header */}
       <div className="bg-medical-dark text-white py-16 px-4 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)' }}>

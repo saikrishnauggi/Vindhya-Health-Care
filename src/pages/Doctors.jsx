@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { FaSearch, FaFilter, FaRedo, FaUserMd } from 'react-icons/fa';
 import DoctorCard from '../components/DoctorCard';
 import { DOCTORS, DEPARTMENTS } from '../data/mockData';
+import SEO from '../components/SEO';
 
 export default function Doctors() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -57,6 +58,12 @@ export default function Doctors() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Doctors for Eye, Orthopedics, Gynaecology & IVF"
+        description="Find experienced ophthalmologists, orthopedists, gynaecologists, fertility specialists, and IVF doctors at Vindhya Healthcare in Hyderabad."
+        canonical="https://www.vindhyahealthcare.in/doctors"
+        keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'doctors']}
+      />
       
       {/* 1. Page Header */}
       <div className="bg-medical-dark text-white py-16 px-4 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)' }}>

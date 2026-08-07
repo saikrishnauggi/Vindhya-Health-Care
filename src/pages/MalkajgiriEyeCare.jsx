@@ -13,6 +13,7 @@ import {
 import DoctorCard from '../components/DoctorCard';
 import { DOCTORS } from '../data/mockData';
 import outdoor4 from '../assets/outdoor4.jpg';
+import SEO from '../components/SEO';
 
 const eyeCareServices = [
   'Comprehensive eye examinations',
@@ -29,6 +30,13 @@ const ophthalmologyDoctors = DOCTORS.filter((doctor) => doctor.departmentId === 
 export default function MalkajgiriEyeCare() {
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Best Eye Hospital in Secunderabad Near Malkajgiri | Eye Care Clinic"
+        description="Vindhya Healthcare in Malkajgiri offers comprehensive eye care and ophthalmology services for patients searching for a best eye hospital in Secunderabad, an eye care clinic, or an eye specialist near Malkajgiri."
+        canonical="https://www.vindhyahealthcare.in/eye-care-hospital-malkajgiri"
+        keywords={['eye care', 'ophthalmology', 'best eye hospital in secunderabad', 'eye care clinic', 'eye hospital in Malkajgiri', 'eye specialist Hyderabad', 'cataract', 'retina', 'glaucoma', 'near secunderabad']}
+      />
+
       <section className="relative isolate overflow-hidden bg-medical-dark text-white">
         <img
           src={outdoor4}
@@ -41,10 +49,10 @@ export default function MalkajgiriEyeCare() {
             <FaMapMarkerAlt /> Sanjay Nagar, Malkajgiri
           </span>
           <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight md:text-6xl">
-            Eye Care Hospital in Malkajgiri, Hyderabad
+            Best Eye Hospital in Secunderabad Near Malkajgiri
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-200 md:text-lg">
-            Vindhya Healthcare provides comprehensive ophthalmology care, from routine vision checks to cataract, retina, glaucoma, and refractive-care consultations.
+            Vindhya Healthcare provides comprehensive ophthalmology care, from routine vision checks to cataract, retina, glaucoma, and refractive-care consultations for patients from Malkajgiri, Secunderabad, and nearby areas.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -69,9 +77,9 @@ export default function MalkajgiriEyeCare() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3 md:px-8">
           <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm md:col-span-2">
             <p className="text-xs font-bold uppercase tracking-widest text-emerald-accent">Eye care services</p>
-            <h2 className="mt-3 text-3xl font-extrabold text-slate-800">Care for everyday and complex vision needs</h2>
+            <h2 className="mt-3 text-3xl font-extrabold text-slate-800">Care for everyday and complex vision needs near Secunderabad</h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
-              Our eye-care team evaluates symptoms, guides you to the appropriate specialist, and supports you through diagnosis, treatment, and follow-up care.
+              Our eye-care team evaluates symptoms, guides you to the appropriate specialist, and supports you through diagnosis, treatment, and follow-up care for people looking for an eye care clinic in Malkajgiri or a trusted ophthalmology hospital near Secunderabad.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {eyeCareServices.map((service) => (

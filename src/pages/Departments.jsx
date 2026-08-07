@@ -4,6 +4,7 @@ import * as FaIcons from 'react-icons/fa';
 
 // 1. Import your dynamic mock data array here (adjust the path if necessary)
 import { DEPARTMENTS } from '../data/mockData'; 
+import SEO from '../components/SEO';
 
 export default function Departments() {
   // Use the imported DEPARTMENTS array dynamically for the initial state
@@ -32,6 +33,12 @@ export default function Departments() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Clinical Departments for Eye, Ophthalmology, Orthopedics, Gynaecology & Fertility"
+        description="Meet the clinical departments at Vindhya Healthcare, including eye and ophthalmology care, orthopedics, and gynaecology with fertility and IVF support."
+        canonical="https://www.vindhyahealthcare.in/departments"
+        keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'departments', 'specialty clinics']}
+      />
       
       {/* 1. Page Header */}
       <div className="bg-medical-dark text-white py-16 px-4 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)' }}>

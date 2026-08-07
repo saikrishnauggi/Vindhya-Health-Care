@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaInfoCircle, FaCalendarCheck, FaEye } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import cataract from '../assets/cataract.png';
 import glaucoma from '../assets/glaucoma.png';
 import retina from '../assets/retina.png';
@@ -211,7 +212,13 @@ export default function Treatments() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      
+      <SEO
+        title="Eye Treatments & Ophthalmology Care in Hyderabad"
+        description="Browse advanced eye treatments at Vindhya Healthcare, including cataract surgery, retina care, glaucoma, pediatric ophthalmology, LASIK, and other ophthalmology services in Hyderabad."
+        canonical="https://www.vindhyahealthcare.in/treatments"
+        keywords={['eye', 'ophthalmology', 'cataract surgery', 'retina care', 'glaucoma treatment', 'pediatric ophthalmology', 'LASIK', 'eye hospital Hyderabad']}
+      />
+
       {/* 1. Page Header */}
       <div className="bg-medical-dark text-white py-16 px-4 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)' }}>
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-accent/5 rounded-full blur-3xl pointer-events-none"></div>

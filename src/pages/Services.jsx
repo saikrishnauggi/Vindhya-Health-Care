@@ -36,6 +36,7 @@ import rakshaLogo from '../assets/insurance/Tata.png';
 import bhartiAxaLogo from '../assets/insurance/Bharti.png';
 import unitedHealthcareLogo from '../assets/insurance/UnitedHealthcare.png';
 import medsaveLogo from '../assets/insurance/MedSave.png';
+import SEO from '../components/SEO';
 
 export default function Services() {
   const servicesList = [
@@ -124,6 +125,12 @@ export default function Services() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Multi-Specialty Services for Eye, Ophthalmology, Orthopedics, Gynaecology, Fertility & IVF"
+        description="Explore Vindhya Healthcare services for eye and ophthalmology care, orthopedics, gynaecology, fertility, IVF, diagnostics, surgery, pharmacy, and day-care support in Malkajgiri, Hyderabad."
+        canonical="https://www.vindhyahealthcare.in/services"
+        keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'speciality clinic services', 'eye surgery', 'orthopedic services', 'fertility services']}
+      />
       
       {/* Dynamic Keyframe Injection for Seamless Infinite Scrolling */}
       <style>{`

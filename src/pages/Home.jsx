@@ -23,6 +23,7 @@ import {
   FaHandHoldingMedical
 } from 'react-icons/fa';
 
+import SEO from '../components/SEO';
 import HeroSlider from '../components/HeroSlider';
 import DoctorCard from '../components/DoctorCard';
 import outdoor4 from '../assets/outdoor4.jpg';
@@ -239,6 +240,52 @@ export default function Home() {
 
   return (
     <div className="w-full">
+      <SEO
+        title="Best Eye Hospital in Secunderabad Near Malkajgiri | Ophthalmology, Orthopedics, Gynaecology, Fertility & IVF"
+        description="Vindhya Healthcare in Malkajgiri, Hyderabad offers eye and ophthalmology care, orthopedics, gynaecology, fertility and IVF consultations, advanced diagnostics, surgery, and day-care services for patients from Secunderabad and nearby areas."
+        canonical="https://www.vindhyahealthcare.in/"
+        keywords={[
+          'eye',
+          'ophthalmology',
+          'orthopedics',
+          'gynaec',
+          'gynaecology',
+          'fertility',
+          'ivf',
+          'best eye hospital in secunderabad',
+          'eye care clinic',
+          'malkajgiri',
+          'near secunderabad',
+          'eye hospital in Malkajgiri',
+          'ophthalmologist Hyderabad',
+          'orthopedic clinic Hyderabad',
+          'fertility clinic Hyderabad',
+        ]}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'MedicalClinic',
+          name: 'Vindhya Healthcare',
+          url: 'https://www.vindhyahealthcare.in/',
+          telephone: '+91-9030757575',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '13-94 & 95, Beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri',
+            addressLocality: 'Hyderabad',
+            addressRegion: 'Telangana',
+            postalCode: '500047',
+            addressCountry: 'IN',
+          },
+          medicalSpecialty: ['Ophthalmology', 'Orthopedics', 'Gynecology', 'Fertility Medicine', 'IVF'],
+          availableService: [
+            'Eye care and ophthalmology',
+            'Orthopedics',
+            'Gynaecology',
+            'Fertility',
+            'IVF consultations',
+          ],
+        }}
+      />
+
       {/* Dynamic Keyframe Injection for Marquee Smooth Scrolling Animations */}
       <style>{`
         @keyframes marquee {
@@ -257,6 +304,19 @@ export default function Home() {
 
       {/* SECTION 1 - HERO SLIDER */}
       <HeroSlider />
+
+      <section className="py-10 bg-slate-50 border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="rounded-3xl bg-white border border-slate-100 shadow-sm px-6 py-5 md:px-8 md:py-6">
+            <p className="text-[11px] md:text-xs font-bold uppercase tracking-[0.25em] text-emerald-accent mb-2">
+              Local Search Coverage
+            </p>
+            <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+              Looking for the best eye hospital in Secunderabad, an eye care clinic near Secunderabad, or a specialist hospital in Malkajgiri? Vindhya Healthcare serves patients from Malkajgiri, Secunderabad, and surrounding neighborhoods with ophthalmology, orthopedics, gynaecology, fertility, and IVF care.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 2 - STATISTICS */}
       <section className="py-16 bg-slate-50">
