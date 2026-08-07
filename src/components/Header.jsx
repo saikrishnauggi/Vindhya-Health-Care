@@ -88,9 +88,9 @@ export default function Header() {
             <FaClock className="text-medical-sky" />
             <span>Mon - Sat: 9am - 9pm</span>
           </span>
-          <a href="mailto:care@vindhyahealthcare.in" className="hidden lg:flex items-center gap-1.5 hover:text-medical-sky transition-colors">
+          <a href="mailto:vindhyahealthcare9495@gmail.com" className="hidden lg:flex items-center gap-1.5 hover:text-medical-sky transition-colors">
             <FaEnvelope className="text-medical-sky" />
-            <span>care@vindhyahealthcare.in</span>
+            <span>vindhyahealthcare9495@gmail.com</span>
           </a>
         </div>
         
@@ -130,7 +130,7 @@ export default function Header() {
               <span className={`block text-[10px] tracking-widest font-bold mt-0.5 ${
                 !isScrolled && isHomePage ? 'text-slate-300' : 'text-slate-500'
               }`}>
-                HEALTHCARE
+                Eye Hospital & Speciality Clinics
               </span>
             </div>
           </Link>

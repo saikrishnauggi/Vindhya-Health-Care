@@ -12,7 +12,7 @@ export default function Careers() {
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('care@vindhyahealthcare.in');
+    navigator.clipboard.writeText('vindhyahealthcare9495@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -120,7 +120,7 @@ export default function Careers() {
 
             {/* Interactive Email Copy Section */}
             <div className="flex items-center justify-between bg-slate-50 border border-slate-200 rounded-xl p-3 mb-6">
-              <span className="text-xs font-semibold text-slate-700 select-all">care@vindhyahealthcare.in</span>
+              <span className="text-xs font-semibold text-slate-700 select-all">vindhyahealthcare9495@gmail.com</span>
               <button 
                 onClick={handleCopyEmail}
                 className="text-slate-400 hover:text-slate-600 p-1.5 transition-colors"
@@ -133,7 +133,7 @@ export default function Careers() {
             {/* Action Buttons */}
             <div className="flex flex-col gap-2">
               <a
-                href={`mailto:care@vindhyahealthcare.in?subject=Application for ${encodeURIComponent(selectedJob.title)} - ${encodeURIComponent(selectedJob.department)}`}
+                href={`mailto:vindhyahealthcare9495@gmail.com?subject=Application for ${encodeURIComponent(selectedJob.title)} - ${encodeURIComponent(selectedJob.department)}`}
                 className="bg-emerald-accent hover:bg-emerald-dark text-white font-extrabold py-3 rounded-xl text-xs shadow-md transition-colors block"
               >
                 Open Mail App

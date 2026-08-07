@@ -35,21 +35,6 @@ import review from '../assets/review.jpg';
 
 export const DEPARTMENTS = [
   {
-    id: "general-medicine",
-    name: "General Medicine & Triage Desk",
-    icon: "FaUserMd",
-    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600",
-    description: "Not sure which doctor to see? Book an initial evaluation with our general medicine desk for proper diagnostic routing.",
-    detailedDescription: "The General Medicine and Primary Consultation unit acts as the primary health evaluation layer for Vindhya Health Care. If you are uncertain about the root cause of your symptoms, our general practitioners will run baseline checks, analyze vitals, provide primary diagnoses, and route you directly to the correct specialized expert.",
-    services: [
-      "Primary Clinical Consultations & Baseline Vitals Audit",
-      "Symptom Evaluation and Multi-Specialty Department Routing",
-      "Routine Health Screenings and Diagnostic Lab Order Setup",
-      "Chronic Health Condition Monitoring (Hypertension, Blood Sugar Base)",
-      "General Wellness Consultations & Preventive Healthcare Guidelines"
-    ]
-  },
-  {
   id: "general-ophthalmology",
   name: "General Ophthalmology & Vision Triage Desk",
   icon: "FaEye",
@@ -223,6 +208,21 @@ export const DEPARTMENTS = [
       "Computerized Vision Studio Dispensing and Pupil Distance Alignment",
       "Contact Lens Custom Sizing Matrices for Irregular Corneas"
     ]
+  },
+  {
+    id: "general-medicine",
+    name: "General Medicine & Triage Desk",
+    icon: "FaUserMd",
+    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600",
+    description: "Not sure which doctor to see? Book an initial evaluation with our general medicine desk for proper diagnostic routing.",
+    detailedDescription: "The General Medicine and Primary Consultation unit acts as the primary health evaluation layer for Vindhya Health Care. If you are uncertain about the root cause of your symptoms, our general practitioners will run baseline checks, analyze vitals, provide primary diagnoses, and route you directly to the correct specialized expert.",
+    services: [
+      "Primary Clinical Consultations & Baseline Vitals Audit",
+      "Symptom Evaluation and Multi-Specialty Department Routing",
+      "Routine Health Screenings and Diagnostic Lab Order Setup",
+      "Chronic Health Condition Monitoring (Hypertension, Blood Sugar Base)",
+      "General Wellness Consultations & Preventive Healthcare Guidelines"
+    ]
   }
 ];
 
@@ -276,23 +276,6 @@ export const DOCTORS = [
       "Fellow Orthopaediae - Bruder Krankenhaus, Germany",
       "Post Graduate Program in Rheumatology - Johns Hopkins University, USA",
       "Specialist in Advanced Arthroplasty and Minimally Invasive Joint Replacements"
-    ]
-  },
-  {
-    id: "dr-general-triage",
-    name: "General Medicine Desk",
-    photo: General,
-    qualification: "M.B.B.S / Consultant Physicians",
-    departmentId: "general-medicine",
-    departmentName: "General Medicine & Triage Desk",
-    specialization: "Primary Healthcare & Specialist Allocation Specialist",
-    experience: "10+ Years",
-    timings: "Mon - Sat: 09:00 AM - 08:00 PM",
-    bio: "Our General Medicine Desk is staffed by experienced practitioners dedicated to helping patients who are uncertain about their clinical symptoms. We check your health baseline and connect you directly with the exact gynaecology, orthopaedic, or eye surgeon you require.",
-    attachments: [
-      "Comprehensive Primary Physical Assessment Models",
-      "Fast-Track Referral Channels into Speciality Clinical Units",
-      "Dedicated to smooth, stress-free care navigation for new patients"
     ]
   },
 ];

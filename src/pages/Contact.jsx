@@ -127,8 +127,8 @@ export default function Contact() {
                     </div>
                     <div className="text-xs">
                       <span className="block font-bold text-slate-700 mb-1">Email Support</span>
-                      <a href="mailto:care@vindhyahealthcare.in" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
-                        care@vindhyahealthcare.in
+                      <a href="mailto:vindhyahealthcare9495@gmail.com" className="block text-slate-500 hover:text-emerald-accent transition-colors font-light">
+                        vindhyahealthcare9495@gmail.com
                       </a>
                     </div>
                   </div>

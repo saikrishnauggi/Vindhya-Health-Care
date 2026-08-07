@@ -12,11 +12,30 @@ import {
   FaHome,
   FaAddressBook
 } from 'react-icons/fa';
-// 1. Import the official EmailJS browser package
+// Official EmailJS browser package
 import emailjs from '@emailjs/browser';
-import { DEPARTMENTS, DOCTORS } from '../data/mockData';
 import { apiService } from '../services/api';
 import { notificationService } from '../services/notificationService';
+
+// Defined list of departments
+const CLINICAL_DEPARTMENTS = [
+  { id: 'ophthalmology', name: 'Eye / Ophthalmology' },
+  { id: 'orthopedics', name: 'Orthopedics' },
+  { id: 'gynaecology', name: 'Gynae & Fertility (IVF)' }
+];
+
+// Department to Doctor mapping
+const DEPARTMENT_DOCTORS_MAP = {
+  'Eye / Ophthalmology': [
+    { id: 'doc-1', name: 'Dr. Navneeth Servey', specialization: 'Ophthalmologist / Eye Specialist' }
+  ],
+  'Orthopedics': [
+    { id: 'doc-2', name: 'Dr. Rahul Kuraganti', specialization: 'Orthopedic Surgeon' }
+  ],
+  'Gynae & Fertility (IVF)': [
+    { id: 'doc-3', name: 'Dr. Tejeswini Nese', specialization: 'Gynecologist & IVF Specialist' }
+  ]
+};
 
 export default function Appointment() {
   const [searchParams] = useSearchParams();
@@ -37,8 +56,8 @@ export default function Appointment() {
   const [successData, setSuccessData] = useState(null);
   const [whatsappUrl, setWhatsappUrl] = useState('');
 
-  // Dynamic doctor listings filtered by department choice
-  const [filteredDoctors, setFilteredDoctors] = useState(DOCTORS);
+  // Filtered doctors list based on selected department
+  const [filteredDoctors, setFilteredDoctors] = useState([]);
 
   // Pre-populate queries from search parameters
   useEffect(() => {
@@ -47,57 +66,62 @@ export default function Appointment() {
     const packageParam = searchParams.get('package');
 
     if (deptParam) {
-      setDepartment(deptParam);
+      // Normalize incoming department parameter if matching key terms
+      const deptLower = deptParam.toLowerCase();
+      if (deptLower.includes('eye') || deptLower.includes('ophthalmology')) {
+        setDepartment('Eye / Ophthalmology');
+      } else if (deptLower.includes('ortho')) {
+        setDepartment('Orthopedics');
+      } else if (deptLower.includes('gynae') || deptLower.includes('fertility') || deptLower.includes('ivf')) {
+        setDepartment('Gynae & Fertility (IVF)');
+      } else {
+        setDepartment(deptParam);
+      }
     }
+
     if (doctorParam) {
       setDoctor(doctorParam);
     }
+
     if (packageParam) {
       setMessage(`Interested in Booking Health Package: ${packageParam}`);
-      setDepartment('Diagnostics & Imaging');
+      setDepartment('Eye / Ophthalmology');
     }
   }, [searchParams]);
 
-  // Sync doctor listings when department is selected (Strict mapping for 4-doctor panel)
+  // Sync doctor listing when department is selected
   useEffect(() => {
-    if (department) {
-      const filtered = DOCTORS.filter((doc) => {
-        const selectedDeptLower = department.toLowerCase();
-        const docDeptIdLower = doc.departmentId ? doc.departmentId.toLowerCase() : '';
-        const docDeptNameLower = doc.departmentName ? doc.departmentName.toLowerCase() : '';
+    if (department && DEPARTMENT_DOCTORS_MAP[department]) {
+      const doctorsForDept = DEPARTMENT_DOCTORS_MAP[department];
+      setFilteredDoctors(doctorsForDept);
 
-        // 1. Explicit Direct ID Match (e.g. "gynecology" matching "gynecology")
-        if (docDeptIdLower === selectedDeptLower || selectedDeptLower.includes(docDeptIdLower)) {
-          return true;
-        }
-
-        // 2. Loose string parsing match (e.g. "Gynecology & Fertility" matching "Gynecology")
-        if (docDeptNameLower.includes(selectedDeptLower) || selectedDeptLower.includes(docDeptNameLower)) {
-          return true;
-        }
-
-        // 3. Fallback routing map for all Eye Care sub-departments to Dr. Navneeth
-        const eyeCareKeywords = ['cataract', 'retina', 'lasik', 'glaucoma', 'cornea', 'trauma', 'squint', 'pediatric'];
-        const isEyeCareSelection = eyeCareKeywords.some(keyword => selectedDeptLower.includes(keyword));
-        
-        if (isEyeCareSelection && docDeptIdLower === 'ophthalmology') {
-          return true;
-        }
-
-        return false;
-      });
-      
-      setFilteredDoctors(filtered);
-      
-      // Reset selected doctor dropdown context if it doesn't align with the parsed sub-department lists
-      const isDocValid = filtered.some((doc) => doc.name === doctor);
-      if (!isDocValid && doctor) {
+      // Auto-select doctor if only 1 specialist exists for the department
+      if (doctorsForDept.length === 1) {
+        setDoctor(doctorsForDept[0].name);
+      } else if (!doctorsForDept.some((d) => d.name === doctor)) {
+        setDoctor('');
+      }
+    } else if (department) {
+      // Fuzzy fallback for external queries
+      const deptLower = department.toLowerCase();
+      if (deptLower.includes('eye') || deptLower.includes('ophthalmology')) {
+        setFilteredDoctors(DEPARTMENT_DOCTORS_MAP['Eye / Ophthalmology']);
+        setDoctor('Dr. Navneeth Servey');
+      } else if (deptLower.includes('ortho')) {
+        setFilteredDoctors(DEPARTMENT_DOCTORS_MAP['Orthopedics']);
+        setDoctor('Dr. Rahul Kuraganti');
+      } else if (deptLower.includes('gynae') || deptLower.includes('fertility') || deptLower.includes('ivf')) {
+        setFilteredDoctors(DEPARTMENT_DOCTORS_MAP['Gynae & Fertility (IVF)']);
+        setDoctor('Dr. Tejeswini Nese');
+      } else {
+        setFilteredDoctors([]);
         setDoctor('');
       }
     } else {
-      setFilteredDoctors(DOCTORS);
+      setFilteredDoctors([]);
+      setDoctor('');
     }
-  }, [department, doctor]);
+  }, [department]);
 
   // Form Validation
   const validateForm = () => {
@@ -149,7 +173,6 @@ export default function Appointment() {
       message: message.trim()
     };
 
-    // Formulate variables matching your dashboard layout keys explicitly
     const templateParams = {
       from_name: appointmentPayload.name,
       phone_number: appointmentPayload.phone,
@@ -162,11 +185,9 @@ export default function Appointment() {
     };
 
     try {
-      // 1. Submit transaction details to the mock local API database
       const response = await apiService.bookAppointment(appointmentPayload);
       
       if (response.success) {
-        // 2. Dispatch EmailJS notification directly using full fallbacks
         await emailjs.send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_APPOINTMENT_TEMPLATE_ID, 
@@ -174,17 +195,13 @@ export default function Appointment() {
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
         );
 
-        // 3. Generate WhatsApp backup redirection fallback link
         const generatedWaUrl = notificationService.generateWhatsAppUrl(appointmentPayload);
         setWhatsappUrl(generatedWaUrl);
-
-        // Toggle UI frame state to receipt summary view
         setSuccessData(response.data);
       }
     } catch (err) {
       console.error('Submission processing error:', err);
       
-      // If EmailJS fails or times out but database registration worked, gracefully load summary with notice
       const generatedWaUrl = notificationService.generateWhatsAppUrl(appointmentPayload);
       setWhatsappUrl(generatedWaUrl);
       
@@ -194,7 +211,7 @@ export default function Appointment() {
       });
       setErrors({ emailDispatchWarning: 'Appointment registered! However, notification delivery failed.' });
     } finally {
-      document.documentElement.scrollTop = 0; // Reset visual viewport layer upwards on confirmation
+      document.documentElement.scrollTop = 0;
       setIsLoading(false);
     }
   };
@@ -328,13 +345,13 @@ export default function Appointment() {
                       </div>
                     </a>
 
-                    <a href="mailto:care@vindhyahealthcare.in" className="flex items-center gap-3 hover:text-emerald-accent transition-colors">
+                    <a href="mailto:vindhyahealthcare9495@gmail.com" className="flex items-center gap-3 hover:text-emerald-accent transition-colors">
                       <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                         <FaEnvelope size={12} />
                       </div>
                       <div>
                         <span className="block text-[10px] text-slate-400">Email Address</span>
-                        <span className="font-bold">care@vindhyahealthcare.in</span>
+                        <span className="font-bold">vindhyahealthcare9495@gmail.com</span>
                       </div>
                     </a>
                   </div>
@@ -408,7 +425,7 @@ export default function Appointment() {
                       className={`w-full px-4 py-3 rounded-xl border ${errors.department ? 'border-red-400 bg-red-50/10' : 'border-slate-200 bg-slate-50'} text-xs focus:outline-none focus:border-emerald-accent cursor-pointer`}
                     >
                       <option value="">-- Choose Division --</option>
-                      {DEPARTMENTS.map((d) => (
+                      {CLINICAL_DEPARTMENTS.map((d) => (
                         <option key={d.id} value={d.name}>{d.name}</option>
                       ))}
                     </select>

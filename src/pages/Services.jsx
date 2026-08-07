@@ -41,7 +41,7 @@ export default function Services() {
   const servicesList = [
     {
       id: 'opd',
-      name: 'Outpatient Department (OPD)',
+      name: 'Speciality Clinics & OPD Services',
       icon: <FaUserMd size={24} />,
       description: 'Multi-specialty consultation clinics including comprehensive Eye Specialist panels, Orthopedics, and Gynecology. Patients undergo primary tracking, physical assessments, and customized care plan mapping.',
       highlights: ['Morning & evening slots available', 'Prioritized senior citizen waitlists', 'Electronic health records system', 'Digital prescription routing'],
