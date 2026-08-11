@@ -127,7 +127,7 @@ export default function Services() {
     <div className="bg-slate-50 min-h-screen">
       <SEO
         title="Multi-Specialty Services for Eye, Ophthalmology, Orthopedics, Gynaecology, Fertility & IVF"
-        description="Explore Vindhya Healthcare services for eye and ophthalmology care, orthopedics, gynaecology, fertility, IVF, diagnostics, surgery, pharmacy, and day-care support in Malkajgiri, Hyderabad."
+        description="Explore Vindhya Eye Hospital & Speciality Clinics services for eye and ophthalmology care, orthopedics, gynaecology, fertility, IVF, diagnostics, surgery, pharmacy, and day-care support in Malkajgiri, Hyderabad."
         canonical="https://www.vindhyahealthcare.in/services"
         keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'speciality clinic services', 'eye surgery', 'orthopedic services', 'fertility services']}
       />

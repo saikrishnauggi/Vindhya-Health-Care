@@ -32,7 +32,7 @@ export default function MalkajgiriEyeCare() {
     <div className="bg-slate-50 min-h-screen">
       <SEO
         title="Best Eye Hospital in Secunderabad Near Malkajgiri | Eye Care Clinic"
-        description="Vindhya Healthcare in Malkajgiri offers comprehensive eye care and ophthalmology services for patients searching for a best eye hospital in Secunderabad, an eye care clinic, or an eye specialist near Malkajgiri."
+        description="Vindhya Eye Hospital & Speciality Clinics in Malkajgiri offers comprehensive eye care and ophthalmology services for patients searching for a best eye hospital in Secunderabad, an eye care clinic, or an eye specialist near Malkajgiri."
         canonical="https://www.vindhyahealthcare.in/eye-care-hospital-malkajgiri"
         keywords={['eye care', 'ophthalmology', 'best eye hospital in secunderabad', 'eye care clinic', 'eye hospital in Malkajgiri', 'eye specialist Hyderabad', 'cataract', 'retina', 'glaucoma', 'near secunderabad']}
       />
@@ -40,7 +40,7 @@ export default function MalkajgiriEyeCare() {
       <section className="relative isolate overflow-hidden bg-medical-dark text-white">
         <img
           src={outdoor4}
-          alt="Vindhya Healthcare eye care hospital in Malkajgiri"
+          alt="Vindhya Eye Hospital & Speciality Clinics eye care hospital in Malkajgiri"
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-medical-dark via-medical-dark/90 to-medical-dark/50" />
@@ -52,7 +52,7 @@ export default function MalkajgiriEyeCare() {
             Best Eye Hospital in Secunderabad Near Malkajgiri
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-200 md:text-lg">
-            Vindhya Healthcare provides comprehensive ophthalmology care, from routine vision checks to cataract, retina, glaucoma, and refractive-care consultations for patients from Malkajgiri, Secunderabad, and nearby areas.
+            Vindhya Eye Hospital & Speciality Clinics provides comprehensive ophthalmology care, from routine vision checks to cataract, retina, glaucoma, and refractive-care consultations for patients from Malkajgiri, Secunderabad, and nearby areas.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -95,7 +95,7 @@ export default function MalkajgiriEyeCare() {
           </div>
 
           <aside className="rounded-3xl bg-medical-dark p-7 text-white shadow-sm">
-            <h2 className="text-xl font-extrabold">Visit Vindhya Healthcare</h2>
+            <h2 className="text-xl font-extrabold">Visit Vindhya Eye Hospital & Speciality Clinics</h2>
             <div className="mt-6 space-y-5 text-sm text-slate-300">
               <p className="flex items-start gap-3"><FaMapMarkerAlt className="mt-1 shrink-0 text-emerald-accent" />13-94 & 95, beside Jagruthi Degree College, Sanjay Nagar, Malkajgiri, Hyderabad, Telangana 500047</p>
               <p className="flex items-center gap-3"><FaClock className="shrink-0 text-emerald-accent" />Open daily, 9:00 AM – 9:00 PM</p>
@@ -143,7 +143,7 @@ export default function MalkajgiriEyeCare() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Vindhya Healthcare eye care hospital location in Malkajgiri"
+              title="Vindhya Eye Hospital & Speciality Clinics eye care hospital location in Malkajgiri"
             />
           </div>
         </div>

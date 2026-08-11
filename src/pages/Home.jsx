@@ -242,7 +242,7 @@ export default function Home() {
     <div className="w-full">
       <SEO
         title="Best Eye Hospital in Secunderabad Near Malkajgiri | Ophthalmology, Orthopedics, Gynaecology, Fertility & IVF"
-        description="Vindhya Healthcare in Malkajgiri, Hyderabad offers eye and ophthalmology care, orthopedics, gynaecology, fertility and IVF consultations, advanced diagnostics, surgery, and day-care services for patients from Secunderabad and nearby areas."
+        description="Vindhya Eye Hospital & Speciality Clinics in Malkajgiri, Hyderabad offers eye and ophthalmology care, orthopedics, gynaecology, fertility and IVF consultations, advanced diagnostics, surgery, and day-care services for patients from Secunderabad and nearby areas."
         canonical="https://www.vindhyahealthcare.in/"
         keywords={[
           'eye',

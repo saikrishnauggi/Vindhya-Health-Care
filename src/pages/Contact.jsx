@@ -70,8 +70,8 @@ export default function Contact() {
   return (
     <div className="bg-slate-50 min-h-screen">
       <SEO
-        title="Contact Vindhya Healthcare | Eye, Orthopedics, Gynaecology & IVF"
-        description="Contact Vindhya Healthcare in Malkajgiri, Hyderabad for eye and ophthalmology care, orthopedics, gynaecology, fertility, IVF, appointments, and support."
+        title="Contact Vindhya Eye Hospital & Speciality Clinics | Eye, Orthopedics, Gynaecology & IVF"
+        description="Contact Vindhya Eye Hospital & Speciality Clinics in Malkajgiri, Hyderabad for eye and ophthalmology care, orthopedics, gynaecology, fertility, IVF, appointments, and support."
         canonical="https://www.vindhyahealthcare.in/contact"
         keywords={['eye', 'ophthalmology', 'orthopedics', 'gynaec', 'fertility', 'ivf', 'contact']}
       />
